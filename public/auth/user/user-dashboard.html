@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Diagnostic Portal | VenaCare Clinical Lab Services</title>
+  <meta name="description" content="Your secure VenaCare Patient Portal — access official doctor-reviewed lab reports, manage at-home sample collection appointments, and track health biomarkers over time." />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" type="image/svg+xml" href="../../../assets/img/logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../../src/css/style.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../../src/js/tailwind-config.js"></script>
+  <script defer src="../../../src/js/site.js"></script>
+  <script defer src="../../../src/js/data.js"></script>
+  <script defer src="../../../src/js/components.js"></script>
+  <script defer src="../../../src/js/navbar.js"></script>
+  <script defer src="../../../src/js/footer.js"></script>
+  <script defer src="../../../src/js/ui.js"></script>
+  <script defer src="../../../src/js/form-validation.js"></script>
+  <script defer src="../../../src/js/dashboard.js"></script>
+</head>
+
+<body data-root="../../../" data-page="user">
+
+  <div id="site-header"></div>
+
+  <main id="main-content">
+
+    <div class="dash-shell">
+
+      <!-- ============================== SIDEBAR ============================== -->
+      <aside class="dash-side">
+        <a class="brand" href="../../../index.html" aria-label="VenaCare At-Home Lab Services home">
+          <img src="../../../assets/img/logo.svg" alt="VenaCare logo" />
+          <span>
+            <span class="brand-name">VenaCare</span>
+            <span class="brand-tag">Patient Portal</span>
+          </span>
+        </a>
+
+        <nav class="mt-5" aria-label="Dashboard sections">
+          <a class="dash-side-link active" href="#overview"><i class="bi bi-speedometer2"></i>Overview</a>
+          <a class="dash-side-link" href="#appointments"><i class="bi bi-house-door-fill"></i>Home Collections</a>
+          <a class="dash-side-link" href="#reports"><i class="bi bi-file-earmark-medical-fill"></i>Lab Results &amp; Reports</a>
+          <a class="dash-side-link" href="#biomarkers"><i class="bi bi-graph-up"></i>Biomarker Trends</a>
+          <a class="dash-side-link" href="#summary"><i class="bi bi-heart-pulse-fill"></i>Health Summary</a>
+        </nav>
+
+        <div class="divider-dashed" style="margin-block:1.1rem;"></div>
+
+        <nav aria-label="Utility links">
+          <a class="dash-side-link" href="../../../index.html"><i class="bi bi-globe"></i>Public Site</a>
+          <a class="dash-side-link" href="../../../public/pages/services.html"><i class="bi bi-clipboard2-pulse"></i>Book New Test</a>
+          <a class="dash-side-link" href="../login.html"><i class="bi bi-box-arrow-in-right"></i>Log Out</a>
+        </nav>
+
+        <!-- Upcoming appointment callout in sidebar -->
+        <div class="card card-soft" style="padding:1rem;margin-top:1.25rem;border:1px solid rgba(255,46,76,0.3);">
+          <div class="flex items-center justify-between gap-2">
+            <strong class="text-xs uppercase tracking-wider" style="color:var(--primary);">Next Home Draw</strong>
+            <span class="badge amber text-xs"><i class="bi bi-clock-history"></i>Tomorrow</span>
+          </div>
+          <p class="text-xs mt-2" style="color:var(--text-muted);">
+            Comprehensive Metabolic &amp; Thyroid Panel at <strong>8:30 AM</strong>. Water only after 10:30 PM.
+          </p>
+          <a class="btn btn-soft btn-sm btn-block mt-3" href="#appointments">
+            <i class="bi bi-calendar-check"></i>View Appointment
+          </a>
+        </div>
+      </aside>
+
+      <!-- =============================== MAIN =============================== -->
+      <div class="dash-main">
+
+        <!-- ------------------------------ TOPBAR ------------------------------ -->
+        <div class="dash-topbar">
+          <button class="icon-btn burger" type="button" data-dash-toggle aria-label="Open dashboard menu">
+            <i class="bi bi-list" style="font-size:1.3rem;"></i>
+          </button>
+
+          <h1 class="hidden sm:block" style="font-size:1.05rem;">Patient Diagnostic Portal</h1>
+
+          <div class="input-wrap hidden md:block" style="flex:1;max-width:24rem;">
+            <i class="bi bi-search input-icon"></i>
+            <input class="input has-icon" type="search" placeholder="Search tests, biomarkers, reports…" aria-label="Search patient records" />
+          </div>
+
+          <span class="badge plain ms-auto"><i class="bi bi-calendar3"></i><span data-today></span></span>
+
+          <a href="../login.html" aria-label="Your account" style="flex:none;">
+            <img src="../../../assets/img/avatar-user.svg" alt="Jordan Diaz avatar"
+                 width="36" height="36"
+                 style="width:36px;height:36px;border-radius:50%;border:2px solid rgba(255,46,76,0.55);" />
+          </a>
+        </div>
+
+        <!-- ------------------------------- BODY ------------------------------- -->
+        <div class="dash-body">
+
+          <!-- ============================ 1 · OVERVIEW ============================ -->
+          <section id="overview">
+            <div class="card" style="padding:1.5rem;overflow:hidden;">
+              <div class="glow-blob red" style="width:20rem;height:20rem;top:-9rem;inset-inline-end:-6rem;opacity:0.4;"></div>
+
+              <div class="relative flex flex-wrap items-center gap-5">
+                <img src="../../../assets/img/avatar-user.svg" alt="Jordan Diaz avatar"
+                     style="width:74px;height:74px;border-radius:50%;flex:none;border:2px solid rgba(255,46,76,0.55);box-shadow:var(--glow-sm);" />
+
+                <div style="flex:1;min-width:14rem;">
+                  <span class="kicker"><span class="pulse-dot"></span>Verified Patient Record</span>
+                  <h2 class="mt-2 text-2xl font-bold">Jordan Diaz</h2>
+                  <div class="flex flex-wrap items-center gap-2 mt-2 text-xs">
+                    <span class="badge plain"><i class="bi bi-upc-scan"></i>Patient ID: #VC-849201</span>
+                    <span class="blood-group" style="height:1.7rem;min-width:2.2rem;font-size:0.75rem;">O+</span>
+                    <span class="badge green"><i class="bi bi-patch-check-fill"></i>Identity Verified</span>
+                    <span class="badge plain"><i class="bi bi-shield-check"></i>HIPAA Protected</span>
+                  </div>
+                </div>
+
+                <a class="btn btn-primary btn-sm" href="../../../public/pages/services.html">
+                  <i class="bi bi-house-heart"></i>Book At-Home Collection
+                </a>
+              </div>
+            </div>
+
+            <div id="user-kpis" class="grid gap-5 sm:grid-cols-2 xl:grid-cols-4 mt-6"></div>
+          </section>
+
+          <!-- ========================== 2 · APPOINTMENTS =========================== -->
+          <section id="appointments" class="mt-11">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <div>
+                <span class="kicker"><i class="bi bi-house-door-fill"></i>At-Home Phlebotomy</span>
+                <h2 class="mt-2 text-xl font-bold">Scheduled &amp; Past Home Collections</h2>
+              </div>
+              <a class="btn btn-outline btn-sm" href="../../../public/pages/services.html">
+                <i class="bi bi-calendar2-plus"></i>Schedule New Collection
+              </a>
+            </div>
+
+            <div id="user-appointments"></div>
+          </section>
+
+          <!-- ============================= 3 · REPORTS ============================= -->
+          <section id="reports" class="mt-11">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <div>
+                <span class="kicker"><i class="bi bi-file-earmark-medical-fill"></i>Diagnostic Results</span>
+                <h2 class="mt-2 text-xl font-bold">Certified Lab Reports (PDF)</h2>
+              </div>
+              <span class="badge green"><i class="bi bi-patch-check"></i>Doctor Reviewed &amp; Signed</span>
+            </div>
+
+            <div class="card p-6">
+              <div id="user-history"></div>
+            </div>
+          </section>
+
+          <!-- ============================== 4 · BIOMARKERS ============================= -->
+          <section id="biomarkers" class="mt-11">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <div>
+                <span class="kicker"><i class="bi bi-graph-up"></i>Longitudinal Health</span>
+                <h2 class="mt-2 text-xl font-bold">Biomarker Trend Trackers</h2>
+              </div>
+              <span class="badge blue"><i class="bi bi-clock-history"></i>Updated Quarterly</span>
+            </div>
+
+            <div id="user-badges" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </section>
+
+          <!-- ============================== 5 · SUMMARY ============================= -->
+          <section id="summary" class="mt-11">
+            <div class="card p-6" style="border-color:rgba(18,185,129,0.35);">
+              <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                <div>
+                  <span class="kicker"><i class="bi bi-heart-pulse-fill"></i>Clinical Summary</span>
+                  <h2 class="mt-2 text-xl font-bold">Physician Health Assessment</h2>
+                </div>
+                <span class="badge plain"><i class="bi bi-person-check-fill"></i>Dr. Aisha Kapoor, MD</span>
+              </div>
+              <div id="user-impact"></div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>

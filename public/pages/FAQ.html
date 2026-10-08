@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | VenaCare Blood Camp</title>
+  <meta name="description" content="Answers to common questions about donating blood, booking camps, accounts, safety and privacy from VenaCare Blood Camp." />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../src/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../src/js/tailwind-config.js"></script>
+  <script defer src="../../src/js/site.js"></script>
+  <script defer src="../../src/js/data.js"></script>
+  <script defer src="../../src/js/components.js"></script>
+  <script defer src="../../src/js/navbar.js"></script>
+  <script defer src="../../src/js/footer.js"></script>
+  <script defer src="../../src/js/ui.js"></script>
+  <script defer src="../../src/js/form-validation.js"></script>
+</head>
+
+<body data-root="../../" data-page="faq">
+
+  <div id="site-header"></div>
+
+  <main id="main-content">
+
+    <!-- 1. PAGE HERO + SEARCH -->
+    <section class="page-hero">
+      <div class="container-x text-center">
+        <div class="breadcrumb justify-center" aria-label="Breadcrumb">
+          <a href="../../index.html"><i class="bi bi-house-door-fill"></i>Home</a>
+          <i class="bi bi-chevron-right"></i>
+          <span>FAQ</span>
+        </div>
+        <h1 class="page-hero-title mt-4">Help centre &amp; FAQs</h1>
+        <p class="page-hero-sub">Find clear answers about eligibility, camps, bookings, accounts and safety.</p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div class="input-wrap w-full max-w-[32rem]">
+            <i class="bi bi-search input-icon"></i>
+            <input class="input has-icon" id="faq-search" type="search" placeholder="Search answers…" autocomplete="off" />
+          </div>
+          <span id="faq-count" class="text-sm" style="color:var(--text-muted);">14 answers</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CATEGORY CHIPS -->
+    <section class="section-sm pt-0">
+      <div class="container-x">
+        <div class="flex flex-wrap justify-center gap-2">
+          <button class="chip active" data-faq-group="all" type="button">All</button>
+          <button class="chip" data-faq-group="Donating Blood" type="button">Donating Blood</button>
+          <button class="chip" data-faq-group="Camps & Booking" type="button">Camps &amp; Booking</button>
+          <button class="chip" data-faq-group="Accounts & Billing" type="button">Accounts &amp; Billing</button>
+          <button class="chip" data-faq-group="Safety & Privacy" type="button">Safety &amp; Privacy</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. DONATING BLOOD GROUP -->
+    <section class="section-sm pt-0">
+      <div class="container-x">
+        <div class="section-head">
+          <h2 class="section-title"><i class="bi bi-droplet-half" style="color:var(--primary);"></i> Donating Blood</h2>
+          <p class="section-sub">Eligibility, timing, safety and what to expect at the camp.</p>
+        </div>
+        <div class="accordion" data-accordion>
+          <div class="accordion-item open" data-faq-item="Donating Blood" data-faq-text="Who is eligible to donate blood? Donors must be 17–65 years old, weigh at least 50 kg, be in good health, and hold a valid photo ID. Temporary deferrals apply for recent illness, travel, tattoos or medication — the on-site nurse makes the final call.">
+            <button class="accordion-btn" type="button" aria-expanded="true">
+              <span>Who is eligible to donate blood?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel" style="max-height:600px;">
+              <div class="accordion-panel-inner">
+                Donors must be 17–65 years old, weigh at least 50 kg, be in good health, and hold a valid photo ID. Temporary deferrals apply for recent illness, travel, tattoos or medication — the on-site nurse makes the final call.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-faq-item="Donating Blood" data-faq-text="How often can I donate? Whole blood every 56 days. Platelets every 14 days, up to 24 times a year. Plasma follows a 28-day interval. Your dashboard tracks the clock for each track automatically.">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              <span>How often can I donate?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                Whole blood every 56 days. Platelets every 14 days, up to 24 times a year. Plasma follows a 28-day interval. Your dashboard tracks the clock for each track automatically.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-faq-item="Donating Blood" data-faq-text="Does blood donation hurt? There is a brief pinch when the needle goes in — most donors rate it 2 out of 10. The draw itself is painless; some donors feel mild pressure as the vein is accessed.">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              <span>Does blood donation hurt?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                There is a brief pinch when the needle goes in — most donors rate it 2 out of 10. The draw itself is painless; some donors feel mild pressure as the vein is accessed.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-faq-item="Donating Blood" data-faq-text="Is it safe? Can I catch something? Every needle is sterile, single-use and opened in front of you. There is no risk of contracting any infection through donation. The bigger risk is leaving shelves empty.">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              <span>Is it safe? Can I catch something?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                Every needle is sterile, single-use and opened in front of you. There is no risk of contracting any infection through donation. The bigger risk is leaving shelves empty.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CAMPS & BOOKING -->
+    <section class="section-sm pt-0">
+      <div class="container-x">
+        <div class="section-head">
+          <h2 class="section-title"><i class="bi bi-calendar-check-fill" style="color:var(--primary);"></i> Camps &amp; Booking</h2>
+          <p class="section-sub">Finding camps, rescheduling and organising your own drive.</p>
+        </div>
+        <div class="accordion" data-accordion>
+          <div class="accordion-item open" data-faq-item="Camps & Booking" data-faq-text="How do I find a camp near me? Open Home 2 (Emergency Camp), enter your city or postcode, and the live board shows upcoming camps with available slots. You can also search from your user dashboard.">
+            <button class="accordion-btn" type="button" aria-expanded="true">
+              <span>How do I find a camp near me?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel" style="max-height:600px;">
+              <div class="accordion-panel-inner">
+                Open Home 2 (Emergency Camp), enter your city or postcode, and the live board shows upcoming camps with available slots. You can also search from your user dashboard.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-faq-item="Camps & Booking" data-faq-text="Can I cancel or reschedule my slot? Yes — up to 4 hours before the slot from your dashboard. Later cancellations are handled by replying to the confirmation SMS so we can free the slot for someone else.">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              <span>Can I cancel or reschedule my slot?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                Yes — up to 4 hours before the slot from your dashboard. Later cancellations are handled by replying to the confirmation SMS so we can free the slot for someone else.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-faq-item="Camps & Booking" data-faq-text="How do I organise a camp for my organisation? Pick the Camp Organizer plan or contact us with your headcount and preferred dates. We handle permits, crew, promotion and reporting — you provide the room and the announcement.">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              <span>How do I organise a camp for my organisation?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                Pick the Camp Organizer plan or contact us with your headcount and preferred dates. We handle permits, crew, promotion and reporting — you provide the room and the announcement.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-faq-item="Camps & Booking" data-faq-text="What should I bring to a camp? Government photo ID, a list of any medications, and sleeves that roll up. Eat normally, hydrate well and sleep properly the night before.">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              <span>What should I bring to a camp?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                Government photo ID, a list of any medications, and sleeves that roll up. Eat normally, hydrate well and sleep properly the night before.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ACCOUNTS & BILLING -->
+    <section class="section-sm pt-0">
+      <div class="container-x">
+        <div class="section-head">
+          <h2 class="section-title"><i class="bi bi-person-gear" style="color:var(--primary);"></i> Accounts &amp; Billing</h2>
+          <p class="section-sub">Accounts, privacy and managing paid plans.</p>
+        </div>
+        <div class="accordion" data-accordion>
+          <div class="accordion-item open" data-faq-item="Accounts & Billing" data-faq-text="Do I need an account to donate? No — walk-ins are welcome at every camp. An account only adds certificate storage, history, booking reminders and donor search.">
+            <button class="accordion-btn" type="button" aria-expanded="true">
+              <span>Do I need an account to donate?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel" style="max-height:600px;">
+              <div class="accordion-panel-inner">
+                No — walk-ins are welcome at every camp. An account only adds certificate storage, history, booking reminders and donor search.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-faq-item="Accounts & Billing" data-faq-text="Is my health data safe? Screening data is encrypted at rest, stored on ISO 27001 certified infrastructure, and never shared with employers, colleges or insurers. You can delete your profile at any time.">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              <span>Is my health data safe?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                Screening data is encrypted at rest, stored on ISO 27001 certified infrastructure, and never shared with employers, colleges or insurers. You can delete your profile at any time.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-faq-item="Accounts & Billing" data-faq-text="How do I cancel a paid plan? Settings → Billing → Cancel. You keep access until the end of the paid period, then drop to the free Donor plan. No cancellation fees.">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              <span>How do I cancel a paid plan?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                Settings → Billing → Cancel. You keep access until the end of the paid period, then drop to the free Donor plan. No cancellation fees.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SAFETY & PRIVACY -->
+    <section class="section-sm pt-0">
+      <div class="container-x">
+        <div class="section-head">
+          <h2 class="section-title"><i class="bi bi-shield-lock-fill" style="color:var(--primary);"></i> Safety &amp; Privacy</h2>
+          <p class="section-sub">Testing, transfusion notifications and keeping your details private.</p>
+        </div>
+        <div class="accordion" data-accordion>
+          <div class="accordion-item open" data-faq-item="Safety & Privacy" data-faq-text="How is donated blood tested? Every unit is screened for HIV, Hepatitis B & C, malaria, syphilis and blood group before release. Units that fail screening are destroyed under medical supervision.">
+            <button class="accordion-btn" type="button" aria-expanded="true">
+              <span>How is donated blood tested?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel" style="max-height:600px;">
+              <div class="accordion-panel-inner">
+                Every unit is screened for HIV, Hepatitis B &amp; C, malaria, syphilis and blood group before release. Units that fail screening are destroyed under medical supervision.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-faq-item="Safety & Privacy" data-faq-text="Can I get notified when my blood is used? Yes — opt into transfusion alerts and you will receive an anonymous SMS when your unit reaches a patient, when the hospital releases that status.">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              <span>Can I get notified when my blood is used?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                Yes — opt into transfusion alerts and you will receive an anonymous SMS when your unit reaches a patient, when the hospital releases that status.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-faq-item="Safety & Privacy" data-faq-text="Who sees my contact details when I respond to a request? Nobody, until you both agree. All first contact goes through the mediated VenaCare inbox; numbers are shared only when both sides tap 'share contact'.">
+            <button class="accordion-btn" type="button" aria-expanded="false">
+              <span>Who sees my contact details when I respond to a request?</span>
+              <span class="acc-icon"><i class="bi bi-plus-lg"></i></span>
+            </button>
+            <div class="accordion-panel">
+              <div class="accordion-panel-inner">
+                Nobody, until you both agree. All first contact goes through the mediated VenaCare inbox; numbers are shared only when both sides tap "share contact".
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. EMPTY STATE -->
+    <section class="section-sm pt-0">
+      <div class="container-x">
+        <div id="faq-empty" style="display:none;" class="empty-state">
+          <i class="bi bi-search"></i>
+          <p>No answers match your search.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. STILL-STUCK CTA -->
+    <section class="section-sm pt-0">
+      <div class="container-x">
+        <div class="relative overflow-hidden rounded-[30px] text-center" style="padding:3rem 1.5rem;background:linear-gradient(135deg,rgba(255,46,76,0.2),rgba(255,138,61,0.1)),var(--bg-2);border:1px solid rgba(255,46,76,0.4);box-shadow:var(--glow-lg);">
+          <span class="kicker"><i class="bi bi-headset"></i>Still stuck?</span>
+          <h2 class="section-title mt-4" style="margin-inline:auto;">Talk to our coordinator <span class="text-gradient">for help</span></h2>
+          <p class="section-sub" style="margin-inline:auto;">Reach out by email, phone or contact form — we reply within one business hour.</p>
+          <div class="mt-7 flex flex-wrap justify-center gap-3">
+            <a class="btn btn-primary btn-lg" href="../../public/pages/contact.html"><i class="bi bi-chat-dots"></i>Contact form</a>
+            <a class="btn btn-outline btn-lg" href="mailto:help@venacare.org"><i class="bi bi-envelope-fill"></i>help@venacare.org</a>
+            <a class="btn btn-outline btn-lg" href="tel:+1800553BLOOD"><i class="bi bi-telephone-fill"></i>+1 (800) 553-BLOOD</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>

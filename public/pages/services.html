@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Routine &amp; Specialized Blood Tests | VenaCare Clinical Lab Services</title>
+  <meta name="description" content="Explore routine blood tests (CBC, CMP, Lipids, HbA1c, Thyroid) and specialized diagnostic panels (hs-CRP, Hormones, Allergy IgE, Autoimmune). Convenient at-home sample collection with 24–48 hr portal results." />
+  <meta name="keywords" content="routine blood tests, specialized blood tests, CBC test, lipid panel, metabolic panel, thyroid test, hormone blood test, allergy IgE test, at-home blood collection" />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../src/css/style.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../src/js/tailwind-config.js"></script>
+  <script defer src="../../src/js/site.js"></script>
+  <script defer src="../../src/js/data.js"></script>
+  <script defer src="../../src/js/components.js"></script>
+  <script defer src="../../src/js/navbar.js"></script>
+  <script defer src="../../src/js/footer.js"></script>
+  <script defer src="../../src/js/ui.js"></script>
+  <script defer src="../../src/js/form-validation.js"></script>
+  <script defer src="../../src/js/services.js"></script>
+</head>
+
+<body data-root="../../" data-page="services">
+
+  <div id="site-header"></div>
+
+  <main id="main-content">
+
+    <!-- ========================= 1 · PAGE HERO ========================= -->
+    <section class="page-hero">
+      <div class="container-x">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../../index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+          <i class="bi bi-chevron-right"></i>
+          <span class="current">Blood Tests &amp; Services</span>
+        </nav>
+        <span class="kicker"><i class="bi bi-clipboard2-pulse-fill"></i>Clinical Diagnostic Menu</span>
+        <h1 class="page-hero-title mt-4">Routine &amp; specialized <span class="text-gradient">blood tests</span></h1>
+        <p class="page-hero-sub">From essential annual baselines (CBC, CMP, Lipids, HbA1c) to advanced specialized diagnostics (Hormones, hs-CRP, Allergy IgE) — all collected comfortably in your home by certified phlebotomists.</p>
+        <div class="mt-7 flex flex-wrap justify-center gap-2">
+          <span class="badge blue"><i class="bi bi-shield-check"></i>CAP &amp; CLIA Accredited Partners</span>
+          <span class="badge green"><i class="bi bi-house-heart-fill"></i>Free Home Draw on Orders &gt; $50</span>
+          <span class="badge"><i class="bi bi-file-earmark-medical"></i>Doctor-Reviewed Portal PDF Reports</span>
+          <span class="badge amber"><i class="bi bi-clock-history"></i>24–48 Hr Average Turnaround</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= 2 · SEARCH & FILTER BAR ========================= -->
+    <section class="section-sm" id="filters" style="background:var(--bg-2);border-block:1px solid var(--border);">
+      <div class="container-x">
+        <div class="grid gap-5 md:grid-cols-[1fr_auto] items-center">
+
+          <!-- Live Search Input -->
+          <div class="input-wrap w-full max-w-xl">
+            <i class="bi bi-search input-icon" style="color:var(--text-faint);"></i>
+            <input class="input has-icon" type="search" placeholder="Search tests by name, biomarker, or condition (e.g. CBC, Cholesterol, Thyroid, Vitamin D, HbA1c)…" data-service-search aria-label="Search blood tests" />
+          </div>
+
+          <!-- Category Filter Chips -->
+          <div class="flex flex-wrap gap-2">
+            <button class="chip active" type="button" data-service-filter="all"><i class="bi bi-grid-fill"></i>All Tests</button>
+            <button class="chip" type="button" data-service-filter="Routine"><i class="bi bi-droplet-half"></i>Routine Blood Tests</button>
+            <button class="chip" type="button" data-service-filter="Specialized"><i class="bi bi-activity"></i>Specialized Tests</button>
+            <button class="chip" type="button" data-service-filter="Packages"><i class="bi bi-gem"></i>Preventive Packages</button>
+            <button class="chip" type="button" data-service-filter="At-Home Care"><i class="bi bi-house-door"></i>At-Home Care</button>
+          </div>
+
+        </div>
+
+        <div class="mt-3 flex items-center justify-between text-xs" style="color:var(--text-muted);">
+          <span>Showing <strong class="text-white" data-service-count>all clinical services</strong></span>
+          <span>Need help choosing? <a class="link-primary" href="pricing.html">Compare all test packages &amp; pricing</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= 3 · SERVICE GRID ========================= -->
+    <section class="section" id="service-grid">
+      <div class="container-x">
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-services-grid></div>
+      </div>
+    </section>
+
+    <!-- ==================== 4 · PATIENT FASTING & PREP GUIDELINES ==================== -->
+    <section class="section section-alt" id="prep-guidelines">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-info-circle-fill"></i>Patient Clinical Preparation</span>
+          <h2 class="section-title">Preparing for your <span class="text-gradient">at-home blood test</span></h2>
+          <p class="section-sub">Follow these clinical guidelines to ensure maximum diagnostic precision and a smooth, gentle blood draw.</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-droplet-fill"></i></span>
+            <h3 class="text-lg font-bold">1. Hydrate with Water</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">
+              Drink 2–3 glasses of plain water beforehand. Hydration expands plasma volume and makes veins visibly plumper and easier to access gently.
+            </p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-clock-history"></i></span>
+            <h3 class="text-lg font-bold">2. Observe Fasting Window</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">
+              If your panel includes Glucose, CMP, or Lipids, fast for 10–12 hours. Early morning collection lets you sleep through most of the fast.
+            </p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-capsule"></i></span>
+            <h3 class="text-lg font-bold">3. Medication Routine</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">
+              Take your routine essential blood pressure medications with water. If taking thyroid medication, delay the dose until after the blood draw.
+            </p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-house-check-fill"></i></span>
+            <h3 class="text-lg font-bold">4. Relax in Comfort</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">
+              Wear comfortable clothing with sleeves that roll up easily. Your phlebotomist will set up a clean, sterile workspace in your dining or living room.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= 5 · WHY VENACARE LABS ========================= -->
+    <section class="section" id="why">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-award-fill"></i>Accredited Standards</span>
+          <h2 class="section-title">Hospital-grade diagnostics, <span class="text-gradient">zero compromises</span></h2>
+          <p class="section-sub">Every sample collected at home is handled with strict chain of custody and analyzed by CAP &amp; CLIA certified laboratories.</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="card card-hover">
+            <span class="icon-box lg"><i class="bi bi-shield-check"></i></span>
+            <h3 class="mt-5 text-xl font-bold">Certified Phlebotomists</h3>
+            <p class="text-sm mt-3" style="color:var(--text-muted);">
+              All mobile draws are conducted by state-licensed phlebotomists (CPT-1) who hold active medical liability coverage, background checks, and annual infection control certifications.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2 text-xs">
+              <span class="badge plain">CPT-1 Licensed</span>
+              <span class="badge plain">Background Checked</span>
+              <span class="badge plain">Pediatric &amp; Senior Care</span>
+            </div>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg"><i class="bi bi-thermometer-snow"></i></span>
+            <h3 class="mt-5 text-xl font-bold">Cold-Chain Specimen Logistics</h3>
+            <p class="text-sm mt-3" style="color:var(--text-muted);">
+              Specimens are sealed in barcode-scanned tubes and placed into calibrated thermal transport carriers (2°C–8°C) with continuous digital temperature loggers.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2 text-xs">
+              <span class="badge plain">CLSI Guidelines</span>
+              <span class="badge plain">Barcoded Tracking</span>
+              <span class="badge plain">99.8% Integrity Rate</span>
+            </div>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg"><i class="bi bi-file-earmark-lock2-fill"></i></span>
+            <h3 class="mt-5 text-xl font-bold">Secure Patient Portal Reports</h3>
+            <p class="text-sm mt-3" style="color:var(--text-muted);">
+              Reports are reviewed by clinical pathologists, encrypted with 256-bit AES standards, and delivered directly to your Patient Portal within 24 to 48 hours.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2 text-xs">
+              <span class="badge plain">Doctor Reviewed</span>
+              <span class="badge plain">HIPAA Compliant</span>
+              <span class="badge plain">Downloadable PDF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== 6 · CTA =============================== -->
+    <section class="section-sm section-alt">
+      <div class="container-x">
+        <div class="card glass text-center p-8 sm:p-12 relative overflow-hidden" style="border-color:rgba(255,46,76,0.35);box-shadow:var(--glow-md);">
+          <span class="kicker"><span class="pulse-dot"></span>Convenient Blood Testing</span>
+          <h2 class="section-title mt-4" style="margin-inline:auto;">Ready to book your <span class="text-gradient">at-home blood draw?</span></h2>
+          <p class="section-sub" style="margin-inline:auto;">Select your tests or package, pick a convenient morning fasting slot, and enjoy sterile phlebotomy in the comfort of your home.</p>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <a class="btn btn-primary btn-lg" href="../../index.html#book-collection">
+              <i class="bi bi-calendar2-check"></i>Book At-Home Collection
+            </a>
+            <a class="btn btn-outline btn-lg" href="pricing.html">
+              <i class="bi bi-tags-fill"></i>View Test Pricing &amp; Packages
+            </a>
+            <a class="btn btn-soft btn-lg" href="../auth/login.html">
+              <i class="bi bi-box-arrow-in-right"></i>Patient Portal Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>

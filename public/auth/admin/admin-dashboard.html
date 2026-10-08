@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | VenaCare Blood Camp</title>
+  <meta name="description" content="VenaCare admin console — monitor donor sign-ups, camp registrations, cold-storage levels and open emergency blood requests in real time." />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" type="image/svg+xml" href="../../../assets/img/logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../../src/css/style.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../../src/js/tailwind-config.js"></script>
+  <script defer src="../../../src/js/site.js"></script>
+  <script defer src="../../../src/js/data.js"></script>
+  <script defer src="../../../src/js/components.js"></script>
+  <script defer src="../../../src/js/navbar.js"></script>
+  <script defer src="../../../src/js/footer.js"></script>
+  <script defer src="../../../src/js/ui.js"></script>
+  <script defer src="../../../src/js/form-validation.js"></script>
+  <script defer src="../../../src/js/dashboard.js"></script>
+</head>
+
+<body data-root="../../../" data-page="admin">
+
+  <div id="site-header"></div>
+
+  <main id="main-content">
+
+    <div class="dash-shell">
+
+      <!-- ============================== SIDEBAR ============================== -->
+      <aside class="dash-side" id="admin-side">
+        <a class="brand" href="../../../index.html" aria-label="VenaCare Blood Camp home">
+          <img src="../../../assets/img/logo.svg" alt="VenaCare logo" />
+          <span>
+            <span class="brand-name">VenaCare Admin</span>
+            <span class="brand-tag">Blood Camp</span>
+          </span>
+        </a>
+
+        <nav class="mt-5" aria-label="Dashboard sections">
+          <a class="dash-side-link active" href="#overview"><i class="bi bi-speedometer2"></i>Overview</a>
+          <a class="dash-side-link" href="#camps"><i class="bi bi-geo-alt-fill"></i>Camps</a>
+          <a class="dash-side-link" href="#donors"><i class="bi bi-people-fill"></i>Donors</a>
+          <a class="dash-side-link" href="#requests"><i class="bi bi-lightning-charge-fill"></i>Emergency</a>
+          <a class="dash-side-link" href="#reports"><i class="bi bi-bar-chart-line-fill"></i>Reports</a>
+        </nav>
+
+        <div class="divider-dashed" style="margin-block:1.1rem;"></div>
+
+        <nav aria-label="Utility links">
+          <a class="dash-side-link" href="../../../index.html"><i class="bi bi-globe"></i>Public site</a>
+          <a class="dash-side-link" href="../user/user-dashboard.html"><i class="bi bi-speedometer"></i>User dashboard</a>
+          <a class="dash-side-link" href="../login.html"><i class="bi bi-box-arrow-in-right"></i>Log in</a>
+        </nav>
+
+        <div class="card card-soft" style="padding:1rem;margin-top:1.25rem;">
+          <div class="flex items-center justify-between gap-2">
+            <strong class="text-sm">Blood stock health</strong>
+            <span class="badge green">63%</span>
+          </div>
+          <div class="progress green mt-3"><span style="width:63%;"></span></div>
+          <p class="text-xs mt-2" style="color:var(--text-faint);">O− and AB− are running low — push tonight's harbour drive.</p>
+          <a class="btn btn-soft btn-sm btn-block mt-3" href="#requests"><i class="bi bi-lightning-charge-fill"></i>Review requests</a>
+        </div>
+      </aside>
+
+      <!-- =============================== MAIN =============================== -->
+      <div class="dash-main">
+
+        <!-- ------------------------------ TOPBAR ------------------------------ -->
+        <div class="dash-topbar">
+          <button class="icon-btn burger" type="button" data-dash-toggle aria-label="Open dashboard menu">
+            <i class="bi bi-list" style="font-size:1.3rem;"></i>
+          </button>
+
+          <h1 class="hidden sm:block" style="font-size:1.05rem;">Admin dashboard</h1>
+
+          <div class="input-wrap hidden md:block" style="flex:1;max-width:24rem;">
+            <i class="bi bi-search input-icon"></i>
+            <input class="input has-icon" type="search" placeholder="Search donors, camps…" aria-label="Search donors and camps" />
+          </div>
+
+          <span class="badge plain ms-auto"><i class="bi bi-calendar3"></i><span data-today></span></span>
+
+          <a href="../login.html" aria-label="Admin account" style="flex:none;">
+            <img src="../../../assets/img/avatar-admin.svg" alt="Admin avatar"
+                 width="36" height="36"
+                 style="width:36px;height:36px;border-radius:50%;border:2px solid rgba(255,46,76,0.55);" />
+          </a>
+        </div>
+
+        <!-- ------------------------------- BODY ------------------------------- -->
+        <div class="dash-body">
+
+          <!-- ============================ 1 · OVERVIEW ============================ -->
+          <section id="overview">
+            <div class="flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <span class="kicker"><span class="pulse-dot"></span>Live operations</span>
+                <h2 class="mt-4" style="font-size:clamp(1.6rem,3vw,2.2rem);">Good morning, Admin <span data-today></span></h2>
+                <p class="mt-2" style="color:var(--text-muted);font-size:0.95rem;">
+                  17 open emergency requests · 4 camps in flight · 2,148 units booked this month
+                </p>
+              </div>
+              <a class="btn btn-outline btn-sm" href="../../../public/pages/contact.html">
+                <i class="bi bi-headset"></i>Coordinator desk
+              </a>
+            </div>
+
+            <div id="admin-kpis" class="grid gap-5 sm:grid-cols-2 xl:grid-cols-4 mt-7"></div>
+          </section>
+
+          <!-- ============================= 2 · REPORTS ============================= -->
+          <section id="reports" class="mt-11">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <div>
+                <span class="kicker"><i class="bi bi-bar-chart-line-fill"></i>Analytics</span>
+                <h2 class="mt-3" style="font-size:1.35rem;">Reports &amp; cold storage</h2>
+              </div>
+              <span class="badge plain"><i class="bi bi-arrow-repeat"></i>Refreshed hourly</span>
+            </div>
+
+            <div class="grid gap-5 xl:grid-cols-[1.6fr_1fr]">
+              <div class="card">
+                <div class="flex items-center justify-between gap-3 mb-5">
+                  <h3 style="font-size:1.1rem;">Donation trends</h3>
+                  <span class="badge plain"><i class="bi bi-graph-up"></i>12 months</span>
+                </div>
+                <div id="admin-trend"></div>
+              </div>
+
+              <div class="card">
+                <div class="flex items-center justify-between gap-3 mb-5">
+                  <h3 style="font-size:1.1rem;">Cold storage by group</h3>
+                  <span class="badge blue"><i class="bi bi-snow"></i>Live</span>
+                </div>
+                <div id="admin-stock"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ============================== 3 · CAMPS ============================== -->
+          <section id="camps" class="mt-11">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <div>
+                <span class="kicker"><i class="bi bi-geo-alt-fill"></i>Field schedule</span>
+                <h2 class="mt-3" style="font-size:1.35rem;">Blood camps</h2>
+              </div>
+              <a class="btn btn-primary btn-sm" href="../../../public/pages/contact.html">
+                <i class="bi bi-calendar-plus"></i>New camp
+              </a>
+            </div>
+
+            <div id="admin-camps"></div>
+          </section>
+
+          <!-- ============================== 4 · DONORS ============================= -->
+          <section id="donors" class="mt-11">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <div>
+                <span class="kicker"><i class="bi bi-people-fill"></i>Registry</span>
+                <h2 class="mt-3" style="font-size:1.35rem;">Donors</h2>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <button class="chip active" type="button">All</button>
+                <button class="chip" type="button">Verified</button>
+                <button class="chip" type="button">Pending</button>
+              </div>
+            </div>
+
+            <div id="admin-donors"></div>
+          </section>
+
+          <!-- ============================= 5 · REQUESTS ============================ -->
+          <section id="requests" class="mt-11">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+              <div>
+                <span class="kicker"><span class="pulse-dot"></span>Emergency desk</span>
+                <h2 class="mt-3" style="font-size:1.35rem;">Open emergency requests</h2>
+              </div>
+              <span class="badge"><i class="bi bi-stopwatch-fill"></i>Median fill: 34 min</span>
+            </div>
+
+            <div id="admin-requests" class="grid gap-3"></div>
+          </section>
+
+          <!-- =========================== 6 · QUICK ACTIONS ========================= -->
+          <section id="quick-actions" class="mt-11">
+            <div class="mb-5">
+              <span class="kicker"><i class="bi bi-lightning-charge-fill"></i>Shortcuts</span>
+              <h2 class="mt-3" style="font-size:1.35rem;">Quick actions</h2>
+            </div>
+
+            <div class="grid gap-5 md:grid-cols-3">
+              <a class="card card-hover" href="../../../public/pages/contact.html">
+                <span class="icon-box"><i class="bi bi-calendar2-event-fill"></i></span>
+                <h3 class="mt-4" style="font-size:1.05rem;">Schedule a camp</h3>
+                <p class="text-sm mt-2" style="color:var(--text-muted);">Lock a venue, crew and cold-chain kit for your next mobile drive.</p>
+                <span class="post-link mt-3 inline-flex">Start booking <i class="bi bi-arrow-right"></i></span>
+              </a>
+
+              <a class="card card-hover" href="../../../public/pages/blog.html">
+                <span class="icon-box"><i class="bi bi-file-earmark-arrow-down-fill"></i></span>
+                <h3 class="mt-4" style="font-size:1.05rem;">Export report</h3>
+                <p class="text-sm mt-2" style="color:var(--text-muted);">Pull the monthly units, fill-rate and participation summary for your board.</p>
+                <span class="post-link mt-3 inline-flex">Open reports <i class="bi bi-arrow-right"></i></span>
+              </a>
+
+              <a class="card card-hover" href="../../../public/pages/contact.html">
+                <span class="icon-box"><i class="bi bi-chat-dots-fill"></i></span>
+                <h3 class="mt-4" style="font-size:1.05rem;">Message donors</h3>
+                <p class="text-sm mt-2" style="color:var(--text-muted);">Send a slot reminder or a thank-you note to everyone booked at a camp.</p>
+                <span class="post-link mt-3 inline-flex">Compose message <i class="bi bi-arrow-right"></i></span>
+              </a>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>

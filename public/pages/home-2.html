@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Blood Camp Network | VenaCare Blood Camp</title>
+  <meta name="description" content="VenaCare's 24/7 emergency blood camp network: live request board, instant donor alerts, 14-minute median response and a human coordinator on every request." />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../src/css/style.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../src/js/tailwind-config.js"></script>
+  <script defer src="../../src/js/site.js"></script>
+  <script defer src="../../src/js/data.js"></script>
+  <script defer src="../../src/js/components.js"></script>
+  <script defer src="../../src/js/navbar.js"></script>
+  <script defer src="../../src/js/footer.js"></script>
+  <script defer src="../../src/js/ui.js"></script>
+  <script defer src="../../src/js/form-validation.js"></script>
+  <script defer src="../../src/js/home.js"></script>
+</head>
+
+<body data-root="../../" data-page="home-2">
+
+  <div id="site-header"></div>
+
+  <main id="main-content">
+
+    <!-- ============================== 1 · HERO ============================== -->
+    <section class="relative overflow-hidden" id="hero">
+      <div class="grid-lines"></div>
+      <div class="glow-blob red" style="width:34rem;height:34rem;top:-10rem;inset-inline-start:-8rem;"></div>
+      <div class="glow-blob orange" style="width:26rem;height:26rem;bottom:-8rem;inset-inline-end:-6rem;opacity:0.35;"></div>
+
+      <div class="container-x relative" style="padding-block:4.5rem 5rem;">
+        <div class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] items-center">
+
+          <div class="fade-up">
+            <span class="kicker"><span class="pulse-dot"></span> Emergency desk online · 24/7</span>
+
+            <h1 class="mt-6" style="font-size:clamp(2.5rem,5.4vw,4.2rem);line-height:1.05;">
+              Blood in minutes,<br />
+              <span class="text-gradient">not hours.</span>
+            </h1>
+
+            <p class="lead mt-5" style="max-width:34rem;">
+              File an urgent request and every compatible donor within 15 km is alerted instantly.
+              A coordinator confirms the donor, arranges transport and pre-warms the receiving
+              hospital — median first response: 14 minutes.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="btn btn-primary btn-lg" href="../../public/auth/signup.html">
+                <i class="bi bi-lightning-charge-fill"></i>Respond to a request
+              </a>
+              <a class="btn btn-outline btn-lg" href="tel:+18005532666">
+                <i class="bi bi-telephone-fill"></i>Call hotline
+              </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap items-center gap-2 text-sm" style="color:var(--text-muted);">
+              <span class="badge plain"><i class="bi bi-headset"></i>24/7 coordinator desk</span>
+              <span class="badge plain"><i class="bi bi-cash-coin"></i>Free for patients</span>
+              <span class="badge plain"><i class="bi bi-hospital"></i>Hospital pre-alerted</span>
+            </div>
+          </div>
+
+          <div class="relative fade-up-2">
+            <div class="glow-blob red" style="width:24rem;height:24rem;top:-4rem;inset-inline-end:-4rem;opacity:0.45;"></div>
+
+            <img src="../../assets/img/hero-emergency.svg" alt="Emergency blood request being matched with nearby donors at the VenaCare desk"
+                 class="relative w-full rounded-[30px]"
+                 style="border:1px solid var(--border-strong);box-shadow:var(--glow-lg);" />
+
+            <div class="card glass absolute -bottom-6 hidden sm:block"
+                 style="inset-inline-start:-1.5rem;padding:1rem 1.2rem;width:15.5rem;">
+              <div class="flex items-center gap-3">
+                <span class="icon-box"><i class="bi bi-stopwatch-fill"></i></span>
+                <div>
+                  <strong class="block text-lg font-display leading-none">14 min</strong>
+                  <span class="text-xs" style="color:var(--text-muted);">median response time</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card glass absolute top-6 hidden sm:block"
+                 style="inset-inline-end:-1rem;padding:0.9rem 1.1rem;">
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <span class="pulse-dot"></span>
+                <span>Coordinator on shift</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hairline-top relative overflow-hidden" style="background:var(--bg-2);">
+        <div class="container-x py-5" data-marquee></div>
+      </div>
+    </section>
+
+    <!-- ==================== 2 · LIVE EMERGENCY REQUEST BOARD ==================== -->
+    <section class="section section-alt" id="emergency-board">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><span class="pulse-dot"></span> Live emergency board</span>
+          <h2 class="section-title">Open requests, <span class="text-gradient">right now</span></h2>
+          <p class="section-sub">
+            Every unclaimed emergency request across our partner hospitals. Tap respond and we will
+            route you to the coordinator handling that case.
+          </p>
+        </div>
+
+        <div data-home-emergency></div>
+
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm" style="color:var(--text-faint);">
+          <span class="badge plain"><i class="bi bi-arrow-repeat"></i>Requests refresh every 5 minutes</span>
+          <span class="badge plain"><i class="bi bi-shield-lock-fill"></i>Patient identities are anonymised</span>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a class="btn btn-outline" href="../../public/pages/service-details.html?id=emergency-request">
+            <i class="bi bi-arrow-right-circle"></i>How emergency matching works
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 3 · HOW EMERGENCY MATCHING WORKS =================== -->
+    <section class="section" id="how-it-works">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-diagram-3-fill"></i>Response chain</span>
+          <h2 class="section-title">Four steps from request to <span class="text-gradient">hospital shelf</span></h2>
+          <p class="section-sub">Software wakes the donors, a human drives the case home. Nothing is left on read.</p>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="step-card">
+            <span class="step-num">01</span>
+            <h3 class="text-lg">File the request</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">Group, units, hospital and deadline — sixty seconds from a phone or a hospital console.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">02</span>
+            <h3 class="text-lg">Instant donor alert</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">Compatible donors inside a 15 km radius get a push alert the second the request lands.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">03</span>
+            <h3 class="text-lg">Coordinator confirms</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">A named coordinator verifies the donor, locks the slot and organises transport if required.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">04</span>
+            <h3 class="text-lg">Hospital handshake</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">The receiving blood bank is pre-alerted so the unit is accepted on arrival — no repeat paperwork.</p>
+          </div>
+        </div>
+
+        <div class="card mt-12 flex flex-wrap items-center justify-between gap-4" style="border-color:rgba(255,46,76,0.4);box-shadow:var(--glow-sm);">
+          <div class="flex items-center gap-4">
+            <span class="icon-box lg"><i class="bi bi-stopwatch-fill"></i></span>
+            <div>
+              <strong class="block font-display">Escalation clock started at 30 minutes</strong>
+              <span class="text-sm" style="color:var(--text-muted);">Unclaimed requests automatically widen their radius, then escalate to our partner registries.</span>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="../../public/auth/signup.html"><i class="bi bi-person-plus-fill"></i>Join the alert list</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4 · WHY THIS NETWORK IS UNIQUE ==================== -->
+    <section class="section section-alt" id="why-us">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-award-fill"></i>Why this network</span>
+          <h2 class="section-title">Built for the cases that <span class="text-gradient">cannot wait</span></h2>
+          <p class="section-sub">Six commitments that make an emergency desk different from a group chat post.</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="card card-hover">
+            <span class="icon-box"><i class="bi bi-stopwatch-fill"></i></span>
+            <h3 class="text-lg mt-4">14-minute median response</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">First donor reply arrives in fourteen minutes at the median — inside metro districts, a confirmed donor is on the line within thirty.</p>
+          </div>
+          <div class="card card-hover">
+            <span class="icon-box"><i class="bi bi-cash-coin"></i></span>
+            <h3 class="text-lg mt-4">Free for patients, forever</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">Individuals and families never pay to be matched. Institutional plans fund the coordinator desk so the patient invoice stays at zero.</p>
+          </div>
+          <div class="card card-hover">
+            <span class="icon-box"><i class="bi bi-people-fill"></i></span>
+            <h3 class="text-lg mt-4">48,392 verified donors</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">Government ID, blood group certificate and screening history are confirmed before anyone appears on the board.</p>
+          </div>
+          <div class="card card-hover">
+            <span class="icon-box"><i class="bi bi-shield-lock-fill"></i></span>
+            <h3 class="text-lg mt-4">Mediated privacy</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">Phone numbers stay hidden in the VenaCare inbox. Contacts are exchanged only when requester and donor both tap share.</p>
+          </div>
+          <div class="card card-hover">
+            <span class="icon-box"><i class="bi bi-thermometer-snow"></i></span>
+            <h3 class="text-lg mt-4">Cold chain 2–6 °C guaranteed</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">Validated cold boxes, temperature loggers and a barcoded chain of custody from donor arm to hospital shelf.</p>
+          </div>
+          <div class="card card-hover">
+            <span class="icon-box"><i class="bi bi-headset"></i></span>
+            <h3 class="text-lg mt-4">A human on every request</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">No ticket queues. A named coordinator stays with the case until the hospital confirms the unit — day or night.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5 · LIVE DONOR AVAILABILITY ==================== -->
+    <section class="section" id="availability">
+      <div class="container-x">
+        <div class="section-head">
+          <span class="kicker"><span class="pulse-dot"></span> Live donor availability</span>
+          <h2 class="section-title">Stock by group, <span class="text-gradient">updated hourly</span></h2>
+          <p class="section-sub">Verified donors ready to respond in your region right now — and the network behind them.</p>
+        </div>
+
+        <div class="grid gap-10 lg:grid-cols-2 items-start">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <h3 class="text-lg">Donors available per blood group</h3>
+              <span class="badge plain"><i class="bi bi-arrow-repeat"></i>Updated hourly</span>
+            </div>
+            <div data-group-board class="grid gap-3 sm:grid-cols-2"></div>
+            <a class="btn btn-soft mt-5 w-full" href="../../public/pages/service-details.html?id=blood-matching">
+              <i class="bi bi-search"></i>Search compatible donors
+            </a>
+          </div>
+
+          <div class="grid gap-5">
+            <div class="card card-hover stat-card">
+              <div class="stat-num"><span data-count="48392">0</span></div>
+              <div class="stat-label">Verified donors on standby across 64 districts</div>
+            </div>
+            <div class="card card-hover stat-card">
+              <div class="stat-num"><span data-count="92">0</span><span class="unit">%</span></div>
+              <div class="stat-label">Emergency requests filled within 60 minutes</div>
+            </div>
+            <div class="card" style="border-color:rgba(255,46,76,0.4);box-shadow:var(--glow-sm);">
+              <div class="flex items-start gap-4">
+                <span class="icon-box lg"><i class="bi bi-lightning-charge-fill"></i></span>
+                <div>
+                  <strong class="block font-display">Rare group? We widen the net.</strong>
+                  <p class="text-sm mt-1" style="color:var(--text-muted);">Rh-null, AB-negative and other rare requests trigger a dedicated search across our national partner registry — at no cost to the patient.</p>
+                  <a class="post-link mt-3 inline-flex" href="../../public/pages/service-details.html?id=emergency-request">See the emergency service <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= 6 · IMPACT STORIES ========================= -->
+    <section class="section section-alt" id="testimonials">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-chat-quote-fill"></i>Impact stories</span>
+          <h2 class="section-title">The requests that <span class="text-gradient">got answered</span></h2>
+          <p class="section-sub">Donors, families and organisers on what happened after the alert lit up their phone.</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-home-testimonials></div>
+      </div>
+    </section>
+
+    <!-- =============================== 7 · CTA =============================== -->
+    <section class="section-sm" id="cta">
+      <div class="container-x">
+        <div class="relative overflow-hidden rounded-[30px] text-center"
+             style="padding:3.5rem 1.5rem;background:linear-gradient(135deg,rgba(255,46,76,0.22),rgba(255,138,61,0.12)),var(--bg-2);border:1px solid rgba(255,46,76,0.4);box-shadow:var(--glow-lg);">
+          <div class="glow-blob red" style="width:26rem;height:26rem;top:-10rem;inset-inline-start:50%;transform:translateX(-50%);opacity:0.5;"></div>
+
+          <div class="relative">
+            <span class="kicker"><span class="pulse-dot"></span>Emergency desk open now</span>
+            <h2 class="section-title mt-5" style="margin-inline:auto;">Somewhere, a request<br class="hidden sm:block" /> <span class="text-gradient">is waiting for you.</span></h2>
+            <p class="section-sub" style="margin-inline:auto;">Signing up takes two minutes. The alert that saves a life could arrive in fourteen.</p>
+
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+              <a class="btn btn-primary btn-lg" href="../../public/auth/signup.html"><i class="bi bi-lightning-charge-fill"></i>Respond to a request</a>
+              <a class="btn btn-light btn-lg" href="../../public/pages/contact.html"><i class="bi bi-headset"></i>Talk to the desk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>

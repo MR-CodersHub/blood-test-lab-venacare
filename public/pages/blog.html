@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | VenaCare Blood Camp</title>
+  <meta name="description" content="Donation knowledge from VenaCare physicians and camp teams: guides, myths, nutrition and organiser tips for safer blood donation." />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../src/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../src/js/tailwind-config.js"></script>
+  <script defer src="../../src/js/site.js"></script>
+  <script defer src="../../src/js/data.js"></script>
+  <script defer src="../../src/js/components.js"></script>
+  <script defer src="../../src/js/navbar.js"></script>
+  <script defer src="../../src/js/footer.js"></script>
+  <script defer src="../../src/js/ui.js"></script>
+  <script defer src="../../src/js/form-validation.js"></script>
+  <script defer src="../../src/js/blog.js"></script>
+</head>
+
+<body data-root="../../" data-page="blog">
+
+  <div id="site-header"></div>
+
+  <main id="main-content">
+
+    <!-- 1. PAGE HERO -->
+    <section class="page-hero">
+      <div class="container-x">
+        <div class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../../index.html"><i class="bi bi-house-door-fill"></i>Home</a>
+          <i class="bi bi-chevron-right"></i>
+          <span>Blog</span>
+        </div>
+        <span class="kicker"><i class="bi bi-journal-bookmark-fill"></i>Knowledge Hub</span>
+        <h1 class="page-hero-title mt-4">Donation knowledge, plainly put</h1>
+        <p class="page-hero-sub">Guides, facts, nutrition and organiser tips reviewed by VenaCare physicians to help every donor feel confident.</p>
+      </div>
+    </section>
+
+    <!-- 2. TOOLBAR -->
+    <section class="section-sm">
+      <div class="container-x">
+        <div class="card flex flex-wrap items-center justify-between gap-5">
+          <div class="flex flex-wrap items-center gap-4 flex-1 min-w-[16rem]">
+            <div class="input-wrap flex-1 min-w-[14rem]">
+              <i class="bi bi-search input-icon"></i>
+              <input class="input has-icon" id="blog-search" type="search" placeholder="Search articles, tags, authors…" autocomplete="off" />
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <button class="chip active" data-blog-filter="all" type="button">All</button>
+              <button class="chip" data-blog-filter="Donation Tips" type="button">Donation Tips</button>
+              <button class="chip" data-blog-filter="Myths & Facts" type="button">Myths & Facts</button>
+              <button class="chip" data-blog-filter="Nutrition" type="button">Nutrition</button>
+              <button class="chip" data-blog-filter="For Organizers" type="button">For Organizers</button>
+              <button class="chip" data-blog-filter="Basics" type="button">Basics</button>
+              <button class="chip" data-blog-filter="Aftercare" type="button">Aftercare</button>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span id="blog-count" class="text-sm" style="color:var(--text-muted);">8 articles</span>
+            <button id="blog-clear" class="btn btn-ghost btn-sm" type="button">Clear filters</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MAIN GRID + SIDEBAR -->
+    <section class="section-sm pt-0">
+      <div class="container-x">
+        <div class="grid gap-8 lg:grid-cols-[1fr_320px]">
+          <div>
+            <div id="blog-grid" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3"></div>
+            <div class="mt-8 text-center">
+              <button id="blog-load-more" class="btn btn-outline" type="button"></button>
+            </div>
+          </div>
+          <aside class="flex flex-col gap-6 lg:sticky lg:top-24 self-start">
+            <div class="card">
+              <span class="kicker"><i class="bi bi-grid"></i>Categories</span>
+              <div class="flex flex-col gap-2 mt-4" data-blog-categories></div>
+            </div>
+            <div class="card">
+              <span class="kicker"><i class="bi bi-tags-fill"></i>Popular tags</span>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <a href="../../public/pages/blog.html?q=donation" class="chip">#donation</a>
+                <a href="../../public/pages/blog.html?q=iron" class="chip">#iron</a>
+                <a href="../../public/pages/blog.html?q=organisers" class="chip">#organisers</a>
+                <a href="../../public/pages/blog.html?q=blood-group" class="chip">#blood-group</a>
+              </div>
+            </div>
+            <div class="card" style="border-color:rgba(255,46,76,0.4);box-shadow:var(--glow-sm);">
+              <span class="kicker"><i class="bi bi-lightning-charge-fill"></i>Need a camp?</span>
+              <h3 class="mt-3" style="font-size:1.1rem;">Ready to bring a drive to your venue</h3>
+              <p class="mt-2 text-sm" style="color:var(--text-muted);">Permits, crew, promotion and cold-chain handled end to end.</p>
+              <a href="../../public/pages/contact.html" class="btn btn-primary mt-4"><i class="bi bi-calendar-check"></i>Book a camp</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WRITE WITH US -->
+    <section class="section-sm section-alt">
+      <div class="container-x">
+        <div class="card flex flex-wrap items-center justify-between gap-6">
+          <div class="flex items-start gap-4">
+            <span class="icon-box lg"><i class="bi bi-pencil-square"></i></span>
+            <div>
+              <h3 style="font-size:1.2rem;">Write with us</h3>
+              <p class="mt-1 text-sm" style="color:var(--text-muted);max-width:36rem;">We welcome practical, evidence-based submissions from medical students, nurses, organisers and donors. Reviewed by our physician panel before publishing.</p>
+            </div>
+          </div>
+          <a href="../../public/pages/contact.html" class="btn btn-outline"><i class="bi bi-envelope-open"></i>Share your idea</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. NEWSLETTER CTA -->
+    <section class="section-sm">
+      <div class="container-x">
+        <div class="relative overflow-hidden rounded-[30px] text-center" style="padding:3rem 1.5rem;background:linear-gradient(135deg,rgba(255,46,76,0.2),rgba(255,138,61,0.1)),var(--bg-2);border:1px solid rgba(255,46,76,0.4);box-shadow:var(--glow-lg);">
+          <span class="kicker"><i class="bi bi-envelope-fill"></i>Stay informed</span>
+          <h2 class="section-title mt-4" style="margin-inline:auto;">Get the next donation guide <span class="text-gradient">straight to your inbox</span></h2>
+          <p class="section-sub" style="margin-inline:auto;">Monthly updates on camps, eligibility changes and tips — no spam, unsubscribe anytime.</p>
+          <form class="mt-7" data-form="newsletter" novalidate style="max-width:28rem;margin-inline:auto;">
+            <div class="field">
+              <label class="label" for="newsletter-email">Email address</label>
+              <input class="input" id="newsletter-email" name="email" type="email" placeholder="you@example.com" required />
+              <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please enter a valid email address.</span>
+            </div>
+            <button class="btn btn-primary btn-lg mt-4 w-full sm:w-auto" type="submit"><i class="bi bi-send-fill"></i>Subscribe</button>
+            <div class="form-success" data-success>
+              <i class="bi bi-check-circle-fill"></i>Thanks for subscribing! Check your inbox for a welcome email.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. READING GUARANTEES -->
+    <section class="section-sm pt-0">
+      <div class="container-x">
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="card text-center">
+            <span class="icon-box lg mx-auto"><i class="bi bi-hospital"></i></span>
+            <h4 class="mt-3">Physician reviewed</h4>
+            <p class="mt-1 text-sm" style="color:var(--text-muted);">Every article passes our medical director before publication.</p>
+          </div>
+          <div class="card text-center">
+            <span class="icon-box lg mx-auto"><i class="bi bi-journal-medical"></i></span>
+            <h4 class="mt-3">Source cited</h4>
+            <p class="mt-1 text-sm" style="color:var(--text-muted);">Guidance references current transfusion medicine best practices.</p>
+          </div>
+          <div class="card text-center">
+            <span class="icon-box lg mx-auto"><i class="bi bi-shield-check"></i></span>
+            <h4 class="mt-3">No sponsored posts</h4>
+            <p class="mt-1 text-sm" style="color:var(--text-muted);">Our editorial integrity is never traded for sponsorship.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>

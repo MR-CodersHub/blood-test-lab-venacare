@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VenaCare | At-Home Blood Sample Collection &amp; Clinical Lab Services</title>
+  <meta name="description" content="Convenient at-home blood sample collection by certified phlebotomists. Routine and specialized blood tests, transparent pricing, and secure patient portal results in 24–48 hours." />
+  <meta name="keywords" content="at-home blood test, home blood sample collection, mobile phlebotomist, routine blood test, specialized blood test, CBC test, lipid panel, thyroid test, patient portal" />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="src/css/style.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="src/js/tailwind-config.js"></script>
+  <script defer src="src/js/site.js"></script>
+  <script defer src="src/js/data.js"></script>
+  <script defer src="src/js/components.js"></script>
+  <script defer src="src/js/navbar.js"></script>
+  <script defer src="src/js/footer.js"></script>
+  <script defer src="src/js/ui.js"></script>
+  <script defer src="src/js/form-validation.js"></script>
+  <script defer src="src/js/home.js"></script>
+</head>
+
+<body data-root="" data-page="home">
+
+  <div id="site-header"></div>
+
+  <main id="main-content">
+
+    <!-- ============================== 1 · HERO ============================== -->
+    <section class="relative overflow-hidden" id="hero">
+      <div class="grid-lines"></div>
+      <div class="glow-blob red" style="width:34rem;height:34rem;top:-10rem;inset-inline-start:-8rem;"></div>
+      <div class="glow-blob orange" style="width:26rem;height:26rem;bottom:-8rem;inset-inline-end:-6rem;opacity:0.35;"></div>
+
+      <div class="container-x relative" style="padding-block:4.5rem 4rem;">
+        <div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
+
+          <div class="fade-up">
+            <span class="kicker"><span class="pulse-dot"></span> Certified At-Home Phlebotomy &amp; Diagnostic Services</span>
+
+            <h1 class="mt-6" style="font-size:clamp(2.5rem,5.2vw,4.1rem);line-height:1.06;">
+              At-Home Sample Collection.<br />
+              <span class="text-gradient">Clinical Accuracy.</span> On Your Schedule.
+            </h1>
+
+            <p class="lead mt-5" style="max-width:35rem;">
+              Skip crowded waiting rooms and morning traffic. Our certified, background-checked phlebotomists visit your home or office with sterile single-use vacuum kits. Samples are cold-chain transported to accredited partner labs, with doctor-reviewed reports delivered securely to your patient portal in 24–48 hours.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="btn btn-primary btn-lg" href="#book-collection">
+                <i class="bi bi-calendar2-check"></i>Book At-Home Collection
+              </a>
+              <a class="btn btn-outline btn-lg" href="public/pages/services.html">
+                <i class="bi bi-clipboard2-pulse"></i>View Routine &amp; Specialized Tests
+              </a>
+              <a class="btn btn-soft btn-lg" href="public/auth/login.html">
+                <i class="bi bi-file-earmark-lock2-fill"></i>Patient Portal Login
+              </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap items-center gap-2 text-sm" style="color:var(--text-muted);">
+              <span class="badge plain"><i class="bi bi-shield-check"></i>100% Certified Phlebotomists (CPT-1)</span>
+              <span class="badge plain"><i class="bi bi-thermometer-snow"></i>Cold-Chain Specimen Storage</span>
+              <span class="badge plain"><i class="bi bi-award"></i>CLIA &amp; CAP Accredited Partners</span>
+              <span class="badge plain"><i class="bi bi-clock-history"></i>24–48 Hr Portal Reports</span>
+            </div>
+          </div>
+
+          <div class="relative fade-up-2">
+            <div class="glow-blob red" style="width:24rem;height:24rem;top:-4rem;inset-inline-end:-4rem;opacity:0.45;"></div>
+
+            <div class="relative rounded-[30px] p-8 glass" style="border:1px solid var(--border-strong);box-shadow:var(--glow-lg);">
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                  <span class="icon-box lg"><i class="bi bi-house-heart-fill"></i></span>
+                  <div>
+                    <h2 class="text-base font-semibold leading-none">Home Phlebotomy Care</h2>
+                    <span class="text-xs" style="color:var(--text-muted);">Gentle · Sterile · On-Time</span>
+                  </div>
+                </div>
+                <span class="badge green"><i class="bi bi-check-circle-fill"></i>Available Today</span>
+              </div>
+
+              <!-- Mini interactive feature showcase -->
+              <div class="grid gap-3 mb-6 text-sm">
+                <div class="p-3 rounded-xl flex items-center justify-between" style="background:var(--surface);">
+                  <div class="flex items-center gap-3">
+                    <i class="bi bi-calendar-check text-lg" style="color:var(--primary);"></i>
+                    <span>Fasting Morning Window</span>
+                  </div>
+                  <strong class="font-semibold text-xs" style="color:var(--primary);">6:30 AM – 11:30 AM</strong>
+                </div>
+
+                <div class="p-3 rounded-xl flex items-center justify-between" style="background:var(--surface);">
+                  <div class="flex items-center gap-3">
+                    <i class="bi bi-droplet-half text-lg" style="color:var(--info);"></i>
+                    <span>Micro-Needle Draw</span>
+                  </div>
+                  <span class="text-xs font-semibold text-emerald-400">Painless &amp; Gentle</span>
+                </div>
+
+                <div class="p-3 rounded-xl flex items-center justify-between" style="background:var(--surface);">
+                  <div class="flex items-center gap-3">
+                    <i class="bi bi-file-earmark-medical text-lg" style="color:var(--warning);"></i>
+                    <span>Encrypted Portal Delivery</span>
+                  </div>
+                  <span class="text-xs font-semibold" style="color:var(--text);">24–48 Hours</span>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-dashed border-white/10 flex items-center justify-between text-xs" style="color:var(--text-muted);">
+                <span>Free home draw on packages &gt; $50</span>
+                <a class="post-link inline-flex items-center gap-1 font-semibold" href="public/pages/pricing.html">
+                  See pricing <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Floating live stats card 1 -->
+            <div class="card glass absolute -bottom-5 hidden sm:block"
+                 style="inset-inline-start:-1.5rem;padding:0.9rem 1.15rem;width:16rem;border-color:rgba(255,46,76,0.35);">
+              <div class="flex items-center gap-3">
+                <span class="icon-box" style="background:rgba(255,46,76,0.15);color:var(--primary);"><i class="bi bi-house-door-fill"></i></span>
+                <div>
+                  <strong class="block text-lg font-display leading-none">154,290+</strong>
+                  <span class="text-xs" style="color:var(--text-muted);">home collections completed</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating live stats card 2 -->
+            <div class="card glass absolute top-4 hidden sm:block"
+                 style="inset-inline-end:-1.5rem;padding:0.85rem 1.1rem;border-color:rgba(18,185,129,0.35);">
+              <div class="flex items-center gap-2 text-sm font-semibold">
+                <span class="pulse-dot" style="background:var(--success);box-shadow:0 0 10px var(--success);"></span>
+                <span>21.4 hr median report time</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Clinical Marquee -->
+      <div class="hairline-top relative overflow-hidden" style="background:var(--bg-2);">
+        <div class="container-x py-4" data-marquee></div>
+      </div>
+    </section>
+    <!-- ============================ 3 · LIVE STATS ============================ -->
+    <!-- <section class="section" id="stats" style="padding-top:1rem;">
+      <div class="container-x">
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="card card-hover stat-card">
+            <div class="stat-num"><span data-count="154290">0</span><span class="unit">+</span></div>
+            <div class="stat-label">At-home blood collections completed</div>
+          </div>
+          <div class="card card-hover stat-card">
+            <div class="stat-num"><span data-count="24">0</span><span class="unit">h</span></div>
+            <div class="stat-label">Average patient portal turnaround</div>
+          </div>
+          <div class="card card-hover stat-card">
+            <div class="stat-num"><span data-count="100">0</span><span class="unit">%</span></div>
+            <div class="stat-label">Licensed CPT-1 phlebotomists</div>
+          </div>
+          <div class="card card-hover stat-card">
+            <div class="stat-num"><span data-count="99.8">0</span><span class="unit">%</span></div>
+            <div class="stat-label">Specimen cold-chain integrity rate</div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ===================== 4 · CONVENIENCE & CLINICAL BENEFITS ===================== -->
+    <section class="section section-alt" id="why-home">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-heart-pulse-fill"></i>Patient Convenience</span>
+          <h2 class="section-title">Clinical care, <span class="text-gradient">at your convenience</span></h2>
+          <p class="section-sub">Why travel to a noisy clinic lobby when hospital-grade phlebotomy can happen in your living room?</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-shield-x"></i></span>
+            <h3 class="text-lg font-bold">Zero Waiting Rooms</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">
+              Avoid traffic, crowded lobbies, and sick clinic waiting rooms. Complete your blood test in quiet privacy at home.
+            </p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-cup-hot-fill"></i></span>
+            <h3 class="text-lg font-bold">Fasting Made Easy</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">
+              Early morning slots (from 6:30 AM) let you sleep through your fast, have your blood drawn in 10 minutes, and eat immediately.
+            </p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-feather"></i></span>
+            <h3 class="text-lg font-bold">Gentle Micro-Needles</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">
+              Licensed phlebotomists trained in pediatric and senior vein access use ultra-fine butterfly needles for minimal discomfort.
+            </p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-file-earmark-medical-fill"></i></span>
+            <h3 class="text-lg font-bold">Secure Patient Portal</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">
+              Download official, doctor-reviewed PDF reports within 24–48 hours. Chart biomarker trends across your entire health history.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 5 · SERVICES SHOWCASE ============================= -->
+    <section class="section" id="services">
+      <div class="container-x">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-8">
+          <div class="section-head" style="margin-bottom:0;">
+            <span class="kicker"><i class="bi bi-clipboard2-pulse-fill"></i>Diagnostic Menu</span>
+            <h2 class="section-title">Routine &amp; specialized <span class="text-gradient">blood tests</span></h2>
+            <p class="section-sub">Choose individual clinical assays or comprehensive wellness panels for at-home collection.</p>
+          </div>
+
+          <!-- Category filter buttons -->
+          <div class="flex flex-wrap gap-2">
+            <button class="chip active" type="button" data-home-tab="all"><i class="bi bi-grid-fill"></i>All Tests</button>
+            <button class="chip" type="button" data-home-tab="Routine"><i class="bi bi-droplet-half"></i>Routine Tests</button>
+            <button class="chip" type="button" data-home-tab="Specialized"><i class="bi bi-activity"></i>Specialized</button>
+            <button class="chip" type="button" data-home-tab="Packages"><i class="bi bi-gem"></i>Packages</button>
+          </div>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-home-services data-limit="6"></div>
+
+        <div class="mt-12 text-center flex flex-wrap justify-center gap-3">
+          <a class="btn btn-outline btn-lg" href="public/pages/services.html">
+            <i class="bi bi-arrow-right-circle"></i>Explore All 20+ Blood Tests
+          </a>
+          <a class="btn btn-primary btn-lg" href="public/pages/pricing.html">
+            <i class="bi bi-tags-fill"></i>View Transparent Price Directory
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== 6 · HOW IT WORKS =========================== -->
+    <section class="section section-alt" id="how-it-works">
+      <div class="container-x">
+        <div class="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] items-start">
+          <div>
+            <span class="kicker"><i class="bi bi-signpost-split-fill"></i>Clinical Workflow</span>
+            <h2 class="section-title mt-4">Four steps from<br /><span class="text-gradient">booking to results</span></h2>
+            <p class="section-sub">Hospital-grade diagnostic precision without stepping foot outside your door.</p>
+
+            <div class="card mt-8" style="border-color:rgba(255,46,76,0.4);box-shadow:var(--glow-sm);">
+              <div class="flex items-start gap-4">
+                <span class="icon-box lg"><i class="bi bi-headset"></i></span>
+                <div>
+                  <strong class="block font-display">Need fasting guidance or doctor advice?</strong>
+                  <p class="text-sm mt-1" style="color:var(--text-muted);">Our lab coordinator desk answers your questions seven days a week from 6:30 AM.</p>
+                  <a class="post-link mt-3 inline-flex" href="tel:+18005535227">Call +1 (800) 553-LABS <i class="bi bi-telephone-outbound"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid gap-8 sm:grid-cols-2">
+            <div class="step-card">
+              <span class="step-num">01</span>
+              <h3 class="text-lg font-bold">Order Tests Online</h3>
+              <p class="text-sm mt-2" style="color:var(--text-muted);">Pick your routine or specialized blood tests and select your convenient morning fasting window.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-num">02</span>
+              <h3 class="text-lg font-bold">Phlebotomist Arrives</h3>
+              <p class="text-sm mt-2" style="color:var(--text-muted);">A licensed, background-checked professional arrives with a sealed, sterile single-use vacuum kit.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-num">03</span>
+              <h3 class="text-lg font-bold">Cold-Chain Transport</h3>
+              <p class="text-sm mt-2" style="color:var(--text-muted);">Barcoded samples are sealed in temperature-monitored carriers and dispatched to accredited CAP/CLIA labs.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-num">04</span>
+              <h3 class="text-lg font-bold">Portal Report Delivery</h3>
+              <p class="text-sm mt-2" style="color:var(--text-muted);">Doctor-reviewed digital reports with reference range flags are ready to download in 24–48 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 7 · PATIENT PORTAL SPOTLIGHT ===================== -->
+    <section class="section" id="portal-spotlight">
+      <div class="container-x">
+        <div class="card glass p-8 sm:p-12 relative overflow-hidden" style="border-color:rgba(56,189,248,0.3);box-shadow:var(--glow-md);">
+          <div class="glow-blob blue" style="width:24rem;height:24rem;top:-8rem;inset-inline-end:-6rem;opacity:0.25;"></div>
+
+          <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center relative">
+            <div>
+              <span class="kicker"><i class="bi bi-file-earmark-lock2-fill"></i>Patient Diagnostic Portal</span>
+              <h2 class="section-title mt-4">Your lab results, <span class="text-gradient">always in reach</span></h2>
+              <p class="section-sub">Sign in to your private patient portal to access doctor-reviewed lab reports, monitor longitudinal biomarker trends, and manage upcoming at-home collections.</p>
+
+              <div class="grid gap-3 sm:grid-cols-2 mt-6 text-sm" style="color:var(--text-muted);">
+                <div class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-emerald-400"></i>Download official certified PDF reports</div>
+                <div class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-emerald-400"></i>Track assigned phlebotomist arrival</div>
+                <div class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-emerald-400"></i>Longitudinal biomarker graphs</div>
+                <div class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-emerald-400"></i>HIPAA-compliant bank-grade security</div>
+              </div>
+
+              <div class="mt-8 flex flex-wrap gap-3">
+                <a class="btn btn-primary btn-lg" href="public/auth/login.html">
+                  <i class="bi bi-box-arrow-in-right"></i>Log In to Patient Portal
+                </a>
+                <a class="btn btn-outline btn-lg" href="public/auth/signup.html">
+                  <i class="bi bi-person-plus-fill"></i>Create Patient Account
+                </a>
+              </div>
+            </div>
+
+            <!-- Visual representation of the portal -->
+            <div class="card card-soft p-5 border border-white/10" style="background:var(--bg-3);">
+              <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="assets/img/avatar-user.svg" alt="Jordan Diaz" style="width:36px;height:36px;border-radius:50%;" />
+                  <div>
+                    <strong class="block text-sm">Jordan Diaz</strong>
+                    <span class="text-xs" style="color:var(--text-faint);">Patient ID: #VC-849201</span>
+                  </div>
+                </div>
+                <span class="badge green text-xs"><i class="bi bi-shield-check"></i>Verified</span>
+              </div>
+
+              <div class="grid gap-3 text-xs mb-4">
+                <div class="p-3 rounded-lg flex items-center justify-between" style="background:var(--surface);">
+                  <div>
+                    <strong class="block text-sm" style="color:var(--text);">Comprehensive Metabolic Panel</strong>
+                    <span style="color:var(--text-muted);">Collected Oct 2, 2026 · Dr. Aisha Kapoor</span>
+                  </div>
+                  <span class="badge blue">Normal</span>
+                </div>
+
+                <div class="p-3 rounded-lg flex items-center justify-between" style="background:var(--surface);">
+                  <div>
+                    <strong class="block text-sm" style="color:var(--text);">Lipid &amp; Cholesterol Profile</strong>
+                    <span style="color:var(--text-muted);">Total Chol: 185 mg/dL · HDL: 54 mg/dL</span>
+                  </div>
+                  <span class="badge blue">Optimal</span>
+                </div>
+
+                <div class="p-3 rounded-lg flex items-center justify-between" style="background:var(--surface);">
+                  <div>
+                    <strong class="block text-sm" style="color:var(--text);">Upcoming Home Draw</strong>
+                    <span style="color:var(--text-muted);">Tomorrow · 8:30 AM (Sarah Jenkins, CPT-1)</span>
+                  </div>
+                  <span class="badge amber">Dispatched</span>
+                </div>
+              </div>
+
+              <a class="btn btn-soft btn-sm btn-block" href="public/auth/login.html">
+                <i class="bi bi-file-earmark-arrow-down-fill"></i>Access Patient Dashboard
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== 8 · TESTIMONIALS =========================== -->
+    <section class="section section-alt" id="testimonials">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-chat-quote-fill"></i>Patient Voices</span>
+          <h2 class="section-title">Trusted by <span class="text-gradient">thousands of patients</span></h2>
+          <p class="section-sub">Read verified reviews from patients who experience the convenience of our at-home phlebotomy service.</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-home-testimonials></div>
+      </div>
+    </section>
+
+    <!-- ============================== 9 · BLOG ============================== -->
+    <section class="section" id="blog">
+      <div class="container-x">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <div class="section-head" style="margin-bottom:0;">
+            <span class="kicker"><i class="bi bi-newspaper"></i>Patient Education</span>
+            <h2 class="section-title">Clinical insights, <span class="text-gradient">plainly explained</span></h2>
+            <p class="section-sub">Physician-reviewed guides on fasting protocols, biomarker reference ranges, and lab preparation.</p>
+          </div>
+          <a class="btn btn-outline" href="public/pages/blog.html"><i class="bi bi-arrow-right"></i>All articles</a>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-home-posts data-limit="3"></div>
+      </div>
+    </section>
+
+    <!-- =============================== 10 · CTA =============================== -->
+    <section class="section-sm" id="cta">
+      <div class="container-x">
+        <div class="relative overflow-hidden rounded-[30px] text-center"
+             style="padding:3.5rem 1.5rem;background:linear-gradient(135deg,rgba(255,46,76,0.22),rgba(255,138,61,0.12)),var(--bg-2);border:1px solid rgba(255,46,76,0.4);box-shadow:var(--glow-lg);">
+          <div class="glow-blob red" style="width:26rem;height:26rem;top:-10rem;inset-inline-start:50%;transform:translateX(-50%);opacity:0.5;"></div>
+
+          <div class="relative">
+            <span class="kicker"><span class="pulse-dot"></span>Accredited Diagnostic Precision</span>
+            <h2 class="section-title mt-5" style="margin-inline:auto;">Professional lab care<br class="hidden sm:block" /> <span class="text-gradient">at your doorstep.</span></h2>
+            <p class="section-sub" style="margin-inline:auto;">Over 150,000 patients have skipped the clinic waiting room. Book your at-home collection in three minutes or sign in to your patient portal.</p>
+
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+              <a class="btn btn-primary btn-lg" href="#book-collection"><i class="bi bi-calendar2-check"></i>Book At-Home Collection</a>
+              <a class="btn btn-light btn-lg" href="public/pages/pricing.html"><i class="bi bi-tags-fill"></i>See Test Pricing</a>
+              <a class="btn btn-soft btn-lg" href="public/auth/login.html"><i class="bi bi-file-earmark-lock2-fill"></i>Patient Portal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>

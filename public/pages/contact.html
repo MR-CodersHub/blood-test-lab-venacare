@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | VenaCare Blood Camp</title>
+  <meta name="description" content="Contact VenaCare Blood Camp by email, phone or message form — help@venacare.org, +1 (800) 553-BLOOD, 221 Meridian Ave, helpline 6 AM–10 PM." />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../src/css/style.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../src/js/tailwind-config.js"></script>
+  <script defer src="../../src/js/site.js"></script>
+  <script defer src="../../src/js/data.js"></script>
+  <script defer src="../../src/js/components.js"></script>
+  <script defer src="../../src/js/navbar.js"></script>
+  <script defer src="../../src/js/footer.js"></script>
+  <script defer src="../../src/js/ui.js"></script>
+  <script defer src="../../src/js/form-validation.js"></script>
+</head>
+
+<body data-root="../../" data-page="contact">
+
+  <div id="site-header"></div>
+
+  <main id="main-content">
+
+    <!-- ========================= 1 · PAGE HERO ========================= -->
+    <section class="page-hero">
+      <div class="container-x">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../../index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+          <i class="bi bi-chevron-right"></i>
+          <span class="current">Contact</span>
+        </nav>
+        <span class="kicker"><i class="bi bi-headset"></i>We answer in under an hour</span>
+        <h1 class="page-hero-title mt-4">Contact <span class="text-gradient">&amp; support</span></h1>
+        <p class="page-hero-sub">Camp bookings, emergency requests, billing questions or partnership ideas — a human coordinator reads every message, seven days a week.</p>
+        <div class="mt-7 flex flex-wrap justify-center gap-2">
+          <span class="badge plain"><i class="bi bi-clock-history"></i>1 hr reply target</span>
+          <span class="badge plain"><i class="bi bi-lightning-charge-fill"></i>Emergency desk 24/7</span>
+          <span class="badge plain"><i class="bi bi-envelope-fill"></i>help@venacare.org</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2 · CONTACT INFO CARDS ===================== -->
+    <section class="section" id="contact-cards">
+      <div class="container-x">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+          <div class="card card-hover">
+            <span class="icon-box"><i class="bi bi-envelope-fill"></i></span>
+            <h3 class="mt-4" style="font-size:1.05rem;">Email</h3>
+            <a class="link-primary text-sm mt-2 inline-block" href="mailto:help@venacare.org">help@venacare.org</a>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">For bookings, partnerships and everything that is not urgent.</p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box"><i class="bi bi-telephone-fill"></i></span>
+            <h3 class="mt-4" style="font-size:1.05rem;">Phone</h3>
+            <a class="link-primary text-sm mt-2 inline-block" href="tel:+18005532666">+1 (800) 553-BLOOD</a>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">Camp Helpline Mon–Sun, 6:00 AM – 10:00 PM.</p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box"><i class="bi bi-geo-alt-fill"></i></span>
+            <h3 class="mt-4" style="font-size:1.05rem;">Headquarters</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">221 Meridian Ave, Central District — coordination desk, cold-store and training room.</p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box"><i class="bi bi-clock-fill"></i></span>
+            <h3 class="mt-4" style="font-size:1.05rem;">Hours</h3>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">Camp Helpline Mon–Sun, 6:00 AM – 10:00 PM. Emergency desk staffed around the clock.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= 3 · CONTACT FORM ========================= -->
+    <section class="section section-alt" id="contact-form">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-send-fill"></i>Send a message</span>
+          <h2 class="section-title">Tell us what <span class="text-gradient">you need</span></h2>
+          <p class="section-sub">Fill in the form and a coordinator will get back to you within one business hour.</p>
+        </div>
+
+        <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-start">
+
+          <div class="card" style="padding:2rem;">
+            <form data-form="contact" novalidate>
+              <div class="grid gap-5 sm:grid-cols-2">
+
+                <div class="field">
+                  <label class="label" for="contact-name">Full name <span class="req">*</span></label>
+                  <input class="input" id="contact-name" type="text" name="name" placeholder="Jordan Avery" autocomplete="name" data-required="text" />
+                  <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please enter your name.</span>
+                </div>
+
+                <div class="field">
+                  <label class="label" for="contact-email">Email address <span class="req">*</span></label>
+                  <input class="input" id="contact-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" data-required="email" />
+                  <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Enter a valid email address.</span>
+                </div>
+
+                <div class="field">
+                  <label class="label" for="contact-phone">Phone number <span class="req">*</span></label>
+                  <input class="input" id="contact-phone" type="tel" name="phone" placeholder="+1 (555) 019-8877" autocomplete="tel" data-required="phone" />
+                  <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Enter a valid phone number.</span>
+                </div>
+
+                <div class="field">
+                  <label class="label" for="contact-subject">Subject <span class="req">*</span></label>
+                  <select class="select" id="contact-subject" name="subject" data-required="select">
+                    <option value="">Choose a subject…</option>
+                    <option value="general">General enquiry</option>
+                    <option value="camp">Host a camp</option>
+                    <option value="emergency">Emergency blood request</option>
+                    <option value="billing">Billing &amp; plans</option>
+                  </select>
+                  <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please choose a subject.</span>
+                </div>
+
+                <div class="field" style="grid-column:1 / -1;">
+                  <label class="label" for="contact-message">Message <span class="req">*</span></label>
+                  <textarea class="textarea" id="contact-message" name="message" placeholder="Tell us about your dates, headcount or request…" data-required="text"></textarea>
+                  <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please write a short message.</span>
+                </div>
+
+              </div>
+
+              <div class="mt-6 flex flex-wrap items-center gap-4">
+                <button class="btn btn-primary btn-lg" type="submit"><i class="bi bi-send-fill"></i>Send message</button>
+                <span class="text-sm" style="color:var(--text-faint);">We never share your details — ever.</span>
+              </div>
+
+              <div class="form-success mt-5" data-success>
+                <i class="bi bi-check2-circle"></i>
+                <span>Message received — a coordinator will reply within one business hour.</span>
+              </div>
+            </form>
+          </div>
+
+          <div class="card" style="padding:2rem;">
+            <h3 class="text-lg">Talk to us directly</h3>
+
+            <div class="mt-5 grid gap-5">
+              <div class="flex items-start gap-3">
+                <span class="icon-box"><i class="bi bi-envelope-fill"></i></span>
+                <div>
+                  <strong class="block text-sm">Email the desk</strong>
+                  <a class="link-primary text-sm" href="mailto:help@venacare.org">help@venacare.org</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="icon-box"><i class="bi bi-telephone-fill"></i></span>
+                <div>
+                  <strong class="block text-sm">Call the camp helpline</strong>
+                  <a class="link-primary text-sm" href="tel:+18005532666">+1 (800) 553-BLOOD</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="icon-box"><i class="bi bi-chat-dots-fill"></i></span>
+                <div>
+                  <strong class="block text-sm">Messaging desk</strong>
+                  <span class="text-sm" style="color:var(--text-muted);">WhatsApp-style chat on your donor dashboard, answered in the same hour.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider-dashed my-6"></div>
+
+            <div class="flex items-start gap-3">
+              <span class="icon-box"><i class="bi bi-stopwatch-fill"></i></span>
+              <div>
+                <strong class="block text-sm">Response-time promise</strong>
+                <p class="text-sm mt-1" style="color:var(--text-muted);">Every message gets a human reply within one business hour, seven days a week. Emergency requests jump the queue entirely.</p>
+              </div>
+            </div>
+
+            <div class="card card-soft mt-6" style="border-color:rgba(255,46,76,0.4);box-shadow:var(--glow-sm);">
+              <div class="flex items-start gap-3">
+                <span class="icon-box"><i class="bi bi-lightning-charge-fill"></i></span>
+                <div>
+                  <strong class="block font-display">Need an answer now?</strong>
+                  <p class="text-sm mt-1" style="color:var(--text-muted);">Eligibility, booking changes and testing questions are already answered in the help centre.</p>
+                  <a class="post-link mt-3 inline-flex" href="../../public/pages/FAQ.html">Browse the FAQ <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4 · MAP ============================ -->
+    <section class="section" id="location">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-pin-map-fill"></i>Find us</span>
+          <h2 class="section-title">VenaCare <span class="text-gradient">headquarters</span></h2>
+          <p class="section-sub">Coordination desk, cold store and training room — visits by appointment, Monday to Friday.</p>
+        </div>
+
+        <div class="rounded-[24px] overflow-hidden" style="border:1px solid var(--border-strong);box-shadow:var(--glow-sm);">
+          <img src="../../assets/img/map.svg" alt="Map showing VenaCare headquarters at 221 Meridian Avenue"
+               class="w-full" loading="lazy" />
+        </div>
+
+        <div class="mt-7 grid gap-5 sm:grid-cols-3">
+          <div class="card card-soft">
+            <span class="icon-box"><i class="bi bi-geo-alt-fill"></i></span>
+            <strong class="block mt-4">Address</strong>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">221 Meridian Ave, Central District</p>
+          </div>
+          <div class="card card-soft">
+            <span class="icon-box"><i class="bi bi-signpost-2-fill"></i></span>
+            <strong class="block mt-4">Get directions</strong>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">Open the exact route in your maps app.</p>
+            <a class="post-link mt-3 inline-flex" href="https://www.google.com/maps/search/?api=1&query=221+Meridian+Ave" target="_blank" rel="noopener">Open in Maps <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+          <div class="card card-soft">
+            <span class="icon-box"><i class="bi bi-bus-front-fill"></i></span>
+            <strong class="block mt-4">Nearest transit</strong>
+            <p class="text-sm mt-2" style="color:var(--text-muted);">Meridian Central station is a 4-minute walk; bus lines 12 and 40 stop outside the building.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================ 5 · SUPPORT HOURS &amp; CHANNELS ================ -->
+    <section class="section section-alt" id="support-hours">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-alarm-fill"></i>Support hours</span>
+          <h2 class="section-title">The right desk, <span class="text-gradient">at the right hour</span></h2>
+          <p class="section-sub">Three teams cover the day — pick the channel that matches how urgent your request is.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Channel</th>
+                <th>Reach us</th>
+                <th>Hours</th>
+                <th>Typical reply</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color:var(--text);font-weight:600;">Emergency desk</td>
+                <td>help@venacare.org · marked URGENT</td>
+                <td><span class="badge green"><i class="bi bi-moon-stars-fill"></i>24 / 7</span></td>
+                <td>Under 15 minutes</td>
+              </tr>
+              <tr>
+                <td style="color:var(--text);font-weight:600;">Camp helpline</td>
+                <td><a class="link-primary" href="tel:+18005532666">+1 (800) 553-BLOOD</a></td>
+                <td>Mon–Sun · 6:00 AM – 10:00 PM</td>
+                <td>Answered on the ring</td>
+              </tr>
+              <tr>
+                <td style="color:var(--text);font-weight:600;">Billing desk</td>
+                <td><a class="link-primary" href="mailto:help@venacare.org">help@venacare.org</a> · subject “Billing”</td>
+                <td>Mon–Fri · 9:00 AM – 6:00 PM</td>
+                <td>Within one business hour</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== 6 · CTA =============================== -->
+    <section class="section-sm" id="cta">
+      <div class="container-x">
+        <div class="relative overflow-hidden rounded-[30px] text-center"
+             style="padding:3.5rem 1.5rem;background:linear-gradient(135deg,rgba(255,46,76,0.22),rgba(255,138,61,0.12)),var(--bg-2);border:1px solid rgba(255,46,76,0.4);box-shadow:var(--glow-lg);">
+          <div class="glow-blob red" style="width:26rem;height:26rem;top:-10rem;inset-inline-start:50%;transform:translateX(-50%);opacity:0.5;"></div>
+
+          <div class="relative">
+            <span class="kicker"><span class="pulse-dot"></span>Camp helpline open now</span>
+            <h2 class="section-title mt-5" style="margin-inline:auto;">Prefer to just <br class="hidden sm:block" /> <span class="text-gradient">get started?</span></h2>
+            <p class="section-sub" style="margin-inline:auto;">Create a free donor account or compare the plans that keep camps running — no card required.</p>
+
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+              <a class="btn btn-primary btn-lg" href="../../public/auth/signup.html"><i class="bi bi-person-plus-fill"></i>Create free account</a>
+              <a class="btn btn-outline btn-lg" href="../../public/pages/pricing.html"><i class="bi bi-tags"></i>See pricing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>

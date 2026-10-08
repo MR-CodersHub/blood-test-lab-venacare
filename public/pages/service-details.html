@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Details | VenaCare Blood Camp</title>
+  <meta name="description" content="Detailed breakdown of a VenaCare blood camp service — features, pricing tiers, FAQs and related services, loaded dynamically from the service id in the URL." />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../src/css/style.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../src/js/tailwind-config.js"></script>
+  <script defer src="../../src/js/site.js"></script>
+  <script defer src="../../src/js/data.js"></script>
+  <script defer src="../../src/js/components.js"></script>
+  <script defer src="../../src/js/navbar.js"></script>
+  <script defer src="../../src/js/footer.js"></script>
+  <script defer src="../../src/js/ui.js"></script>
+  <script defer src="../../src/js/form-validation.js"></script>
+  <script defer src="../../src/js/services.js"></script>
+  <script defer src="../../src/js/service-details.js"></script>
+</head>
+
+<body data-root="../../" data-page="service-details">
+
+  <div id="site-header"></div>
+
+  <main id="main-content">
+    <div id="service-detail-root">
+
+      <!-- ========================= 1 · DYNAMIC PAGE HERO ========================= -->
+      <section class="page-hero">
+        <div class="container-x">
+          <div id="sd-breadcrumb"></div>
+          <span class="kicker" id="sd-kicker"></span>
+          <h1 class="page-hero-title mt-4" id="sd-title">Loading service…</h1>
+          <p class="page-hero-sub" id="sd-sub"></p>
+          <div id="sd-meta"></div>
+        </div>
+      </section>
+
+      <!-- =========================== 2 · OVERVIEW =========================== -->
+      <section class="section" id="overview">
+        <div class="container-x">
+          <div id="sd-overview"></div>
+        </div>
+      </section>
+
+      <!-- =========================== 3 · FEATURES =========================== -->
+      <section class="section section-alt" id="features">
+        <div class="container-x">
+          <div class="section-head center" id="sd-features-head"></div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="sd-features"></div>
+        </div>
+      </section>
+
+      <!-- =========================== 4 · PRICING =========================== -->
+      <section class="section" id="pricing">
+        <div class="container-x">
+          <div class="section-head center" id="sd-pricing-head"></div>
+          <div id="sd-pricing"></div>
+
+          <div class="card mt-10 flex flex-wrap items-center justify-between gap-4" style="border-color:rgba(255,46,76,0.35);">
+            <div class="flex items-center gap-4">
+              <span class="icon-box lg"><i class="bi bi-shield-check"></i></span>
+              <div>
+                <strong class="block font-display">Need help choosing the right test?</strong>
+                <span class="text-sm" style="color:var(--text-muted);">Our clinical laboratory desk can review your symptoms or physician requisition within one business hour.</span>
+              </div>
+            </div>
+            <a class="btn btn-primary" href="../../public/pages/contact.html"><i class="bi bi-chat-dots"></i>Consult our lab desk</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== 5 · FAQS ============================== -->
+      <section class="section section-alt" id="faqs">
+        <div class="container-x">
+          <div class="section-head center" id="sd-faq-head"></div>
+          <div id="sd-faq"></div>
+        </div>
+      </section>
+
+      <!-- ============================ 6 · RELATED ============================ -->
+      <section class="section" id="related">
+        <div class="container-x">
+          <div class="section-head center" id="sd-related-head"></div>
+          <div id="sd-related"></div>
+        </div>
+      </section>
+
+      <!-- =============================== 7 · CTA =============================== -->
+      <section class="section-sm section-alt">
+        <div class="container-x">
+          <div class="relative overflow-hidden rounded-[30px] text-center" style="padding:3rem 1.5rem;background:linear-gradient(135deg,rgba(255,46,76,0.2),rgba(255,138,61,0.1)),var(--bg-2);border:1px solid rgba(255,46,76,0.4);box-shadow:var(--glow-lg);">
+            <span class="kicker"><i class="bi bi-calendar-check-fill"></i>At-Home Phlebotomy</span>
+            <h2 class="section-title mt-4" style="margin-inline:auto;">Schedule your at-home<br class="hidden sm:block" /> <span class="text-gradient">blood collection</span></h2>
+            <p class="section-sub" style="margin-inline:auto;">Certified phlebotomists arrive on your schedule with sterile kits. Doctor-reviewed reports in 24–48 hours.</p>
+            <div class="mt-7 flex flex-wrap justify-center gap-3">
+              <a class="btn btn-primary btn-lg" href="../../index.html#book-collection"><i class="bi bi-house-heart-fill"></i>Book At-Home Collection</a>
+              <a class="btn btn-outline btn-lg" href="../../public/pages/services.html"><i class="bi bi-clipboard2-pulse"></i>All blood tests</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>
