@@ -378,7 +378,7 @@
               '<span style="display:block;font-size:0.72rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">Price</span>' +
               '<strong style="font-size:1.15rem;color:var(--text);">' + (t.price === 0 ? 'FREE' : '$' + t.price) + '</strong>' +
             '</div>' +
-            '<button type="button" class="btn btn-sm ' + (isSelected ? 'btn-primary' : 'btn-outline') + '" data-toggle-test="' + t.id + '">' +
+            '<button type="button" class="btn btn-sm ' + (isSelected ? 'btn-primary' : 'btn-outline') + '" style="flex-shrink:0;" data-toggle-test="' + t.id + '">' +
               (isSelected ? '<i class="bi bi-check2-circle"></i>Selected' : '<i class="bi bi-plus-lg"></i>Add Test') +
             '</button>' +
           '</div>' +

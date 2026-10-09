@@ -57,8 +57,8 @@
       <div class="container-x">
 
         <!-- Progress Steps Bar -->
-        <div class="mb-10 overflow-x-auto pb-2">
-          <div class="flex items-center justify-between min-w-[620px] max-w-4xl mx-auto px-4 py-3 rounded-2xl" style="background:var(--surface);border:1px solid var(--border);">
+        <div class="mb-8 overflow-x-auto pb-2 -mx-2 px-2 sm:mx-0 sm:px-0" style="-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+          <div class="flex items-center justify-between min-w-[580px] sm:min-w-[620px] max-w-4xl mx-auto px-4 py-3 rounded-2xl" style="background:var(--surface);border:1px solid var(--border);">
             <div class="flex items-center gap-3 cursor-pointer" data-step-indicator="1">
               <span class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background:var(--primary);color:#fff;">1</span>
               <div>
@@ -123,7 +123,7 @@
                     <i class="bi bi-search input-icon"></i>
                     <input class="input has-icon" type="search" id="booking-test-search" placeholder="Search tests (e.g. Thyroid, CBC, Vitamin D, HbA1c, Lipids)…" />
                   </div>
-                  <div class="flex flex-wrap gap-1.5 self-center">
+                  <div class="flex flex-wrap gap-1.5 self-start sm:self-center">
                     <button class="chip active" type="button" data-test-tab="all"><i class="bi bi-grid-fill"></i>All</button>
                     <button class="chip" type="button" data-test-tab="Packages"><i class="bi bi-gem"></i>Packages</button>
                     <button class="chip" type="button" data-test-tab="Routine"><i class="bi bi-droplet-half"></i>Routine</button>
@@ -135,11 +135,11 @@
                 <div class="grid gap-4 sm:grid-cols-2" id="booking-tests-grid"></div>
 
                 <!-- Step 1 Footer -->
-                <div class="flex items-center justify-between gap-4 border-t border-dashed border-white/10 pt-5 mt-6">
-                  <span class="text-xs" style="color:var(--text-muted);">
+                <div class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-dashed border-white/10 pt-5 mt-6">
+                  <span class="text-xs text-center sm:text-start" style="color:var(--text-muted);">
                     <i class="bi bi-info-circle text-rose-500 mr-1"></i>Select one or more tests to proceed.
                   </span>
-                  <button type="button" class="btn btn-primary" id="step-1-next" disabled>
+                  <button type="button" class="btn btn-primary w-full sm:w-auto" id="step-1-next" disabled>
                     Continue to Scheduling <i class="bi bi-arrow-right"></i>
                   </button>
                 </div>
@@ -227,11 +227,11 @@
                 </div>
 
                 <!-- Step 2 Navigation -->
-                <div class="flex items-center justify-between gap-4 border-t border-dashed border-white/10 pt-5">
-                  <button type="button" class="btn btn-ghost" id="step-2-back">
+                <div class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-dashed border-white/10 pt-5">
+                  <button type="button" class="btn btn-ghost w-full sm:w-auto" id="step-2-back">
                     <i class="bi bi-arrow-left"></i> Back to Tests
                   </button>
-                  <button type="button" class="btn btn-primary" id="step-2-next">
+                  <button type="button" class="btn btn-primary w-full sm:w-auto" id="step-2-next">
                     Continue to Patient Info <i class="bi bi-arrow-right"></i>
                   </button>
                 </div>
@@ -266,7 +266,7 @@
                     <span class="error-msg"><i class="bi bi-exclamation-circle"></i>Valid email is required to access your certified PDF results.</span>
                   </div>
 
-                  <div class="grid grid-cols-2 gap-2">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="field">
                       <label class="label" for="patient-dob">Date of Birth</label>
                       <input class="input" type="date" id="patient-dob" />
@@ -338,11 +338,11 @@
                 </div>
 
                 <!-- Step 3 Navigation -->
-                <div class="flex items-center justify-between gap-4 border-t border-dashed border-white/10 pt-5">
-                  <button type="button" class="btn btn-ghost" id="step-3-back">
+                <div class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-dashed border-white/10 pt-5">
+                  <button type="button" class="btn btn-ghost w-full sm:w-auto" id="step-3-back">
                     <i class="bi bi-arrow-left"></i> Back to Schedule
                   </button>
-                  <button type="button" class="btn btn-primary" id="step-3-next">
+                  <button type="button" class="btn btn-primary w-full sm:w-auto" id="step-3-next">
                     Review &amp; Payment <i class="bi bi-arrow-right"></i>
                   </button>
                 </div>
@@ -440,11 +440,11 @@
                 </div>
 
                 <!-- Step 4 Navigation -->
-                <div class="flex items-center justify-between gap-4 border-t border-dashed border-white/10 pt-5">
-                  <button type="button" class="btn btn-ghost" id="step-4-back">
+                <div class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-dashed border-white/10 pt-5">
+                  <button type="button" class="btn btn-ghost w-full sm:w-auto" id="step-4-back">
                     <i class="bi bi-arrow-left"></i> Back to Patient Info
                   </button>
-                  <button type="button" class="btn btn-primary btn-lg" id="submit-booking-btn">
+                  <button type="button" class="btn btn-primary btn-lg w-full sm:w-auto" id="submit-booking-btn">
                     <i class="bi bi-check2-circle"></i> Confirm Booking &amp; Schedule Draw
                   </button>
                 </div>
