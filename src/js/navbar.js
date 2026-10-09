@@ -13,14 +13,18 @@
     { label: 'Home', href: 'index.html', key: 'index.html' },
     { label: 'About', href: 'public/pages/about.html', key: 'about.html' },
     { label: 'Services', href: 'public/pages/services.html', key: 'services.html' },
-    { label: 'Blog', href: 'public/pages/blog.html', key: 'blog.html' },
+    { label: 'Book Draw', href: 'public/pages/booking.html', key: 'booking.html' },
     { label: 'Pricing', href: 'public/pages/pricing.html', key: 'pricing.html' },
+    { label: 'Blog', href: 'public/pages/blog.html', key: 'blog.html' },
     { label: 'Contact', href: 'public/pages/contact.html', key: 'contact.html' }
   ];
 
   var PAGE_MENU = [
+    { label: 'Book At-Home Draw', href: 'public/pages/booking.html', icon: 'bi-calendar2-check-fill' },
+    { label: 'Routine & Specialized Services', href: 'public/pages/services.html', icon: 'bi-clipboard2-pulse-fill' },
+    { label: 'Transparent Test Pricing', href: 'public/pages/pricing.html', icon: 'bi-tags-fill' },
     { label: 'Home 2 · Emergency Camp', href: 'public/pages/home-2.html', icon: 'bi-lightning-charge-fill' },
-    { label: 'Service Details', href: 'public/pages/service-details.html?id=mobile-blood-drive', icon: 'bi-clipboard2-pulse-fill' },
+    { label: 'Service Details', href: 'public/pages/service-details.html?id=at-home-collection', icon: 'bi-clipboard2-pulse-fill' },
     { label: 'Article Details', href: 'public/pages/blog-details.html?id=first-donor-guide', icon: 'bi-newspaper' },
     { label: 'Help & FAQ', href: 'public/pages/FAQ.html', icon: 'bi-question-circle-fill' },
     { label: 'Privacy Policy', href: 'public/pages/Privacy-policy.html', icon: 'bi-shield-lock-fill' },
@@ -65,69 +69,46 @@
         '</div>' +
       '</div>' +
       '<div class="dropdown-label">Patient Access</div>' +
-      '<a class="dropdown-item" href="' + S.link('public/auth/login.html') + '"><i class="bi bi-box-arrow-in-right"></i>Patient Portal Log In</a>' +
-      '<a class="dropdown-item" href="' + S.link('public/auth/signup.html') + '"><i class="bi bi-person-plus-fill"></i>Register New Patient</a>' +
+      '<a class="dropdown-item" href="' + S.link('public/auth/login.html') + '"><i class="bi bi-box-arrow-in-right"></i>Log In</a>' +
+      '<a class="dropdown-item" href="' + S.link('public/auth/signup.html') + '"><i class="bi bi-person-plus-fill"></i> Sign Up </a>' +
       '<div class="dropdown-divider"></div>' +
       '<div class="dropdown-label">My Medical Care</div>' +
-      '<a class="dropdown-item" href="' + S.link('public/auth/user/user-dashboard.html') + '"><i class="bi bi-file-earmark-medical-fill"></i>My Lab Results &amp; Reports</a>' +
-      '<a class="dropdown-item" href="' + S.link('public/pages/services.html') + '"><i class="bi bi-house-heart-fill"></i>Book At-Home Collection</a>' +
-      '<a class="dropdown-item" href="' + S.link('public/pages/pricing.html') + '"><i class="bi bi-tags-fill"></i>View Test Pricing</a>' +
-      '<div class="dropdown-divider"></div>' +
-      '<a class="dropdown-item" href="' + S.link('public/pages/contact.html') + '"><i class="bi bi-headset"></i>Lab Support Desk</a>'
+      '<a class="dropdown-item" href="' + S.link('public/auth/user/user-dashboard.html') + '"><i class="bi bi-file-earmark-medical-fill"></i>User Dashboard</a>' +
+      '<a class="dropdown-item" href="' + S.link('public/auth/admin/admin-dashboard.html') + '"><i class="bi bi-file-earmark-medical-fill"></i>Admin Dashboard</a>'
     );
   }
 
   function navbarHTML() {
     return (
-      '<div class="topbar">' +
-        '<div class="container-x">' +
-          '<div class="topbar-links">' +
-            '<span class="topbar-item"><i class="bi bi-telephone-fill"></i><a href="tel:+18005535227">+1 (800) 553-LABS (5227)</a></span>' +
-            '<span class="topbar-item hidden sm:inline-flex"><i class="bi bi-clock-fill"></i>Phlebotomy Helpline: Mon–Sun · 6:30 AM – 8:00 PM</span>' +
-          '</div>' +
-          '<div class="topbar-links">' +
-            '<span class="topbar-item hidden md:inline-flex"><i class="bi bi-shield-check"></i>CLIA &amp; CAP Accredited Diagnostic Labs</span>' +
-            '<a class="topbar-item" href="' + S.link('public/auth/login.html') + '"><i class="bi bi-file-earmark-lock2-fill"></i>Patient Portal</a>' +
-          '</div>' +
-        '</div>' +
-      '</div>' +
 
       '<nav class="site-nav" id="site-navbar" role="navigation" aria-label="Main navigation">' +
         '<div class="container-x">' +
           '<div class="nav-inner">' +
 
             '<a class="brand" href="' + S.link('index.html') + '" aria-label="VenaCare At-Home Lab Services">' +
-              '<img src="' + S.link('assets/img/logo.svg') + '" alt="VenaCare logo" />' +
+              '<img src="' + S.link('assets/img/logo.png') + '" alt="VenaCare logo" />' +
               '<span>' +
                 '<span class="brand-name">VenaCare</span>' +
-                '<span class="brand-tag">At-Home Lab Services</span>' +
               '</span>' +
             '</a>' +
 
             '<ul class="nav-links" role="list">' + navLinksHTML() +
 
-              '<li class="dropdown hoverable">' +
-                '<button class="nav-link" type="button" aria-haspopup="true">More <i class="bi bi-chevron-down" style="font-size:0.7rem;"></i></button>' +
-                '<div class="dropdown-menu">' +
-                  '<div class="dropdown-label">Explore</div>' +
-                  pageMenuHTML() +
-                '</div>' +
-              '</li>' +
             '</ul>' +
 
             '<div class="nav-actions">' +
               '<button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle colour theme"><i class="bi bi-moon-stars-fill"></i></button>' +
-              '<button class="icon-btn hidden sm:inline-flex" type="button" data-rtl-toggle aria-label="Toggle RTL layout"><i class="bi bi-text-right"></i></button>' +
+              '<button class="icon-btn hidden sm:inline-flex" type="button" data-rtl-toggle aria-label="Toggle RTL layout" title="Toggle RTL layout"><i class="bi bi-text-right"></i></button>' +
 
               '<div class="dropdown" data-profile-dropdown>' +
-                '<button class="profile-btn" type="button" aria-haspopup="true" aria-expanded="false" data-profile-toggle aria-label="Open patient menu">' +
-                  '<img src="' + S.link('assets/img/avatar-user.svg') + '" alt="Profile" />' +
+                '<button class="icon-btn" type="button" aria-haspopup="true" aria-expanded="false" data-profile-toggle aria-label="Open patient menu">' +
+                  '<i class="bi bi-person-fill"></i>' +
                 '</button>' +
                 '<div class="dropdown-menu">' + profileMenuHTML() + '</div>' +
               '</div>' +
 
-              '<a class="btn btn-primary btn-sm hidden md:inline-flex" href="' + S.link('public/pages/services.html') + '">' +
-                '<i class="bi bi-house-heart"></i>Book Home Draw</a>' +
+              '<a class="btn btn-primary btn-sm hidden md:inline-flex" href="' + S.link('public/pages/booking.html') + '">' +
+                'Book Test</a>' +
 
               '<button class="icon-btn burger" type="button" data-drawer-open aria-label="Open menu" aria-expanded="false">' +
                 '<i class="bi bi-list" style="font-size:1.3rem;"></i></button>' +
@@ -172,7 +153,7 @@
             '<button class="btn btn-outline btn-sm" type="button" data-rtl-toggle style="flex:1;"><i class="bi bi-text-right"></i>RTL</button>' +
           '</div>' +
 
-          '<a class="btn btn-primary btn-block" style="margin-top:0.75rem;" href="' + S.link('public/pages/services.html') + '">' +
+          '<a class="btn btn-primary btn-block" style="margin-top:0.75rem;" href="' + S.link('public/pages/booking.html') + '">' +
             '<i class="bi bi-house-heart"></i>Book At-Home Collection</a>' +
         '</div>' +
       '</div>'
@@ -232,5 +213,8 @@
     if (!mount) return;
     mount.innerHTML = navbarHTML();
     bind();
+    if (S && typeof S.applyDir === 'function') {
+      S.applyDir(document.documentElement.getAttribute('dir') || 'ltr');
+    }
   });
 })();

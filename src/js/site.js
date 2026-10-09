@@ -98,12 +98,26 @@ window.SITE = (function () {
 
   function applyDir(dir) {
     document.documentElement.setAttribute('dir', dir);
-    document.documentElement.setAttribute('lang', 'en');
+    document.documentElement.setAttribute('lang', dir === 'rtl' ? 'ar' : 'en');
     qsa('[data-rtl-toggle]').forEach(function (btn) {
       var icon = qs('i', btn);
       if (icon) icon.className = dir === 'rtl' ? 'bi bi-text-left' : 'bi bi-text-right';
       btn.setAttribute('aria-label', dir === 'rtl' ? 'Switch to LTR layout' : 'Switch to RTL layout');
+      btn.setAttribute('title', dir === 'rtl' ? 'Switch to LTR layout' : 'Switch to RTL layout');
+      if (dir === 'rtl') {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
     });
+  }
+
+  function toggleDir() {
+    var current = document.documentElement.getAttribute('dir') === 'rtl' ? 'rtl' : 'ltr';
+    var next = current === 'rtl' ? 'ltr' : 'rtl';
+    applyDir(next);
+    try { localStorage.setItem(RTL_KEY, next); } catch (e) {}
+    toast(next === 'rtl' ? 'RTL layout enabled' : 'LTR layout enabled', 'Layout direction switched.');
   }
 
   function initDir() {
@@ -112,15 +126,22 @@ window.SITE = (function () {
     var dir = saved || 'ltr';
     applyDir(dir);
 
-    qsa('[data-rtl-toggle]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var current = document.documentElement.getAttribute('dir') === 'rtl' ? 'rtl' : 'ltr';
-        var next = current === 'rtl' ? 'ltr' : 'rtl';
-        applyDir(next);
-        try { localStorage.setItem(RTL_KEY, next); } catch (e) {}
-        toast(next === 'rtl' ? 'RTL layout enabled' : 'LTR layout enabled', 'Layout direction switched.');
-      });
+    // Event delegation: always catches clicks on dynamically injected buttons in header, drawer, etc.
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-rtl-toggle]');
+      if (!btn) return;
+      e.preventDefault();
+      toggleDir();
     });
+
+    // Observer to update icons whenever the navbar or footer is injected
+    var observer = new MutationObserver(function () {
+      var current = document.documentElement.getAttribute('dir') || 'ltr';
+      applyDir(current);
+    });
+    if (document.body) {
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
   }
 
   /* ---------- TOASTS / ACKNOWLEDGEMENT MESSAGES ---------- */
@@ -231,6 +252,8 @@ window.SITE = (function () {
     toast: toast,
     params: params,
     formatDate: formatDate,
-    onLoad: onLoad
+    onLoad: onLoad,
+    applyDir: applyDir,
+    toggleDir: toggleDir
   };
 })();

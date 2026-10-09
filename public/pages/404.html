@@ -3,169 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 — Page Not Found | VenaCare Blood Camp</title>
-  <meta name="description" content="Sorry, this page could not be found. Explore services, blog, pricing, FAQ or find a camp on VenaCare Blood Camp." />
+  <title>404 — Page Not Found | VenaCare Clinical Lab Services</title>
+  <meta name="description" content="Sorry, the page you're looking for does not exist. Explore routine and specialized blood tests, pricing, or book at-home collection on VenaCare." />
   <meta name="theme-color" content="#07090f" />
   <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="../../src/css/style.css" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="../../src/js/tailwind-config.js"></script>
   <script defer src="../../src/js/site.js"></script>
   <script defer src="../../src/js/data.js"></script>
   <script defer src="../../src/js/components.js"></script>
-  <script defer src="../../src/js/navbar.js"></script>
-  <script defer src="../../src/js/footer.js"></script>
   <script defer src="../../src/js/ui.js"></script>
-  <script defer src="../../src/js/form-validation.js"></script>
 </head>
 
 <body data-root="../../" data-page="404">
 
-  <div id="site-header"></div>
+  <!-- Ambient Glow Backdrop -->
+  <div class="glow-blob red" style="width:32rem;height:32rem;top:-10rem;inset-inline-start:-10rem;opacity:0.35;"></div>
+  <div class="glow-blob orange" style="width:26rem;height:26rem;bottom:-8rem;inset-inline-end:-8rem;opacity:0.25;"></div>
+  <div class="grid-lines"></div>
+
+  <!-- Floating Theme Toggle (Top Right) -->
+  <div style="position:fixed;top:1.25rem;inset-inline-end:1.25rem;z-index:50;">
+    <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle colour theme">
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
+  </div>
 
   <main id="main-content">
 
-    <!-- 1. HERO -->
-    <section class="relative overflow-hidden">
-      <div class="grid-lines"></div>
-      <div class="glow-blob red" style="width:30rem;height:30rem;top:-12rem;inset-inline-start:-8rem;"></div>
-      <div class="glow-blob orange" style="width:22rem;height:22rem;bottom:-8rem;inset-inline-end:-6rem;opacity:0.35;"></div>
-      <div class="container-x relative" style="padding-block:4.5rem 4rem;">
-        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
-          <div class="text-center lg:text-start">
-            <div class="text-gradient" style="font-size:clamp(6rem,16vw,9rem);line-height:0.95;font-family:var(--font-display);font-weight:800;">404</div>
-            <h1 class="mt-6" style="font-size:clamp(1.9rem,3.8vw,2.8rem);line-height:1.05;">This vein leads nowhere</h1>
-            <p class="lead mt-4" style="max-width:32rem;margin-inline:auto lg:ms-0;">The page you're looking for doesn't exist, may have moved, or the link might have a typo. Don't worry — there's plenty of life-saving work to do.</p>
-            <div class="mt-7 flex flex-wrap justify-center lg:justify-start gap-3">
-              <a class="btn btn-primary btn-lg" href="../../index.html"><i class="bi bi-house-door-fill"></i>Back to home</a>
-              <a class="btn btn-outline btn-lg" href="../../public/pages/contact.html"><i class="bi bi-envelope-open-fill"></i>Contact us</a>
-            </div>
-          </div>
-          <div class="flex justify-center">
-            <img src="../../assets/img/404.svg" alt="Illustration for the 404 error page" class="w-full max-w-[28rem] rounded-[30px]" style="border:1px solid var(--border-strong);box-shadow:var(--glow-lg);" />
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- ============================== SINGLE CENTERED 404 SECTION ============================== -->
+    <section class="single-section-page text-center">
+      <div class="container-x relative max-w-2xl mx-auto">
 
-    <!-- 2. SEARCH STRIP -->
-    <section class="section-sm section-alt">
-      <div class="container-x">
-        <div class="card flex flex-wrap items-center justify-between gap-4">
-          <div class="flex items-center gap-4">
-            <span class="icon-box lg"><i class="bi bi-search"></i></span>
-            <div>
-              <h3 style="font-size:1.15rem;">Find what you need</h3>
-              <p class="text-sm mt-1" style="color:var(--text-muted);">Search our guides to find the answer you're looking for.</p>
-            </div>
-          </div>
-          <form action="../../public/pages/blog.html" method="get" class="flex flex-wrap items-center gap-3 flex-1 min-w-[16rem] justify-end">
-            <input class="input" name="q" type="search" placeholder="Search our guides…" autocomplete="off" style="min-width:14rem;flex:1;max-width:20rem;" />
-            <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i>Search</button>
-          </form>
-        </div>
-      </div>
-    </section>
+        <!-- Brand Header (Logo Only) -->
+        <a class="auth-brand-header mb-8 inline-flex" href="../../index.html" aria-label="VenaCare Home">
+          <img src="../../assets/img/logo.png" alt="VenaCare logo" style="width:48px;height:48px;" />
+          <span class="brand-name">VenaCare</span>
+        </a>
 
-    <!-- 3. POPULAR DESTINATIONS -->
-    <section class="section-sm">
-      <div class="container-x">
-        <div class="section-head">
-          <span class="kicker"><i class="bi bi-compass"></i>Popular destinations</span>
-          <h2 class="section-title mt-3">Get back on the right track</h2>
-          <p class="section-sub">These pages are the most useful places to start.</p>
+        <!-- 404 Large Display Typography -->
+        <div class="text-gradient leading-none select-none"
+             style="font-size:clamp(6.5rem,16vw,10.5rem);font-family:var(--font-display);font-weight:800;letter-spacing:-0.04em;">
+          404
         </div>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <a href="../../public/pages/services.html" class="card card-hover">
-            <span class="icon-box"><i class="bi bi-grid-3x3-gap-fill"></i></span>
-            <h4 class="mt-3">Services</h4>
-            <p class="mt-1 text-sm" style="color:var(--text-muted);">Mobile drives, screening, matching, emergency support and aftercare.</p>
-            <span class="post-link mt-3 inline-flex">Explore services <i class="bi bi-arrow-right"></i></span>
-          </a>
-          <a href="../../public/pages/blog.html" class="card card-hover">
-            <span class="icon-box"><i class="bi bi-journal-bookmark-fill"></i></span>
-            <h4 class="mt-3">Blog</h4>
-            <p class="mt-1 text-sm" style="color:var(--text-muted);">Physician-reviewed guides, myths, nutrition and organiser tips.</p>
-            <span class="post-link mt-3 inline-flex">Read articles <i class="bi bi-arrow-right"></i></span>
-          </a>
-          <a href="../../public/pages/pricing.html" class="card card-hover">
-            <span class="icon-box"><i class="bi bi-cash-stack"></i></span>
-            <h4 class="mt-3">Pricing</h4>
-            <p class="mt-1 text-sm" style="color:var(--text-muted);">Free donor plan, organiser tools and hospital-grade infrastructure.</p>
-            <span class="post-link mt-3 inline-flex">View pricing <i class="bi bi-arrow-right"></i></span>
-          </a>
-          <a href="../../public/pages/FAQ.html" class="card card-hover">
-            <span class="icon-box"><i class="bi bi-question-circle"></i></span>
-            <h4 class="mt-3">FAQ</h4>
-            <p class="mt-1 text-sm" style="color:var(--text-muted);">Quick answers about eligibility, camps, billing, safety and privacy.</p>
-            <span class="post-link mt-3 inline-flex">Browse FAQs <i class="bi bi-arrow-right"></i></span>
-          </a>
-          <a href="../../public/pages/home-2.html" class="card card-hover">
-            <span class="icon-box"><i class="bi bi-lightning-charge-fill"></i></span>
-            <h4 class="mt-3">Find a camp</h4>
-            <p class="mt-1 text-sm" style="color:var(--text-muted);">See live camps nearby and emergency requests in your area.</p>
-            <span class="post-link mt-3 inline-flex">Find a camp <i class="bi bi-arrow-right"></i></span>
-          </a>
-          <a href="../../public/pages/contact.html" class="card card-hover">
-            <span class="icon-box"><i class="bi bi-envelope-paper-fill"></i></span>
-            <h4 class="mt-3">Book a camp</h4>
-            <p class="mt-1 text-sm" style="color:var(--text-muted);">Tell us your headcount, date and venue — we'll get back within an hour.</p>
-            <span class="post-link mt-3 inline-flex">Book a camp <i class="bi bi-arrow-right"></i></span>
-          </a>
-        </div>
-      </div>
-    </section>
 
-    <!-- 4. COMMON CAUSES -->
-    <section class="section-sm section-alt">
-      <div class="container-x">
-        <div class="section-head">
-          <span class="kicker"><i class="bi bi-info-circle"></i>What may have happened</span>
-          <h2 class="section-title mt-3">Common causes for this error</h2>
-          <p class="section-sub">A few simple things could explain why you're seeing this page.</p>
-        </div>
-        <div class="grid gap-6 sm:grid-cols-3">
-          <div class="card">
-            <span class="icon-box"><i class="bi bi-arrow-left-right"></i></span>
-            <h4 class="mt-3">Moved article</h4>
-            <p class="mt-1 text-sm" style="color:var(--text-muted);">We may have renamed or relocated this page. Try searching our blog for it.</p>
-          </div>
-          <div class="card">
-            <span class="icon-box"><i class="bi bi-calendar-x"></i></span>
-            <h4 class="mt-3">Expired camp link</h4>
-            <p class="mt-1 text-sm" style="color:var(--text-muted);">Old camp registration links can expire. Check the live camps board for current drives.</p>
-          </div>
-          <div class="card">
-            <span class="icon-box"><i class="bi bi-typo"></i></span>
-            <h4 class="mt-3">Typo in the URL</h4>
-            <p class="mt-1 text-sm" style="color:var(--text-muted);">Double-check the address in your browser for any spelling errors.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <h1 class="mt-4 font-extrabold" style="font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.15;">
+          Page Not Found
+        </h1>
 
-    <!-- 5. CTA BAND -->
-    <section class="section-sm">
-      <div class="container-x">
-        <div class="relative overflow-hidden rounded-[30px] text-center" style="padding:3rem 1.5rem;background:linear-gradient(135deg,rgba(255,46,76,0.2),rgba(255,138,61,0.1)),var(--bg-2);border:1px solid rgba(255,46,76,0.4);box-shadow:var(--glow-lg);">
-          <span class="kicker"><i class="bi bi-droplet-half"></i>Ready to make an impact</span>
-          <h2 class="section-title mt-4" style="margin-inline:auto;">Join as a donor or <span class="text-gradient">book a life-saving camp</span></h2>
-          <p class="section-sub" style="margin-inline:auto;">One pint can save up to three lives. Get started in just a few clicks.</p>
-          <div class="mt-7 flex flex-wrap justify-center gap-3">
-            <a class="btn btn-primary btn-lg" href="../../public/auth/signup.html"><i class="bi bi-person-plus-fill"></i>Join as a donor</a>
-            <a class="btn btn-outline btn-lg" href="tel:+1800553BLOOD"><i class="bi bi-telephone-fill"></i>Call hotline</a>
-          </div>
+        <p class="lead mt-3" style="color:var(--text-muted);max-width:32rem;margin-inline:auto;font-size:1.02rem;line-height:1.6;">
+          The page you are looking for doesn't exist, may have moved, or the link has a typo. Let's get you back to clinical diagnostic care.
+        </p>
+
+        <!-- Primary Action Navigation -->
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a class="btn btn-primary btn-lg" href="../../index.html">
+            <i class="bi bi-house-door-fill"></i>Back to Home
+          </a>
+          <a class="btn btn-outline btn-lg" href="services.html">
+            <i class="bi bi-clipboard2-pulse"></i>Explore Blood Tests
+          </a>
+          <a class="btn btn-soft btn-lg" href="booking.html">
+            <i class="bi bi-calendar2-check"></i>Book At-Home Collection
+          </a>
         </div>
+
       </div>
     </section>
 
   </main>
-
-  <div id="site-footer"></div>
 
 </body>
 </html>

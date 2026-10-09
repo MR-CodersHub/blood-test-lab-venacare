@@ -193,7 +193,10 @@
           if (card) card.style.opacity = '0.45';
           S.toast('Appointment cancelled', 'The phlebotomist slot has been cancelled. You can reschedule anytime.');
         } else {
-          S.toast('Reschedule requested', 'Choose a new date and morning fasting window from the service booking desk.');
+          S.toast('Reschedule requested', 'Redirecting to booking desk to select your new slot…');
+          setTimeout(function () {
+            window.location.href = S.link('public/pages/booking.html');
+          }, 1200);
         }
       });
     });

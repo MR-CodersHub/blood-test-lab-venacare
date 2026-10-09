@@ -10,6 +10,7 @@
 
   var QUICK_LINKS = [
     { label: 'Home Page', href: 'index.html', icon: 'bi-house-door-fill' },
+    { label: 'Book At-Home Draw', href: 'public/pages/booking.html', icon: 'bi-calendar2-check-fill' },
     { label: 'Blood Tests & Services', href: 'public/pages/services.html', icon: 'bi-clipboard2-pulse-fill' },
     { label: 'Test Pricing & Packages', href: 'public/pages/pricing.html', icon: 'bi-tags-fill' },
     { label: 'Patient Portal', href: 'public/auth/login.html', icon: 'bi-file-earmark-lock2-fill' },
@@ -19,10 +20,10 @@
 
   var SERVICE_LINKS = [
     { label: 'At-Home Sample Collection', href: 'public/pages/service-details.html?id=at-home-collection' },
-    { label: 'Complete Blood Count (CBC)', href: 'public/pages/service-details.html?id=cbc-panel' },
-    { label: 'Comprehensive Metabolic (CMP-14)', href: 'public/pages/service-details.html?id=cmp-metabolic' },
-    { label: 'Lipid & Cholesterol Profile', href: 'public/pages/service-details.html?id=lipid-profile' },
-    { label: 'Thyroid Function Panel', href: 'public/pages/service-details.html?id=thyroid-panel' },
+    { label: 'Complete Blood Count', href: 'public/pages/service-details.html?id=cbc-panel' },
+    { label: 'Comprehensive Metabolic', href: 'public/pages/service-details.html?id=cmp-metabolic' },
+    { label: 'Lipid & Cholesterol', href: 'public/pages/service-details.html?id=lipid-profile' },
+    { label: 'Thyroid Function', href: 'public/pages/service-details.html?id=thyroid-panel' },
     { label: 'Specialized Cardiac & Hormones', href: 'public/pages/service-details.html?id=cardiac-crp' }
   ];
 
@@ -35,47 +36,35 @@
 
             '<div>' +
               '<a class="brand" href="' + S.link('index.html') + '" style="margin-bottom:1rem;">' +
-                '<img src="' + S.link('assets/img/logo.svg') + '" alt="VenaCare logo" />' +
-                '<span><span class="brand-name">VenaCare</span><span class="brand-tag">At-Home Lab Services</span></span>' +
+                '<img src="' + S.link('assets/img/logo.png') + '" alt="VenaCare logo" />' +
+                '<span><span class="brand-name">VenaCare</span></span>' +
               '</a>' +
               '<p style="font-size:0.94rem;max-width:26rem;margin-bottom:1.25rem;">' +
-                'VenaCare provides convenient, clinical at-home blood sample collection for routine and specialized lab tests. Skip the waiting room and access doctor-reviewed results through our secure patient portal.' +
+                'VenaCare provides convenient, clinical at-home blood sample collection for routine and specialized lab tests.' +
               '</p>' +
               '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;">' +
-                ['facebook', 'x-twitter', 'instagram', 'linkedin', 'youtube'].map(function (net) {
+                ['facebook', 'instagram', 'linkedin', 'youtube'].map(function (net) {
                   return '<a class="social-btn" href="#" aria-label="VenaCare on ' + net + '"><i class="bi bi-' + net + '"></i></a>';
                 }).join('') +
               '</div>' +
             '</div>' +
 
             '<div>' +
-              '<h4 class="footer-title">Navigation</h4>' +
+              '<h4 class="footer-title">Quick links</h4>' +
               QUICK_LINKS.map(function (item) {
                 return '<a class="footer-link" href="' + S.link(item.href) + '"><i class="bi ' + item.icon + '"></i>' + item.label + '</a>';
               }).join('') +
             '</div>' +
 
             '<div>' +
-              '<h4 class="footer-title">Blood Tests &amp; Panels</h4>' +
+              '<h4 class="footer-title">Tests</h4>' +
               SERVICE_LINKS.map(function (item) {
                 return '<a class="footer-link" href="' + S.link(item.href) + '"><i class="bi bi-chevron-right"></i>' + item.label + '</a>';
               }).join('') +
             '</div>' +
 
             '<div>' +
-              '<h4 class="footer-title">Patient Newsletter</h4>' +
-              '<p style="font-size:0.92rem;margin-bottom:1rem;">Stay informed on routine preventive checkups, seasonal biomarker guidelines, and health tips.</p>' +
-              '<form class="newsletter-form" data-form="newsletter" novalidate>' +
-                '<div class="newsletter-row">' +
-                  '<div class="field" style="flex:1;min-width:11rem;">' +
-                    '<input class="input" type="email" name="email" placeholder="you@example.com" aria-label="Email address" data-required="email" />' +
-                    '<span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Enter a valid email address.</span>' +
-                  '</div>' +
-                  '<button class="btn btn-primary" type="submit"><i class="bi bi-send-fill"></i>Subscribe</button>' +
-                '</div>' +
-                '<div class="form-success" data-success><i class="bi bi-check2-circle"></i><span>Subscribed — health guidelines and diagnostic tips are on the way.</span></div>' +
-              '</form>' +
-
+              '<h4 class="footer-title">Stay connected</h4>' +
               '<div style="margin-top:1.4rem;display:grid;gap:0.6rem;font-size:0.9rem;">' +
                 '<span class="footer-link" style="padding:0;"><i class="bi bi-geo-alt-fill"></i>221 Meridian Ave, Central Medical District</span>' +
                 '<a class="footer-link" style="padding:0;" href="mailto:support@venacare.com"><i class="bi bi-envelope-fill"></i>support@venacare.com</a>' +
@@ -90,8 +79,6 @@
               '<a class="link-primary" style="font-size:0.85rem;font-weight:500;" href="' + S.link('public/pages/Privacy-policy.html') + '">Privacy Policy</a>' +
               '<a class="link-primary" style="font-size:0.85rem;font-weight:500;" href="' + S.link('public/pages/Terms-of-service.html') + '">Terms of Service</a>' +
               '<a class="link-primary" style="font-size:0.85rem;font-weight:500;" href="' + S.link('public/pages/FAQ.html') + '">FAQ</a>' +
-              '<a class="link-primary" style="font-size:0.85rem;font-weight:500;" href="' + S.link('public/auth/login.html') + '">Patient Portal</a>' +
-              '<a class="link-primary" style="font-size:0.85rem;font-weight:500;" href="' + S.link('public/pages/contact.html') + '">Support</a>' +
             '</div>' +
           '</div>' +
         '</div>' +

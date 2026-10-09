@@ -19,7 +19,7 @@ window.DATA = (function () {
       icon: 'bi-house-heart-fill',
       image: 'assets/img/service-mobile-drive.svg',
       category: 'At-Home Care',
-      priceFrom: 0,
+      priceFrom: 50,
       duration: '15–25 minutes per visit',
       excerpt: 'Certified, background-checked phlebotomists arrive at your doorstep with sterile single-use vacuum kits, cold-chain specimen storage, and digital tracking.',
       bullets: [
@@ -664,58 +664,6 @@ window.DATA = (function () {
       stats: [{ value: '52', label: 'Biomarkers' }, { value: '24–48 hrs', label: 'Turnaround' }, { value: '$0', label: 'Home visit fee' }],
       related: ['essential-wellness', 'executive-advanced', 'thyroid-panel']
     },
-    {
-      id: 'executive-advanced',
-      title: 'Executive Specialized Diagnostic Profile',
-      kicker: 'Comprehensive Package',
-      icon: 'bi-stars',
-      image: 'assets/img/service-screening.svg',
-      category: 'Packages',
-      priceFrom: 229,
-      duration: '25 min collection · 48 hr results',
-      excerpt: 'All-inclusive executive profile covering all 52 biomarkers from Comprehensive, plus Cardiac hs-CRP, Male/Female Hormone Profile, Vitamin B12, and Ferritin.',
-      bullets: [
-        '78 Comprehensive Diagnostic Biomarkers',
-        'Includes Cardiac hs-CRP Vascular Inflammation',
-        'Complete Sex Hormone & Cortisol Profile',
-        'Vitamin D, B12, Folate & Ferritin Iron Stores'
-      ],
-      fasting: '10–12 hours fasting required (morning)',
-      sampleType: 'Whole Blood & Serum',
-      turnaround: '48 Hours',
-      description: [
-        'The gold standard in proactive executive health assessment. The Executive Specialized Diagnostic Profile leaves no stone unturned, evaluating 78 cellular, biochemical, hormonal, and vascular biomarkers in a single draw.',
-        'Expands on our Comprehensive package by adding high-sensitivity C-reactive protein (hs-CRP) for arterial inflammation, a full male/female hormone panel (testosterone, estradiol, DHEA-S, morning cortisol), and complete micronutrient testing (Vitamin B12, Folate, and Ferritin).',
-        'Conducted by a senior phlebotomist at your home or executive office with priority laboratory processing and doctor-annotated reports.'
-      ],
-      features: [
-        { icon: 'bi-trophy-fill', title: '78 Total Biomarkers', text: 'The most comprehensive out-of-hospital diagnostic panel available.' },
-        { icon: 'bi-heart-pulse-fill', title: 'Advanced Cardiac Screen', text: 'hs-CRP inflammation and complete lipid ratios.' },
-        { icon: 'bi-person-badge', title: 'Full Endocrine Suite', text: 'Testosterone, Estradiol, Cortisol, DHEA-S, and Thyroid function.' },
-        { icon: 'bi-house-check-fill', title: 'VIP Phlebotomist Visit', text: 'Dedicated senior phlebotomist dispatched at your preferred morning hour.' }
-      ],
-      tiers: [
-        {
-          name: 'Executive Diagnostic Profile', price: 229, per: 'package', featured: true,
-          desc: 'All-inclusive 78-biomarker diagnostic checkup.',
-          features: [
-            'All 78 diagnostic biomarkers',
-            'Full Comprehensive Vitality Panel (CBC, CMP-14, Lipids, HbA1c, TSH, Vit D)',
-            'Cardiac hs-CRP Vascular Inflammation',
-            'Full Sex Hormone & Cortisol Profile',
-            'Vitamin B12, Folate & Ferritin Stores',
-            'Complimentary VIP At-Home Phlebotomist Visit',
-            'Priority 48-Hour Processing & Expedited Doctor Report',
-            'Direct Physician Tele-Review Option'
-          ]
-        }
-      ],
-      faqs: [
-        { q: 'Can I do this executive panel at my office during work hours?', a: 'Yes! Our mobile phlebotomists can visit your private office or conference room before your workday begins.' }
-      ],
-      stats: [{ value: '78', label: 'Biomarkers' }, { value: '48 hrs', label: 'Turnaround' }, { value: 'VIP', label: 'Priority service' }],
-      related: ['comprehensive-vitality', 'cardiac-crp', 'hormone-endocrine']
-    }
   ];
 
   /* ------------------------------------------------------------- TEST CATALOG */

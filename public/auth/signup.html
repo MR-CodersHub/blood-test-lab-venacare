@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up | VenaCare Blood Camp</title>
-  <meta name="description" content="Create a free VenaCare donor account — register your blood group, find nearby camps and get alerted when a patient nearby needs blood." />
+  <title>Create Your Account | VenaCare Clinical Lab Services</title>
+  <meta name="description" content="Create your VenaCare patient account to book at-home blood collection, access certified lab reports, and manage health records." />
   <meta name="theme-color" content="#07090f" />
   <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg" />
 
@@ -19,248 +19,135 @@
   <script defer src="../../src/js/site.js"></script>
   <script defer src="../../src/js/data.js"></script>
   <script defer src="../../src/js/components.js"></script>
-  <script defer src="../../src/js/navbar.js"></script>
-  <script defer src="../../src/js/footer.js"></script>
   <script defer src="../../src/js/ui.js"></script>
   <script defer src="../../src/js/form-validation.js"></script>
 </head>
 
 <body data-root="../../" data-page="signup">
 
-  <div id="site-header"></div>
+  <!-- Ambient Glow Backdrop -->
+  <div class="glow-blob red" style="width:28rem;height:28rem;top:-8rem;inset-inline-start:-8rem;opacity:0.35;"></div>
+  <div class="glow-blob orange" style="width:24rem;height:24rem;bottom:-6rem;inset-inline-end:-6rem;opacity:0.25;"></div>
 
-  <main id="main-content">
+  <!-- Floating Theme Toggle (Top Right) -->
+  <div style="position:fixed;top:1.25rem;inset-inline-end:1.25rem;z-index:50;">
+    <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle colour theme">
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
+  </div>
 
-    <div class="auth-wrap">
+  <main id="main-content" class="auth-centered-page">
 
-      <!-- ===================== VISUAL PANEL · 1 · BRAND ===================== -->
-      <div class="auth-visual">
-        <div class="grid-lines"></div>
-        <div class="glow-blob red" style="width:28rem;height:28rem;top:-9rem;inset-inline-start:-9rem;"></div>
-        <div class="glow-blob orange" style="width:20rem;height:20rem;bottom:-7rem;inset-inline-end:-6rem;opacity:0.3;"></div>
+    <!-- ===================== BRAND HEADER ===================== -->
+    <a class="auth-brand-header" href="../../index.html" aria-label="VenaCare Home">
+      <img src="../../assets/img/logo.png" alt="VenaCare logo" />
+      <span class="brand-name">VenaCare</span>
+    </a>
 
-        <section class="relative">
-          <a class="brand" href="../../index.html" aria-label="VenaCare Blood Camp home">
-            <img src="../../assets/img/logo.svg" alt="VenaCare logo" />
-            <span>
-              <span class="brand-name">VenaCare</span>
-              <span class="brand-tag">Blood Camp</span>
-            </span>
-          </a>
-        </section>
+    <!-- ===================== CENTERED SIGNUP CARD ===================== -->
+    <div class="auth-centered-card">
+      <h1 class="auth-heading-title">Create your account</h1>
+      <p class="auth-heading-sub">Two minutes now, and you are bookable at every VenaCare camp in the network.</p>
 
-        <!-- ============ VISUAL PANEL · 2 · HERO PANEL + BENEFITS ============ -->
-        <section class="relative" style="padding-block:2.25rem;">
-          <img src="../../assets/img/hero-emergency.svg" alt="VenaCare coordinator matching an emergency blood request with nearby donors"
-               class="w-full rounded-[24px]"
-               style="border:1px solid var(--border-strong);box-shadow:var(--glow-lg);max-height:14rem;object-fit:cover;" />
+      <form data-form="signup" novalidate>
 
-          <h2 class="mt-6" style="font-size:clamp(1.7rem,2.4vw,2.4rem);line-height:1.15;">
-            Join <span class="text-gradient">48,392 donors</span> who answer when a stranger's life depends on it.
-          </h2>
-
-          <div class="grid gap-4 mt-6">
-            <div class="flex items-start gap-3">
-              <span class="icon-box"><i class="bi bi-geo-alt-fill"></i></span>
-              <div>
-                <strong class="block font-display">Camps on your street</strong>
-                <p class="text-sm mt-1" style="color:var(--text-muted);">Mobile drives land at offices, campuses and community halls — most donors never travel more than 15 minutes.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3">
-              <span class="icon-box"><i class="bi bi-bell-fill"></i></span>
-              <div>
-                <strong class="block font-display">Emergency alerts that matter</strong>
-                <p class="text-sm mt-1" style="color:var(--text-muted);">Only compatible requests within your radius, only when blood banks are genuinely short.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3">
-              <span class="icon-box"><i class="bi bi-patch-check-fill"></i></span>
-              <div>
-                <strong class="block font-display">Verified donor profile</strong>
-                <p class="text-sm mt-1" style="color:var(--text-muted);">Screening history, blood group certificate and photo ID verified once — trusted at every partner hospital.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ============== VISUAL PANEL · 3 · WHAT YOU GET ============== -->
-        <section class="relative">
-          <div class="card glass">
-            <span class="kicker"><i class="bi bi-gift-fill"></i>What you get</span>
-            <ul class="grid gap-3 mt-4">
-              <li class="flex items-start gap-2 text-sm" style="color:var(--text-muted);">
-                <i class="bi bi-check-circle-fill" style="color:var(--primary);margin-top:0.15rem;"></i>
-                Digital donation certificate, stored forever in your dashboard.
-              </li>
-              <li class="flex items-start gap-2 text-sm" style="color:var(--text-muted);">
-                <i class="bi bi-check-circle-fill" style="color:var(--primary);margin-top:0.15rem;"></i>
-                Automatic 56-day eligibility reminders by email and SMS.
-              </li>
-              <li class="flex items-start gap-2 text-sm" style="color:var(--text-muted);">
-                <i class="bi bi-check-circle-fill" style="color:var(--primary);margin-top:0.15rem;"></i>
-                Mediated contact — your number stays private until you agree to share it.
-              </li>
-              <li class="flex items-start gap-2 text-sm" style="color:var(--text-muted);">
-                <i class="bi bi-check-circle-fill" style="color:var(--primary);margin-top:0.15rem;"></i>
-                Lifetime impact counter showing the lives your units have touched.
-              </li>
-            </ul>
-          </div>
-
-          <div class="grid grid-cols-3 gap-3 mt-5">
-            <div class="card card-soft text-center" style="padding:1rem 0.5rem;">
-              <strong class="block font-display text-xl">2 min</strong>
-              <span class="text-xs" style="color:var(--text-muted);">to sign up</span>
-            </div>
-            <div class="card card-soft text-center" style="padding:1rem 0.5rem;">
-              <strong class="block font-display text-xl">Free</strong>
-              <span class="text-xs" style="color:var(--text-muted);">forever</span>
-            </div>
-            <div class="card card-soft text-center" style="padding:1rem 0.5rem;">
-              <strong class="block font-display text-xl">92%</strong>
-              <span class="text-xs" style="color:var(--text-muted);">requests filled</span>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- ===================== FORM PANEL · 1 · HEADING ===================== -->
-      <div class="auth-form-side">
-        <div class="auth-card">
-
-          <section>
-            <span class="kicker"><i class="bi bi-person-plus-fill"></i>Free donor account</span>
-            <h1 class="mt-4" style="font-size:clamp(1.9rem,4vw,2.5rem);">Create your account</h1>
-            <p class="mt-3" style="color:var(--text-muted);font-size:0.95rem;">
-              Two minutes now, and you are bookable at every VenaCare camp in the network.
-            </p>
-          </section>
-
-          <!-- ==================== FORM PANEL · 2 · SIGNUP FORM ==================== -->
-          <section class="mt-7">
-
-            <form data-form="signup" novalidate class="grid gap-5">
-
-              <div class="field">
-                <label class="label" for="signup-name">Full name <span class="req">*</span></label>
-                <input class="input" id="signup-name" name="fullname" type="text" data-required="text"
-                       autocomplete="name" placeholder="Jordan Diaz" />
-                <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please complete this field.</span>
-              </div>
-
-              <div class="field">
-                <label class="label" for="signup-email">Email <span class="req">*</span></label>
-                <input class="input" id="signup-email" name="email" type="email" data-required="email"
-                       autocomplete="email" placeholder="you@example.com" />
-                <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Enter a valid email address.</span>
-              </div>
-
-              <div class="field">
-                <label class="label" for="signup-phone">Phone <span class="req">*</span></label>
-                <input class="input" id="signup-phone" name="phone" type="tel" data-required="phone"
-                       autocomplete="tel" placeholder="+1 (555) 013-2266" />
-                <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Enter a valid phone number (at least 7 digits).</span>
-              </div>
-
-              <div class="field">
-                <label class="label" for="signup-group">Blood group <span class="req">*</span></label>
-                <select class="select" id="signup-group" name="bloodgroup" data-required="select">
-                  <option value="" selected disabled>Choose your blood group</option>
-                  <option value="O−">O−</option>
-                  <option value="O+">O+</option>
-                  <option value="A−">A−</option>
-                  <option value="A+">A+</option>
-                  <option value="B−">B−</option>
-                  <option value="B+">B+</option>
-                  <option value="AB−">AB−</option>
-                  <option value="AB+">AB+</option>
-                </select>
-                <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please choose an option.</span>
-              </div>
-
-              <div class="field">
-                <label class="label" for="signup-city">City <span class="req">*</span></label>
-                <input class="input" id="signup-city" name="city" type="text" data-required="text"
-                       autocomplete="address-level2" placeholder="e.g. Metro City" />
-                <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please complete this field.</span>
-              </div>
-
-              <div class="field">
-                <label class="label" for="signup-password">Password <span class="req">*</span></label>
-                <div class="input-wrap">
-                  <input class="input" id="signup-password" name="password" type="password" data-required="password"
-                         autocomplete="new-password" placeholder="At least 8 characters"
-                         style="padding-inline-end:2.75rem;" />
-                  <button class="icon-btn" type="button" data-toggle-password="signup-password" aria-label="Show password"
-                          style="position:absolute;inset-inline-end:0.4rem;top:50%;transform:translateY(-50%);width:2rem;height:2rem;border:0;background:transparent;">
-                    <i class="bi bi-eye"></i>
-                  </button>
-                </div>
-                <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Password must be at least 8 characters.</span>
-              </div>
-
-              <div class="field">
-                <label class="label" for="signup-confirm">Confirm password <span class="req">*</span></label>
-                <div class="input-wrap">
-                  <input class="input" id="signup-confirm" name="confirm_password" type="password"
-                         data-required="confirm" data-match="password"
-                         autocomplete="new-password" placeholder="Repeat your password"
-                         style="padding-inline-end:2.75rem;" />
-                  <button class="icon-btn" type="button" data-toggle-password="signup-confirm" aria-label="Show password"
-                          style="position:absolute;inset-inline-end:0.4rem;top:50%;transform:translateY(-50%);width:2rem;height:2rem;border:0;background:transparent;">
-                    <i class="bi bi-eye"></i>
-                  </button>
-                </div>
-                <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Passwords do not match.</span>
-              </div>
-
-              <div class="field">
-                <div class="checkbox-row">
-                  <input type="checkbox" id="signup-terms" data-required="checked"
-                         data-error="Please accept the Terms of Service to continue." />
-                  <label for="signup-terms">
-                    I agree to the <a class="link-primary" href="../../public/pages/Terms-of-service.html">Terms of Service</a>
-                    and the <a class="link-primary" href="../../public/pages/Privacy-policy.html">Privacy Policy</a>.
-                  </label>
-                </div>
-                <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please accept the Terms of Service to continue.</span>
-              </div>
-
-              <button class="btn btn-primary btn-block" type="submit">
-                <i class="bi bi-droplet-half"></i>Create free account
-              </button>
-
-              <div class="form-success" data-success>
-                <i class="bi bi-check2-circle"></i>
-                <span>Account created — check your inbox to verify your email.</span>
-              </div>
-
-            </form>
-
-            <div class="divider-dashed" style="margin-block:1.6rem;"></div>
-
-            <p class="text-center text-sm" style="color:var(--text-muted);">
-              Already registered? <a class="link-primary" href="login.html">Log in instead</a>
-            </p>
-
-            <p class="mt-4 text-center text-xs" style="color:var(--text-faint);">
-              We never sell donor data. Read how we handle it in our
-              <a class="link-primary" href="../../public/pages/Privacy-policy.html">Privacy Policy</a>, or write to
-              <a class="link-primary" href="mailto:help@venacare.org">help@venacare.org</a>.
-            </p>
-
-          </section>
+        <!-- Full Name -->
+        <div class="field auth-field">
+          <label class="label" for="signup-name">Full name <span class="req">*</span></label>
+          <input class="auth-input input" id="signup-name" name="fullname" type="text" data-required="text"
+                 autocomplete="name" placeholder="Jordan Diaz" required />
+          <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please complete this field.</span>
         </div>
+
+        <!-- Email -->
+        <div class="field auth-field">
+          <label class="label" for="signup-email">Email <span class="req">*</span></label>
+          <input class="auth-input input" id="signup-email" name="email" type="email" data-required="email"
+                 autocomplete="email" placeholder="you@example.com" required />
+          <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Enter a valid email address.</span>
+        </div>
+
+        <!-- Phone -->
+        <div class="field auth-field">
+          <label class="label" for="signup-phone">Phone <span class="req">*</span></label>
+          <input class="auth-input input" id="signup-phone" name="phone" type="tel" data-required="phone"
+                 autocomplete="tel" placeholder="+1(555) 013-2266" required />
+          <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Enter a valid phone number (at least 7 digits).</span>
+        </div>
+
+        <!-- Blood Group -->
+        <div class="field auth-field">
+          <label class="label" for="signup-group">Blood group <span class="req">*</span></label>
+          <select class="auth-select select" id="signup-group" name="bloodgroup" data-required="select" required>
+            <option value="" selected disabled>Choose your blood group</option>
+            <option value="O−">O−</option>
+            <option value="O+">O+</option>
+            <option value="A−">A−</option>
+            <option value="A+">A+</option>
+            <option value="B−">B−</option>
+            <option value="B+">B+</option>
+            <option value="AB−">AB−</option>
+            <option value="AB+">AB+</option>
+          </select>
+          <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please choose an option.</span>
+        </div>
+
+        <!-- City -->
+        <div class="field auth-field">
+          <label class="label" for="signup-city">City <span class="req">*</span></label>
+          <input class="auth-input input" id="signup-city" name="city" type="text" data-required="text"
+                 autocomplete="address-level2" placeholder="e.g. Metro City" required />
+          <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please complete this field.</span>
+        </div>
+
+        <!-- Password with Eye Toggle -->
+        <div class="field auth-field">
+          <label class="label" for="signup-password">Password <span class="req">*</span></label>
+          <div class="auth-input-wrap">
+            <input class="auth-input input" id="signup-password" name="password" type="password" data-required="password"
+                   autocomplete="new-password" placeholder="At least 8 characters" required />
+            <button class="auth-password-toggle" type="button" data-toggle-password="signup-password" aria-label="Toggle password visibility">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+          <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Password must be at least 8 characters.</span>
+        </div>
+
+        <!-- Terms Agreement Checkbox -->
+        <div class="field mt-2 mb-4">
+          <div class="checkbox-row text-xs" style="color:var(--text-muted);display:flex;align-items:flex-start;gap:0.5rem;">
+            <input type="checkbox" id="signup-terms" data-required="checked"
+                   data-error="Please accept the Terms of Service to continue." checked style="margin-top:0.2rem;" />
+            <label for="signup-terms" style="cursor:pointer;line-height:1.45;">
+              I agree to the <a class="link-primary" href="../../public/pages/Terms-of-service.html">Terms of Service</a>
+              and the <a class="link-primary" href="../../public/pages/Privacy-policy.html">Privacy Policy</a>.
+            </label>
+          </div>
+          <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Please accept the terms to continue.</span>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn btn-primary auth-submit-btn" type="submit">
+          Create account
+        </button>
+
+        <!-- Form Success State -->
+        <div class="form-success mt-4" data-success>
+          <i class="bi bi-check2-circle"></i>
+          <span>Account created successfully — redirecting to your Patient Portal…</span>
+        </div>
+
+      </form>
+
+      <!-- Bottom Link -->
+      <div class="auth-bottom-links">
+        Already have an account?
+        <a class="link-primary font-semibold" href="login.html">Sign in</a>
       </div>
 
     </div>
 
   </main>
-
-  <div id="site-footer"></div>
 
 </body>
 </html>

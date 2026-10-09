@@ -117,6 +117,26 @@ window.UI = (function () {
     );
   }
 
+  function teamCard(m) {
+    var socs = (m.socials || []).map(function (s) {
+      var icon = s === 'x-twitter' ? 'bi-twitter-x' : (s === 'linkedin' ? 'bi-linkedin' : (s === 'instagram' ? 'bi-instagram' : 'bi-share'));
+      return '<a href="#" class="icon-btn" style="width:2.2rem;height:2.2rem;font-size:0.9rem;" aria-label="' + S.esc(s) + '" onclick="event.preventDefault();">' +
+        '<i class="bi ' + icon + '"></i></a>';
+    }).join('');
+
+    return (
+      '<div class="card card-hover flex flex-col items-center text-center">' +
+        '<div style="position:relative;width:96px;height:96px;margin:0 auto 1.15rem;">' +
+          '<img src="' + S.link(m.img) + '" alt="' + S.esc(m.name) + '" style="width:100%;height:100%;border-radius:50%;border:2px solid rgba(255,46,76,0.45);box-shadow:var(--glow-sm);object-fit:cover;" loading="lazy" />' +
+        '</div>' +
+        '<h3 style="font-size:1.12rem;font-weight:700;margin-bottom:0.3rem;">' + S.esc(m.name) + '</h3>' +
+        '<p style="font-size:0.78rem;color:var(--primary);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.75rem;">' + S.esc(m.role) + '</p>' +
+        '<p style="font-size:0.88rem;color:var(--text-muted);line-height:1.55;margin-bottom:1.25rem;flex:1;">' + S.esc(m.bio) + '</p>' +
+        (socs ? '<div style="display:flex;gap:0.5rem;justify-content:center;margin-top:auto;">' + socs + '</div>' : '') +
+      '</div>'
+    );
+  }
+
   function faqItem(item, open) {
     return (
       '<div class="accordion-item' + (open ? ' open' : '') + '" data-accordion-item>' +
@@ -162,6 +182,7 @@ window.UI = (function () {
     postCard: postCard,
     campCard: campCard,
     testimonialCard: testimonialCard,
+    teamCard: teamCard,
     faqItem: faqItem,
     breadcrumb: breadcrumb,
     emptyState: emptyState,

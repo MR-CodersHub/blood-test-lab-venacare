@@ -19,194 +19,106 @@
   <script defer src="../../src/js/site.js"></script>
   <script defer src="../../src/js/data.js"></script>
   <script defer src="../../src/js/components.js"></script>
-  <script defer src="../../src/js/navbar.js"></script>
-  <script defer src="../../src/js/footer.js"></script>
   <script defer src="../../src/js/ui.js"></script>
   <script defer src="../../src/js/form-validation.js"></script>
 </head>
 
 <body data-root="../../" data-page="login">
 
-  <div id="site-header"></div>
+  <!-- Ambient Glow Backdrop -->
+  <div class="glow-blob red" style="width:28rem;height:28rem;top:-8rem;inset-inline-start:-8rem;opacity:0.35;"></div>
+  <div class="glow-blob orange" style="width:24rem;height:24rem;bottom:-6rem;inset-inline-end:-6rem;opacity:0.25;"></div>
 
-  <main id="main-content">
+  <!-- Floating Theme Toggle (Top Right) -->
+  <div style="position:fixed;top:1.25rem;inset-inline-end:1.25rem;z-index:50;">
+    <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle colour theme">
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
+  </div>
 
-    <div class="auth-wrap">
+  <main id="main-content" class="auth-centered-page">
 
-      <!-- ===================== VISUAL PANEL · PATIENT PORTAL BENEFITS ===================== -->
-      <div class="auth-visual">
-        <div class="grid-lines"></div>
-        <div class="glow-blob red" style="width:28rem;height:28rem;top:-9rem;inset-inline-start:-9rem;"></div>
-        <div class="glow-blob orange" style="width:20rem;height:20rem;bottom:-7rem;inset-inline-end:-6rem;opacity:0.3;"></div>
+    <!-- ===================== BRAND HEADER ===================== -->
+    <a class="auth-brand-header" href="../../index.html" aria-label="VenaCare Home">
+      <img src="../../assets/img/logo.png" alt="VenaCare logo" />
+      <span class="brand-name">VenaCare</span>
+    </a>
 
-        <section class="relative">
-          <a class="brand" href="../../index.html" aria-label="VenaCare At-Home Lab Services home">
-            <img src="../../assets/img/logo.svg" alt="VenaCare logo" />
-            <span>
-              <span class="brand-name">VenaCare</span>
-              <span class="brand-tag">At-Home Lab Services</span>
-            </span>
-          </a>
-        </section>
+    <!-- ===================== CENTERED LOGIN CARD ===================== -->
+    <div class="auth-centered-card">
+      <h1 class="auth-heading-title">Sign in to your account</h1>
+      <p class="auth-heading-sub">Access your patient portal, lab results and collection bookings.</p>
 
-        <!-- Headline & Patient Portal Highlights -->
-        <section class="relative" style="padding-block:2.5rem;">
-          <span class="kicker"><span class="pulse-dot"></span>Secure Patient Portal</span>
-
-          <h2 class="mt-5" style="font-size:clamp(1.8rem,2.5vw,2.5rem);line-height:1.15;">
-            Access your doctor-reviewed <span class="text-gradient">lab results</span> anytime, anywhere.
-          </h2>
-
-          <div class="grid gap-5 mt-8">
-            <div class="flex items-start gap-4">
-              <span class="icon-box"><i class="bi bi-file-earmark-pdf-fill"></i></span>
-              <div>
-                <strong class="block font-display">Certified PDF Lab Reports</strong>
-                <p class="text-sm mt-1" style="color:var(--text-muted);">Download official laboratory reports complete with reference ranges, pathologist notes, and doctor review within 24–48 hours.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <span class="icon-box"><i class="bi bi-house-heart-fill"></i></span>
-              <div>
-                <strong class="block font-display">At-Home Collection Tracker</strong>
-                <p class="text-sm mt-1" style="color:var(--text-muted);">View scheduled morning draws, assigned phlebotomist credentials, fasting guidelines, and live arrival status.</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <span class="icon-box"><i class="bi bi-graph-up"></i></span>
-              <div>
-                <strong class="block font-display">Biomarker Trend Analysis</strong>
-                <p class="text-sm mt-1" style="color:var(--text-muted);">Compare cholesterol, glucose, hemoglobin, and hormone markers over time to observe your preventive health progress.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Testimonial + Stats -->
-        <section class="relative">
-          <div class="card glass">
-            <div class="flex items-start gap-4">
-              <img src="../../assets/img/team-1.svg" alt="Dr. Aisha Kapoor, VenaCare Medical Director"
-                   style="width:54px;height:54px;border-radius:50%;flex:none;border:2px solid rgba(255,46,76,0.55);" />
-              <div>
-                <p style="color:var(--text);font-size:0.95rem;">
-                  “Direct, secure patient access to diagnostic data empowers patients and their physicians to make timely, informed healthcare decisions.”
-                </p>
-                <p class="text-sm mt-3" style="color:var(--text-muted);">
-                  <strong style="color:var(--text);">Dr. Aisha Kapoor, MD</strong> · Medical Director, VenaCare Labs
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-3 gap-3 mt-5">
-            <div class="card card-soft text-center" style="padding:1rem 0.5rem;">
-              <strong class="block font-display text-xl">154k+</strong>
-              <span class="text-xs" style="color:var(--text-muted);">home collections</span>
-            </div>
-            <div class="card card-soft text-center" style="padding:1rem 0.5rem;">
-              <strong class="block font-display text-xl">21.4 hrs</strong>
-              <span class="text-xs" style="color:var(--text-muted);">avg turnaround</span>
-            </div>
-            <div class="card card-soft text-center" style="padding:1rem 0.5rem;">
-              <strong class="block font-display text-xl">100%</strong>
-              <span class="text-xs" style="color:var(--text-muted);">HIPAA secure</span>
-            </div>
-          </div>
-        </section>
+      <!-- Quick 1-Click Demo Login Pill -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:0.65rem 0.95rem;border-radius:14px;background:rgba(225,29,72,0.08);border:1px dashed rgba(225,29,72,0.35);margin-bottom:1.5rem;">
+        <div class="flex items-center gap-2 text-xs" style="color:var(--text);">
+          <span class="pulse-dot"></span>
+          <span><strong>Testing Demo:</strong> Jordan Diaz (Patient)</span>
+        </div>
+        <button class="btn btn-primary btn-sm" type="button" id="demo-patient-btn" style="padding:0.35rem 0.75rem;font-size:0.78rem;">
+          <i class="bi bi-box-arrow-in-right"></i> 1-Click Fill
+        </button>
       </div>
 
-      <!-- ===================== FORM PANEL · PATIENT SIGN IN ===================== -->
-      <div class="auth-form-side">
-        <div class="auth-card">
+      <form data-form="login" novalidate>
 
-          <section>
-            <span class="kicker"><i class="bi bi-file-earmark-lock2-fill"></i>HIPAA-Encrypted Sign In</span>
-            <h1 class="mt-4" style="font-size:clamp(1.9rem,4vw,2.5rem);">Patient Portal Login</h1>
-            <p class="mt-3" style="color:var(--text-muted);font-size:0.95rem;">
-              Sign in to view your diagnostic test results, download certified reports, and manage your at-home collection bookings.
-            </p>
-          </section>
+        <!-- Email Address -->
+        <div class="field auth-field">
+          <label class="label" for="login-email">Email <span class="req">*</span></label>
+          <input class="auth-input input" id="login-email" name="email" type="email" data-required="email"
+                 autocomplete="email" placeholder="you@example.com" required />
+          <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Enter a valid email address.</span>
+        </div>
 
-          <!-- Quick One-Click Demo Login Helper -->
-          <div class="mt-6 p-3 rounded-xl flex items-center justify-between gap-3" style="background:rgba(255,46,76,0.08);border:1px dashed rgba(255,46,76,0.35);">
-            <div class="flex items-center gap-2 text-xs">
-              <span class="pulse-dot"></span>
-              <span><strong>Testing Demo:</strong> Jordan Diaz (Patient)</span>
-            </div>
-            <button class="btn btn-primary btn-sm" type="button" id="demo-patient-btn" style="padding:0.4rem 0.75rem;font-size:0.8rem;">
-              <i class="bi bi-box-arrow-in-right"></i>1-Click Demo Login
+        <!-- Password with Eye Toggle -->
+        <div class="field auth-field">
+          <label class="label" for="login-password">Password <span class="req">*</span></label>
+          <div class="auth-input-wrap">
+            <input class="auth-input input" id="login-password" name="password" type="password" data-required="password"
+                   autocomplete="current-password" placeholder="At least 8 characters" required />
+            <button class="auth-password-toggle" type="button" data-toggle-password="login-password" aria-label="Toggle password visibility">
+              <i class="bi bi-eye"></i>
             </button>
           </div>
-
-          <!-- ===================== LOGIN FORM ===================== -->
-          <section class="mt-6">
-
-            <form data-form="login" novalidate class="grid gap-5">
-
-              <div class="field">
-                <label class="label" for="login-email">Patient Email or Patient ID <span class="req">*</span></label>
-                <input class="input" id="login-email" name="email" type="email" data-required="email"
-                       autocomplete="email" placeholder="patient@venacare.com or VC-849201" />
-                <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Enter a valid email address or Patient ID.</span>
-              </div>
-
-              <div class="field">
-                <label class="label" for="login-password">Password <span class="req">*</span></label>
-                <div class="input-wrap">
-                  <input class="input" id="login-password" name="password" type="password" data-required="password"
-                         autocomplete="current-password" placeholder="Enter your portal password"
-                         style="padding-inline-end:2.75rem;" />
-                  <button class="icon-btn" type="button" data-toggle-password="login-password" aria-label="Show password"
-                          style="position:absolute;inset-inline-end:0.4rem;top:50%;transform:translateY(-50%);width:2rem;height:2rem;border:0;background:transparent;">
-                    <i class="bi bi-eye"></i>
-                  </button>
-                </div>
-                <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Password must be at least 8 characters.</span>
-              </div>
-
-              <div class="flex flex-wrap items-center justify-between gap-3 text-sm">
-                <label class="checkbox-row">
-                  <input type="checkbox" name="remember" />
-                  <span>Remember me on this trusted device</span>
-                </label>
-                <a class="link-primary text-sm" href="../pages/contact.html">Forgot password?</a>
-              </div>
-
-              <button class="btn btn-primary btn-block" type="submit">
-                <i class="bi bi-box-arrow-in-right"></i>Sign In to Patient Portal
-              </button>
-
-              <div class="form-success" data-success>
-                <i class="bi bi-check2-circle"></i>
-                <span>Authentication successful — opening your Patient Diagnostic Portal…</span>
-              </div>
-
-            </form>
-
-            <div class="divider-dashed" style="margin-block:1.6rem;"></div>
-
-            <div class="text-center text-sm" style="color:var(--text-muted);">
-              Need to book a new at-home blood test?
-              <a class="link-primary block mt-1 font-semibold" href="../../index.html#book-collection">Book At-Home Sample Collection</a>
-            </div>
-
-            <p class="mt-6 text-center text-xs" style="color:var(--text-faint);">
-              Patient records protected under HIPAA Privacy Standards. Need assistance? Call our lab desk at
-              <a class="link-primary" href="tel:+18005535227">+1 (800) 553-LABS (5227)</a>.
-            </p>
-
-          </section>
+          <span class="error-msg"><i class="bi bi-exclamation-circle-fill"></i>Password must be at least 8 characters.</span>
         </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="flex flex-wrap items-center justify-between gap-3 text-xs my-3" style="color:var(--text-muted);">
+          <label class="checkbox-row" style="display:flex;align-items:center;gap:0.45rem;cursor:pointer;">
+            <input type="checkbox" name="remember" checked />
+            <span>Remember me on this device</span>
+          </label>
+          <a class="link-primary font-semibold" href="../pages/contact.html">Forgot password?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn btn-primary auth-submit-btn" type="submit">
+          Sign in to account
+        </button>
+
+        <!-- Form Success State -->
+        <div class="form-success mt-4" data-success>
+          <i class="bi bi-check2-circle"></i>
+          <span>Authentication successful — opening your Patient Portal…</span>
+        </div>
+
+      </form>
+
+      <!-- Bottom Links -->
+      <div class="auth-bottom-links">
+        Don't have an account?
+        <a class="link-primary font-semibold" href="signup.html">Create an account</a>
+      </div>
+
+      <div class="mt-4 pt-3 text-center text-xs border-t border-dashed border-white/10" style="color:var(--text-faint);">
+        Need to schedule a home draw without signing in?
+        <a class="link-primary block mt-1 font-semibold" href="../../public/pages/booking.html">Book At-Home Sample Collection</a>
       </div>
 
     </div>
 
   </main>
-
-  <div id="site-footer"></div>
 
   <script>
     // Quick One-Click Demo Login Script for Patients
@@ -214,14 +126,17 @@
       var demoBtn = document.getElementById('demo-patient-btn');
       var emailInput = document.getElementById('login-email');
       var passInput = document.getElementById('login-password');
-      var form = document.querySelector('form[data-form="login"]');
 
-      if (demoBtn && emailInput && passInput && form) {
+      if (demoBtn && emailInput && passInput) {
         demoBtn.addEventListener('click', function () {
-          emailInput.value = 'patient@venacare.com';
-          passInput.value = 'patient123';
-          var submitBtn = form.querySelector('[type="submit"]');
-          if (submitBtn) submitBtn.click();
+          emailInput.value = 'jordan.diaz@example.com';
+          passInput.value = 'Password123!';
+          var evt = new Event('input', { bubbles: true });
+          emailInput.dispatchEvent(evt);
+          passInput.dispatchEvent(evt);
+          if (window.SITE && window.SITE.toast) {
+            window.SITE.toast('Demo Credentials Loaded', 'Jordan Diaz patient account ready to sign in.');
+          }
         });
       }
     });

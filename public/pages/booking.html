@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book At-Home Blood Collection | VenaCare Clinical Lab Services</title>
+  <meta name="description" content="Schedule a certified phlebotomist visit to your home or office. Choose routine blood tests, specialized diagnostic panels, or comprehensive checkups with 24–48 hr portal reports." />
+  <meta name="keywords" content="book blood test at home, home phlebotomist, mobile blood draw, blood test booking, routine blood test, specialized panels, cold chain lab" />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../src/css/style.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../src/js/tailwind-config.js"></script>
+  <script defer src="../../src/js/site.js"></script>
+  <script defer src="../../src/js/data.js"></script>
+  <script defer src="../../src/js/components.js"></script>
+  <script defer src="../../src/js/navbar.js"></script>
+  <script defer src="../../src/js/footer.js"></script>
+  <script defer src="../../src/js/ui.js"></script>
+  <script defer src="../../src/js/form-validation.js"></script>
+  <script defer src="../../src/js/booking.js"></script>
+</head>
+
+<body data-root="../../" data-page="booking">
+
+  <!-- =============================== NAVBAR =============================== -->
+  <div id="site-header"></div>
+
+  <main id="main-content">
+
+    <!-- ============================= 1 · HERO ============================= -->
+    <section class="page-hero">
+      <div class="container-x">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../../index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+          <i class="bi bi-chevron-right"></i>
+          <a href="services.html">Services</a>
+          <i class="bi bi-chevron-right"></i>
+          <span class="current">Book At-Home Collection</span>
+        </nav>
+
+        <span class="kicker"><i class="bi bi-house-heart-fill"></i>At-Home Phlebotomy Service</span>
+        <h1 class="page-hero-title mt-4">Book At-Home <span class="text-gradient">Blood Sample Collection</span></h1>
+        <p class="page-hero-sub">
+          Skip clinic waiting rooms and morning traffic. Our certified phlebotomists visit your doorstep with sterile vacuum kits. Certified CAP/CLIA lab reports in 24–48 hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================== 2 · BOOKING ENGINE ======================== -->
+    <section class="section" id="booking-engine" style="padding-top:2.5rem;">
+      <div class="container-x">
+
+        <!-- Progress Steps Bar -->
+        <div class="mb-10 overflow-x-auto pb-2">
+          <div class="flex items-center justify-between min-w-[620px] max-w-4xl mx-auto px-4 py-3 rounded-2xl" style="background:var(--surface);border:1px solid var(--border);">
+            <div class="flex items-center gap-3 cursor-pointer" data-step-indicator="1">
+              <span class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background:var(--primary);color:#fff;">1</span>
+              <div>
+                <strong class="text-xs uppercase tracking-wider block" style="color:var(--text);">Step 1</strong>
+                <span class="text-xs font-semibold" style="color:var(--text-muted);">Select Tests</span>
+              </div>
+            </div>
+            <i class="bi bi-chevron-right text-xs" style="color:var(--text-faint);"></i>
+
+            <div class="flex items-center gap-3 cursor-pointer" data-step-indicator="2">
+              <span class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background:var(--surface-2);color:var(--text-muted);border:1px solid var(--border);">2</span>
+              <div>
+                <strong class="text-xs uppercase tracking-wider block" style="color:var(--text);">Step 2</strong>
+                <span class="text-xs font-semibold" style="color:var(--text-muted);">Date &amp; Fasting Slot</span>
+              </div>
+            </div>
+            <i class="bi bi-chevron-right text-xs" style="color:var(--text-faint);"></i>
+
+            <div class="flex items-center gap-3 cursor-pointer" data-step-indicator="3">
+              <span class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background:var(--surface-2);color:var(--text-muted);border:1px solid var(--border);">3</span>
+              <div>
+                <strong class="text-xs uppercase tracking-wider block" style="color:var(--text);">Step 3</strong>
+                <span class="text-xs font-semibold" style="color:var(--text-muted);">Patient &amp; Address</span>
+              </div>
+            </div>
+            <i class="bi bi-chevron-right text-xs" style="color:var(--text-faint);"></i>
+
+            <div class="flex items-center gap-3 cursor-pointer" data-step-indicator="4">
+              <span class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background:var(--surface-2);color:var(--text-muted);border:1px solid var(--border);">4</span>
+              <div>
+                <strong class="text-xs uppercase tracking-wider block" style="color:var(--text);">Step 4</strong>
+                <span class="text-xs font-semibold" style="color:var(--text-muted);">Review &amp; Pay</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Main Grid (Wizard + Sticky Summary) -->
+        <div class="grid gap-8 lg:grid-cols-12 items-start">
+
+          <!-- Wizard Left Column (7 cols) -->
+          <div class="lg:col-span-7 xl:col-span-8" id="booking-wizard-content">
+
+            <!-- ----------------- STEP 1: TEST SELECTION ----------------- -->
+            <div data-step-panel="1">
+              <div class="card mb-6">
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-5">
+                  <div>
+                    <h2 class="text-xl font-bold">1. Select Tests &amp; Diagnostic Panels</h2>
+                    <p class="text-xs mt-1" style="color:var(--text-muted);">
+                      Pick routine blood tests, specialized biomarker assays, or full diagnostic checkups.
+                    </p>
+                  </div>
+                  <a href="services.html" class="link-primary text-xs font-semibold inline-flex items-center gap-1">
+                    <i class="bi bi-box-arrow-up-right"></i>View Full Catalog Details
+                  </a>
+                </div>
+
+                <!-- Search and Categories -->
+                <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                  <div class="input-wrap flex-1">
+                    <i class="bi bi-search input-icon"></i>
+                    <input class="input has-icon" type="search" id="booking-test-search" placeholder="Search tests (e.g. Thyroid, CBC, Vitamin D, HbA1c, Lipids)…" />
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 self-center">
+                    <button class="chip active" type="button" data-test-tab="all"><i class="bi bi-grid-fill"></i>All</button>
+                    <button class="chip" type="button" data-test-tab="Packages"><i class="bi bi-gem"></i>Packages</button>
+                    <button class="chip" type="button" data-test-tab="Routine"><i class="bi bi-droplet-half"></i>Routine</button>
+                    <button class="chip" type="button" data-test-tab="Specialized"><i class="bi bi-activity"></i>Specialized</button>
+                  </div>
+                </div>
+
+                <!-- Tests Grid -->
+                <div class="grid gap-4 sm:grid-cols-2" id="booking-tests-grid"></div>
+
+                <!-- Step 1 Footer -->
+                <div class="flex items-center justify-between gap-4 border-t border-dashed border-white/10 pt-5 mt-6">
+                  <span class="text-xs" style="color:var(--text-muted);">
+                    <i class="bi bi-info-circle text-rose-500 mr-1"></i>Select one or more tests to proceed.
+                  </span>
+                  <button type="button" class="btn btn-primary" id="step-1-next" disabled>
+                    Continue to Scheduling <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ----------------- STEP 2: SCHEDULE & FASTING SLOT ----------------- -->
+            <div data-step-panel="2" class="hidden" style="display:none;">
+              <div class="card mb-6">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h2 class="text-xl font-bold">2. Select Date &amp; Phlebotomist Window</h2>
+                    <p class="text-xs mt-1" style="color:var(--text-muted);">
+                      Morning slots let you sleep through your fasting window and eat right after your 10-minute draw.
+                    </p>
+                  </div>
+                  <span class="badge plain"><i class="bi bi-clock-history"></i>Fasting Recommended</span>
+                </div>
+
+                <!-- Date Picker -->
+                <div class="field mb-6">
+                  <label class="label" for="booking-date-input">Appointment Date <span class="req">*</span></label>
+                  <div class="input-wrap max-w-sm">
+                    <i class="bi bi-calendar-event input-icon"></i>
+                    <input class="input has-icon" type="date" id="booking-date-input" required />
+                  </div>
+                  <span class="text-xs mt-1" style="color:var(--text-faint);">Appointments available 7 days a week, starting tomorrow.</span>
+                </div>
+
+                <!-- Slot Selector -->
+                <div class="mb-6">
+                  <label class="label mb-2 block">Choose Arrival &amp; Fasting Slot <span class="req">*</span></label>
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <button type="button" class="btn btn-primary text-start justify-start p-3 text-xs" data-booking-slot="06:30 AM – 07:30 AM (Early Fasting Window)">
+                      <div>
+                        <strong class="block text-sm">06:30 AM – 07:30 AM</strong>
+                        <span class="opacity-80">Early Fasting · Wake &amp; Draw</span>
+                      </div>
+                    </button>
+                    <button type="button" class="btn btn-outline text-start justify-start p-3 text-xs active" data-booking-slot="07:30 AM – 08:30 AM (Recommended Fasting)">
+                      <div>
+                        <strong class="block text-sm">07:30 AM – 08:30 AM</strong>
+                        <span class="opacity-80">Most Popular · Overnight Fasting</span>
+                      </div>
+                    </button>
+                    <button type="button" class="btn btn-outline text-start justify-start p-3 text-xs" data-booking-slot="08:30 AM – 09:30 AM (Standard Morning)">
+                      <div>
+                        <strong class="block text-sm">08:30 AM – 09:30 AM</strong>
+                        <span class="opacity-80">Standard Morning Slot</span>
+                      </div>
+                    </button>
+                    <button type="button" class="btn btn-outline text-start justify-start p-3 text-xs" data-booking-slot="09:30 AM – 10:30 AM (Late Morning)">
+                      <div>
+                        <strong class="block text-sm">09:30 AM – 10:30 AM</strong>
+                        <span class="opacity-80">Late Morning Slot</span>
+                      </div>
+                    </button>
+                    <button type="button" class="btn btn-outline text-start justify-start p-3 text-xs" data-booking-slot="11:00 AM – 01:00 PM (Midday · Non-Fasting)">
+                      <div>
+                        <strong class="block text-sm">11:00 AM – 01:00 PM</strong>
+                        <span class="opacity-80">Midday (CBC, Allergy, Hormones)</span>
+                      </div>
+                    </button>
+                    <button type="button" class="btn btn-outline text-start justify-start p-3 text-xs" data-booking-slot="02:00 PM – 04:00 PM (Afternoon · Flexible)">
+                      <div>
+                        <strong class="block text-sm">02:00 PM – 04:00 PM</strong>
+                        <span class="opacity-80">Afternoon · Non-fasting assays</span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Clinical Fasting Guide Callout -->
+                <div class="card card-soft p-4 rounded-xl border border-rose-500/30 mb-6">
+                  <div class="flex items-start gap-3">
+                    <span class="icon-box sm"><i class="bi bi-droplet-half"></i></span>
+                    <div>
+                      <strong class="text-sm block" style="color:var(--text);">Fasting Protocol Reminders</strong>
+                      <p class="text-xs mt-1" style="color:var(--text-muted);line-height:1.5;">
+                        If your test requires fasting (Lipids, CMP-14, Fasting Glucose), refrain from food and juices for <strong>10 to 12 hours</strong> prior.
+                        <strong>Drink plenty of plain water</strong> — hydration plumps your veins, making venipuncture quick and painless.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 2 Navigation -->
+                <div class="flex items-center justify-between gap-4 border-t border-dashed border-white/10 pt-5">
+                  <button type="button" class="btn btn-ghost" id="step-2-back">
+                    <i class="bi bi-arrow-left"></i> Back to Tests
+                  </button>
+                  <button type="button" class="btn btn-primary" id="step-2-next">
+                    Continue to Patient Info <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ----------------- STEP 3: PATIENT & ADDRESS ----------------- -->
+            <div data-step-panel="3" class="hidden" style="display:none;">
+              <div class="card mb-6">
+                <h2 class="text-xl font-bold mb-1">3. Patient Details &amp; Collection Address</h2>
+                <p class="text-xs mb-6" style="color:var(--text-muted);">
+                  Our mobile phlebotomist will arrive with sterile single-use vacuum equipment.
+                </p>
+
+                <!-- Patient Personal Info -->
+                <div class="grid gap-4 sm:grid-cols-2 mb-6">
+                  <div class="field">
+                    <label class="label" for="patient-name">Patient Full Name <span class="req">*</span></label>
+                    <input class="input" type="text" id="patient-name" placeholder="First and last legal name" required />
+                    <span class="error-msg"><i class="bi bi-exclamation-circle"></i>Please enter patient full legal name.</span>
+                  </div>
+
+                  <div class="field">
+                    <label class="label" for="patient-phone">Mobile Phone (For SMS &amp; ETA Updates) <span class="req">*</span></label>
+                    <input class="input" type="tel" id="patient-phone" placeholder="(555) 000-0000" required />
+                    <span class="error-msg"><i class="bi bi-exclamation-circle"></i>Valid mobile phone is required for phlebotomist arrival updates.</span>
+                  </div>
+
+                  <div class="field">
+                    <label class="label" for="patient-email">Email Address (For Portal Reports) <span class="req">*</span></label>
+                    <input class="input" type="email" id="patient-email" placeholder="patient@example.com" required />
+                    <span class="error-msg"><i class="bi bi-exclamation-circle"></i>Valid email is required to access your certified PDF results.</span>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-2">
+                    <div class="field">
+                      <label class="label" for="patient-dob">Date of Birth</label>
+                      <input class="input" type="date" id="patient-dob" />
+                    </div>
+                    <div class="field">
+                      <label class="label" for="patient-gender">Biological Sex</label>
+                      <select class="select" id="patient-gender">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Requisition Type -->
+                <div class="card card-soft p-4 rounded-xl mb-6">
+                  <label class="label mb-2 block">Physician Requisition &amp; Order Type</label>
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <label class="flex items-start gap-2.5 p-3 rounded-lg border border-white/10 cursor-pointer bg-surface hover:border-rose-500/50">
+                      <input type="radio" name="reqType" value="self-directed" class="mt-1" checked />
+                      <div>
+                        <strong class="text-xs block text-white">Self-Ordered Preventive Test</strong>
+                        <span class="text-xs" style="color:var(--text-muted);">Reviewed by VenaCare Medical Director (No outside Rx required).</span>
+                      </div>
+                    </label>
+                    <label class="flex items-start gap-2.5 p-3 rounded-lg border border-white/10 cursor-pointer bg-surface hover:border-rose-500/50">
+                      <input type="radio" name="reqType" value="physician-requisition" class="mt-1" />
+                      <div>
+                        <strong class="text-xs block text-white">I Have a Doctor's Requisition</strong>
+                        <span class="text-xs" style="color:var(--text-muted);">Present paper slip or digital order to phlebotomist upon arrival.</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Collection Address -->
+                <div class="mb-4">
+                  <strong class="text-sm block mb-3 font-bold" style="color:var(--text);">At-Home Collection Address</strong>
+                  <div class="grid gap-4 sm:grid-cols-3 mb-4">
+                    <div class="field sm:col-span-2">
+                      <label class="label" for="patient-address">Street Address <span class="req">*</span></label>
+                      <input class="input" type="text" id="patient-address" placeholder="123 Market Street" required />
+                      <span class="error-msg"><i class="bi bi-exclamation-circle"></i>Please enter valid street address.</span>
+                    </div>
+                    <div class="field">
+                      <label class="label" for="patient-apt">Apt / Suite / Unit</label>
+                      <input class="input" type="text" id="patient-apt" placeholder="Apt 4B" />
+                    </div>
+                  </div>
+
+                  <div class="grid gap-4 sm:grid-cols-2">
+                    <div class="field">
+                      <label class="label" for="patient-city">City <span class="req">*</span></label>
+                      <input class="input" type="text" id="patient-city" value="San Francisco" required />
+                      <span class="error-msg"><i class="bi bi-exclamation-circle"></i>City is required.</span>
+                    </div>
+                    <div class="field">
+                      <label class="label" for="patient-zip">ZIP / Postal Code <span class="req">*</span></label>
+                      <input class="input" type="text" id="patient-zip" value="94107" required />
+                      <span class="error-msg"><i class="bi bi-exclamation-circle"></i>ZIP code is required.</span>
+                    </div>
+                  </div>
+
+                  <div class="field mt-4">
+                    <label class="label" for="patient-notes">Phlebotomist Arrival Instructions (Optional)</label>
+                    <textarea class="textarea" id="patient-notes" style="min-height:4.5rem;" placeholder="e.g. Gate code #1234, ring bell on left, difficult veins (use butterfly needle)…"></textarea>
+                  </div>
+                </div>
+
+                <!-- Step 3 Navigation -->
+                <div class="flex items-center justify-between gap-4 border-t border-dashed border-white/10 pt-5">
+                  <button type="button" class="btn btn-ghost" id="step-3-back">
+                    <i class="bi bi-arrow-left"></i> Back to Schedule
+                  </button>
+                  <button type="button" class="btn btn-primary" id="step-3-next">
+                    Review &amp; Payment <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ----------------- STEP 4: REVIEW & PAYMENT ----------------- -->
+            <div data-step-panel="4" class="hidden" style="display:none;">
+              <div class="card mb-6">
+                <h2 class="text-xl font-bold mb-1">4. Review Clinical Details &amp; Payment</h2>
+                <p class="text-xs mb-6" style="color:var(--text-muted);">
+                  Please verify your selected tests, schedule window, and collection address.
+                </p>
+
+                <!-- Review Breakdown Grid -->
+                <div class="grid gap-4 sm:grid-cols-2 mb-6">
+                  <div class="card card-soft p-4 rounded-xl">
+                    <div class="flex items-center justify-between mb-2">
+                      <strong class="text-xs uppercase tracking-wider text-rose-500">Selected Tests</strong>
+                      <span class="badge plain text-xs" id="summary-items-count">0 tests</span>
+                    </div>
+                    <div id="review-tests-list"></div>
+                  </div>
+
+                  <div class="card card-soft p-4 rounded-xl">
+                    <strong class="text-xs uppercase tracking-wider text-rose-500 block mb-2">Schedule &amp; Fasting</strong>
+                    <div id="review-schedule-details" class="text-sm" style="color:var(--text-muted);line-height:1.6;"></div>
+                  </div>
+
+                  <div class="card card-soft p-4 rounded-xl">
+                    <strong class="text-xs uppercase tracking-wider text-rose-500 block mb-2">Patient Details</strong>
+                    <div id="review-patient-details" class="text-sm" style="color:var(--text-muted);line-height:1.6;"></div>
+                  </div>
+
+                  <div class="card card-soft p-4 rounded-xl">
+                    <strong class="text-xs uppercase tracking-wider text-rose-500 block mb-2">Collection Address</strong>
+                    <div id="review-address-details" class="text-sm" style="color:var(--text-muted);line-height:1.6;"></div>
+                  </div>
+                </div>
+
+                <!-- Payment Method Selection -->
+                <div class="mb-6">
+                  <strong class="text-sm block mb-3 font-bold" style="color:var(--text);">Select Payment Method</strong>
+                  <div class="grid gap-3 sm:grid-cols-2 mb-4">
+                    <label class="flex items-start gap-3 p-3.5 rounded-xl border border-white/10 cursor-pointer bg-surface hover:border-rose-500/50">
+                      <input type="radio" name="paymentMethod" value="doorstep" class="mt-1" checked />
+                      <div>
+                        <strong class="text-sm block text-white"><i class="bi bi-wallet2 mr-1 text-rose-500"></i>Pay at Doorstep</strong>
+                        <span class="text-xs" style="color:var(--text-muted);">Phlebotomist carries a secure mobile card reader and accepts cash.</span>
+                      </div>
+                    </label>
+
+                    <label class="flex items-start gap-3 p-3.5 rounded-xl border border-white/10 cursor-pointer bg-surface hover:border-rose-500/50">
+                      <input type="radio" name="paymentMethod" value="online" class="mt-1" />
+                      <div>
+                        <strong class="text-sm block text-white"><i class="bi bi-credit-card-2-front mr-1 text-sky-400"></i>Pay Online (Card / HSA / FSA)</strong>
+                        <span class="text-xs" style="color:var(--text-muted);">Encrypted instant authorization. HSA &amp; FSA cards accepted.</span>
+                      </div>
+                    </label>
+                  </div>
+
+                  <!-- Simulated Online Card Input Fields -->
+                  <div id="online-card-inputs" class="card card-soft p-4 rounded-xl mb-4" style="display:none;">
+                    <div class="grid gap-3 sm:grid-cols-3">
+                      <div class="field sm:col-span-2">
+                        <label class="label">Card Number</label>
+                        <div class="input-wrap">
+                          <i class="bi bi-credit-card input-icon"></i>
+                          <input class="input has-icon" type="text" placeholder="4242 •••• •••• 4242" />
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-2 gap-2">
+                        <div class="field">
+                          <label class="label">Exp</label>
+                          <input class="input text-center" type="text" placeholder="MM/YY" />
+                        </div>
+                        <div class="field">
+                          <label class="label">CVC</label>
+                          <input class="input text-center" type="text" placeholder="CVC" />
+                        </div>
+                      </div>
+                    </div>
+                    <span class="text-xs mt-2 block" style="color:var(--text-faint);"><i class="bi bi-shield-lock-fill text-emerald-400 mr-1"></i>256-bit HIPAA-compliant encryption.</span>
+                  </div>
+                </div>
+
+                <!-- Clinical Consent -->
+                <div class="p-3.5 rounded-xl bg-surface border border-white/10 mb-6">
+                  <label class="flex items-start gap-2.5 cursor-pointer">
+                    <input type="checkbox" id="booking-consent-check" class="mt-1" checked />
+                    <span class="text-xs" style="color:var(--text-muted);line-height:1.5;">
+                      I authorize VenaCare’s licensed phlebotomists to collect blood specimens at my specified location and dispatch them under cold-chain to CLIA/CAP accredited partner laboratories. I agree to the <a href="Terms-of-service.html" class="link-primary" target="_blank">Terms</a> and <a href="Privacy-policy.html" class="link-primary" target="_blank">HIPAA Privacy Policy</a>.
+                    </span>
+                  </label>
+                </div>
+
+                <!-- Step 4 Navigation -->
+                <div class="flex items-center justify-between gap-4 border-t border-dashed border-white/10 pt-5">
+                  <button type="button" class="btn btn-ghost" id="step-4-back">
+                    <i class="bi bi-arrow-left"></i> Back to Patient Info
+                  </button>
+                  <button type="button" class="btn btn-primary btn-lg" id="submit-booking-btn">
+                    <i class="bi bi-check2-circle"></i> Confirm Booking &amp; Schedule Draw
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Wizard Right Column: Sticky Summary Box (4 cols) -->
+          <div class="lg:col-span-5 xl:col-span-4 lg:sticky lg:top-24" id="booking-summary-col">
+            <div class="card" style="box-shadow:var(--glow-sm);border-color:rgba(255,46,76,0.35);">
+              
+              <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+                <div>
+                  <h3 class="text-base font-bold">Booking Summary</h3>
+                  <span class="text-xs" style="color:var(--text-muted);">At-Home Specimen Collection</span>
+                </div>
+                <span class="badge plain text-xs"><i class="bi bi-shield-check"></i>CLIA Lab</span>
+              </div>
+
+              <!-- Selected Items List -->
+              <div id="summary-items-list" class="mb-4"></div>
+
+              <!-- Free Phlebotomy Notice / Progress Bar -->
+              <div id="free-phlebotomy-notice" class="mb-4"></div>
+
+              <!-- Schedule preview -->
+              <div class="card card-soft p-3 rounded-lg mb-4 text-xs" id="booking-schedule-preview">
+                <i class="bi bi-calendar2-check text-rose-500 mr-1.5"></i>
+                <span>Tomorrow · 07:30 AM – 08:30 AM</span>
+              </div>
+
+              <!-- Price Breakdown -->
+              <div class="space-y-2 text-sm border-t border-dashed border-white/10 pt-3 mb-4">
+                <div class="flex justify-between">
+                  <span style="color:var(--text-muted);">Lab Tests Subtotal</span>
+                  <strong style="color:var(--text);" id="summary-subtotal">$0</strong>
+                </div>
+                <div class="flex justify-between">
+                  <span style="color:var(--text-muted);">Mobile Phlebotomist Fee</span>
+                  <span id="summary-phlebotomy-fee" style="font-weight:700;color:var(--primary);">FREE</span>
+                </div>
+                <div class="flex justify-between">
+                  <span style="color:var(--text-muted);">Cold-Chain Sample Logistics</span>
+                  <span style="color:var(--text);font-weight:700;">Included ($0)</span>
+                </div>
+                <div class="flex justify-between">
+                  <span style="color:var(--text-muted);">Doctor-Reviewed Portal PDF</span>
+                  <span style="color:var(--text);font-weight:700;">Included ($0)</span>
+                </div>
+                <div class="flex justify-between text-base border-t border-white/10 pt-2 font-bold">
+                  <span style="color:var(--text);">Total</span>
+                  <span style="color:var(--primary);font-size:1.3rem;" id="summary-total">$0</span>
+                </div>
+              </div>
+
+              <!-- Fasting Advisory Notice in summary -->
+              <div id="summary-fasting-advisory" class="hidden mb-4 p-3 rounded-lg border text-xs" style="background:rgba(225,29,72,0.06);border-color:rgba(225,29,72,0.25);color:var(--text);">
+                <i class="bi bi-clock-history mr-1" style="color:var(--primary);"></i>
+                <strong>Fasting Test Notice:</strong> Overnight 10–12h water only recommended for maximum clinical accuracy.
+              </div>
+
+              <!-- Live Coordinator Helpline Box -->
+              <div class="flex items-center gap-3 pt-3 border-t border-white/10 text-xs" style="color:var(--text-muted);">
+                <span class="icon-box sm"><i class="bi bi-headset"></i></span>
+                <div>
+                  <span class="block font-semibold" style="color:var(--text);">Questions about your draw?</span>
+                  <a href="tel:+18005535227" class="link-primary font-bold">+1 (800) 553-LABS (5227)</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ----------------- STEP 5: SUCCESS CONFIRMATION VIEW ----------------- -->
+          <div id="booking-success-view" class="lg:col-span-12 hidden" style="display:none;">
+            <div class="card p-8 text-center max-w-3xl mx-auto rounded-3xl" style="background:linear-gradient(160deg, rgba(225,29,72,0.08), var(--bg-2));border-color:rgba(225,29,72,0.45);box-shadow:var(--glow-lg);">
+              
+              <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 text-3xl" style="background:linear-gradient(135deg,var(--primary),var(--primary-deep));color:#fff;box-shadow:var(--glow-md);">
+                <i class="bi bi-check2"></i>
+              </div>
+
+              <span class="badge text-xs mb-2"><i class="bi bi-shield-check"></i>Appointment Confirmed</span>
+              <h2 class="text-3xl font-extrabold mt-2">At-Home Collection Scheduled!</h2>
+              <p class="text-sm mt-2 max-w-lg mx-auto" style="color:var(--text-muted);">
+                Your sample collection order has been transmitted to our clinical dispatch network. A certified phlebotomist has been assigned.
+              </p>
+
+              <!-- Reference Badge -->
+              <div class="my-6 inline-flex flex-col items-center justify-center px-6 py-3 rounded-2xl bg-surface border border-rose-500/40">
+                <span class="text-xs uppercase tracking-widest font-semibold" style="color:var(--text-faint);">Booking Reference Code</span>
+                <strong class="text-2xl font-mono mt-1" style="color:var(--primary);" id="confirmed-ref-id">VC-000000</strong>
+              </div>
+
+              <!-- Appointment Overview Card -->
+              <div class="grid gap-4 sm:grid-cols-2 text-start max-w-xl mx-auto card card-soft p-5 rounded-2xl mb-8">
+                <div>
+                  <span class="text-xs uppercase tracking-wider block" style="color:var(--text-faint);">Ordered Tests</span>
+                  <strong class="text-sm block mt-1" style="color:var(--text);" id="confirmed-tests-title">Routine Panels</strong>
+                </div>
+                <div>
+                  <span class="text-xs uppercase tracking-wider block" style="color:var(--text-faint);">Arrival Window</span>
+                  <strong class="text-sm block mt-1" style="color:var(--text);" id="confirmed-datetime">Tomorrow</strong>
+                </div>
+                <div>
+                  <span class="text-xs uppercase tracking-wider block" style="color:var(--text-faint);">Collection Address</span>
+                  <strong class="text-sm block mt-1" style="color:var(--text);" id="confirmed-address">123 Market St</strong>
+                </div>
+                <div>
+                  <span class="text-xs uppercase tracking-wider block" style="color:var(--text-faint);">Assigned Professional</span>
+                  <strong class="text-sm block mt-1" style="color:var(--text);">Sara Muller (CLSI Certified)</strong>
+                </div>
+                <div class="sm:col-span-2 pt-2 border-t border-dashed border-white/10 flex justify-between items-center">
+                  <span class="text-xs" style="color:var(--text-muted);">Total Billing</span>
+                  <strong class="text-sm text-emerald-400 font-bold" id="confirmed-total">$0</strong>
+                </div>
+              </div>
+
+              <!-- Patient Next Steps Checklist -->
+              <div class="max-w-xl mx-auto text-start mb-8 space-y-2.5">
+                <strong class="text-xs uppercase tracking-wider block font-bold" style="color:var(--text);">Preparation for your visit:</strong>
+                <div class="flex items-start gap-2.5 text-xs" style="color:var(--text-muted);">
+                  <i class="bi bi-check-circle-fill text-rose-500 mt-0.5"></i>
+                  <span><strong>Stay Hydrated:</strong> Drink 2 tall glasses of plain water 45 minutes before arrival to ease vein access.</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs" style="color:var(--text-muted);">
+                  <i class="bi bi-check-circle-fill text-rose-500 mt-0.5"></i>
+                  <span><strong>Comfortable Clothes:</strong> Wear short sleeves or sleeves that easily push above your elbow.</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs" style="color:var(--text-muted);">
+                  <i class="bi bi-check-circle-fill text-rose-500 mt-0.5"></i>
+                  <span><strong>Results in Portal:</strong> Pathologist-reviewed reports will appear in your Patient Portal in 24–48 hours.</span>
+                </div>
+              </div>
+
+              <!-- Action CTAs -->
+              <div class="flex flex-wrap justify-center gap-3">
+                <a class="btn btn-primary btn-lg" href="../auth/user/user-dashboard.html">
+                  <i class="bi bi-file-earmark-medical-fill"></i> View in Patient Portal
+                </a>
+                <button type="button" class="btn btn-outline btn-lg" id="book-again-btn">
+                  <i class="bi bi-plus-lg"></i> Book Another Test
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================= 3 · HOW IT WORKS ======================= -->
+    <section class="section section-alt" id="how-it-works">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-shield-check"></i>Clinical Standards</span>
+          <h2 class="section-title">Zero clinic waiting rooms.<br /><span class="text-gradient">Hospital-grade diagnostic accuracy.</span></h2>
+          <p class="section-sub">Here is what happens from the moment you click confirm to your verified digital lab results.</p>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-calendar2-check"></i></span>
+            <strong class="text-base block font-bold mb-1">1. Scheduled Arrival</strong>
+            <p class="text-xs" style="color:var(--text-muted);">Your certified phlebotomist calls 15 minutes before arrival and arrives precisely within your morning window.</p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-feather"></i></span>
+            <strong class="text-base block font-bold mb-1">2. 10-Minute Draw</strong>
+            <p class="text-xs" style="color:var(--text-muted);">Sterile single-use vacuum tubes and ultra-fine butterfly needles guarantee minimal sensation and zero cross-contamination.</p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-snow"></i></span>
+            <strong class="text-base block font-bold mb-1">3. Cold-Chain Dispatch</strong>
+            <p class="text-xs" style="color:var(--text-muted);">Unique barcoded tubes are placed into calibrated 2°C–8°C thermal loggers, preserving delicate enzymes during transport.</p>
+          </div>
+
+          <div class="card card-hover">
+            <span class="icon-box lg mb-4"><i class="bi bi-file-earmark-pdf-fill"></i></span>
+            <strong class="text-base block font-bold mb-1">4. Patient Portal Delivery</strong>
+            <p class="text-xs" style="color:var(--text-muted);">CAP/CLIA accredited lab analyzers run your panels. Certified digital PDFs with reference ranges ready in 24–48 hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4 · FAQS ============================ -->
+    <section class="section" id="faqs">
+      <div class="container-x">
+        <div class="section-head center">
+          <span class="kicker"><i class="bi bi-question-circle-fill"></i>Questions &amp; Guidance</span>
+          <h2 class="section-title">At-Home Collection <span class="text-gradient">Frequently Asked Questions</span></h2>
+          <p class="section-sub">Everything you need to know about preparing for your mobile phlebotomy appointment.</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-3" id="booking-faqs-accordion"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================== FOOTER =============================== -->
+  <div id="site-footer"></div>
+
+</body>
+</html>

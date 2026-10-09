@@ -33,13 +33,13 @@
   <main id="main-content">
 
     <!-- ============================== 1 · HERO ============================== -->
-    <section class="relative overflow-hidden" id="hero">
+    <section class="relative overflow-hidden" id="hero" style="height: 90vh;">
       <div class="grid-lines"></div>
       <div class="glow-blob red" style="width:34rem;height:34rem;top:-10rem;inset-inline-start:-8rem;"></div>
       <div class="glow-blob orange" style="width:26rem;height:26rem;bottom:-8rem;inset-inline-end:-6rem;opacity:0.35;"></div>
 
-      <div class="container-x relative" style="padding-block:4.5rem 5rem;">
-        <div class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] items-center">
+      <div class="container-x relative" style="padding-block:4.5rem 5rem; ">
+        <div class="block center">
 
           <div class="fade-up">
             <span class="kicker"><span class="pulse-dot"></span> Emergency desk online · 24/7</span>
@@ -71,66 +71,13 @@
             </div>
           </div>
 
-          <div class="relative fade-up-2">
-            <div class="glow-blob red" style="width:24rem;height:24rem;top:-4rem;inset-inline-end:-4rem;opacity:0.45;"></div>
-
-            <img src="../../assets/img/hero-emergency.svg" alt="Emergency blood request being matched with nearby donors at the VenaCare desk"
-                 class="relative w-full rounded-[30px]"
-                 style="border:1px solid var(--border-strong);box-shadow:var(--glow-lg);" />
-
-            <div class="card glass absolute -bottom-6 hidden sm:block"
-                 style="inset-inline-start:-1.5rem;padding:1rem 1.2rem;width:15.5rem;">
-              <div class="flex items-center gap-3">
-                <span class="icon-box"><i class="bi bi-stopwatch-fill"></i></span>
-                <div>
-                  <strong class="block text-lg font-display leading-none">14 min</strong>
-                  <span class="text-xs" style="color:var(--text-muted);">median response time</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="card glass absolute top-6 hidden sm:block"
-                 style="inset-inline-end:-1rem;padding:0.9rem 1.1rem;">
-              <div class="flex items-center gap-2 text-sm font-semibold">
-                <span class="pulse-dot"></span>
-                <span>Coordinator on shift</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hairline-top relative overflow-hidden" style="background:var(--bg-2);">
-        <div class="container-x py-5" data-marquee></div>
       </div>
     </section>
-
-    <!-- ==================== 2 · LIVE EMERGENCY REQUEST BOARD ==================== -->
-    <section class="section section-alt" id="emergency-board">
-      <div class="container-x">
-        <div class="section-head center">
-          <span class="kicker"><span class="pulse-dot"></span> Live emergency board</span>
-          <h2 class="section-title">Open requests, <span class="text-gradient">right now</span></h2>
-          <p class="section-sub">
-            Every unclaimed emergency request across our partner hospitals. Tap respond and we will
-            route you to the coordinator handling that case.
-          </p>
-        </div>
-
-        <div data-home-emergency></div>
-
-        <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm" style="color:var(--text-faint);">
-          <span class="badge plain"><i class="bi bi-arrow-repeat"></i>Requests refresh every 5 minutes</span>
-          <span class="badge plain"><i class="bi bi-shield-lock-fill"></i>Patient identities are anonymised</span>
-        </div>
-
-        <div class="mt-8 text-center">
-          <a class="btn btn-outline" href="../../public/pages/service-details.html?id=emergency-request">
-            <i class="bi bi-arrow-right-circle"></i>How emergency matching works
-          </a>
-        </div>
-      </div>
-    </section>
+    
+    <!-- Clinical Marquee -->
+    <div class="hairline-top relative overflow-hidden" style="background:var(--bg-2);">
+      <div class="container-x py-4" data-marquee></div>
+    </div>
 
     <!-- =================== 3 · HOW EMERGENCY MATCHING WORKS =================== -->
     <section class="section" id="how-it-works">

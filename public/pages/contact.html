@@ -41,11 +41,6 @@
         <span class="kicker"><i class="bi bi-headset"></i>We answer in under an hour</span>
         <h1 class="page-hero-title mt-4">Contact <span class="text-gradient">&amp; support</span></h1>
         <p class="page-hero-sub">Camp bookings, emergency requests, billing questions or partnership ideas — a human coordinator reads every message, seven days a week.</p>
-        <div class="mt-7 flex flex-wrap justify-center gap-2">
-          <span class="badge plain"><i class="bi bi-clock-history"></i>1 hr reply target</span>
-          <span class="badge plain"><i class="bi bi-lightning-charge-fill"></i>Emergency desk 24/7</span>
-          <span class="badge plain"><i class="bi bi-envelope-fill"></i>help@venacare.org</span>
-        </div>
       </div>
     </section>
 
@@ -138,8 +133,8 @@
               </div>
 
               <div class="mt-6 flex flex-wrap items-center gap-4">
-                <button class="btn btn-primary btn-lg" type="submit"><i class="bi bi-send-fill"></i>Send message</button>
-                <span class="text-sm" style="color:var(--text-faint);">We never share your details — ever.</span>
+                <button class="btn btn-primary btn-lg w-full" type="submit"><i class="bi bi-send-fill"></i>Send message</button>
+                
               </div>
 
               <div class="form-success mt-5" data-success>
@@ -181,14 +176,10 @@
             <div class="divider-dashed my-6"></div>
 
             <div class="flex items-start gap-3">
-              <span class="icon-box"><i class="bi bi-stopwatch-fill"></i></span>
-              <div>
-                <strong class="block text-sm">Response-time promise</strong>
-                <p class="text-sm mt-1" style="color:var(--text-muted);">Every message gets a human reply within one business hour, seven days a week. Emergency requests jump the queue entirely.</p>
-              </div>
+             
             </div>
 
-            <div class="card card-soft mt-6" style="border-color:rgba(255,46,76,0.4);box-shadow:var(--glow-sm);">
+            <div class="card card-soft" style="border-color:rgba(255,46,76,0.4);box-shadow:var(--glow-sm);">
               <div class="flex items-start gap-3">
                 <span class="icon-box"><i class="bi bi-lightning-charge-fill"></i></span>
                 <div>
@@ -213,9 +204,31 @@
           <p class="section-sub">Coordination desk, cold store and training room — visits by appointment, Monday to Friday.</p>
         </div>
 
-        <div class="rounded-[24px] overflow-hidden" style="border:1px solid var(--border-strong);box-shadow:var(--glow-sm);">
-          <img src="../../assets/img/map.svg" alt="Map showing VenaCare headquarters at 221 Meridian Avenue"
-               class="w-full" loading="lazy" />
+        <div class="contact-map-frame" id="contact-map-container">
+          <div class="contact-map-badge hidden sm:block">
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="pulse-dot"></span>
+              <span class="text-xs font-bold uppercase tracking-wider" style="color:var(--primary);">Central Diagnostic Lab</span>
+            </div>
+            <strong class="block text-base font-display">VenaCare Headquarters</strong>
+            <p class="text-xs mt-1" style="color:var(--text-muted);"><i class="bi bi-geo-alt-fill text-primary me-1"></i>221 Meridian Ave, Central District</p>
+            <div class="mt-3 flex items-center gap-2">
+              <a href="https://www.google.com/maps/search/?api=1&query=221+Meridian+Ave" target="_blank" rel="noopener" class="btn btn-primary btn-sm text-xs py-1.5 px-3">
+                <i class="bi bi-cursor-fill me-1"></i> Directions
+              </a>
+              <a href="tel:+18005532566" class="btn btn-secondary btn-sm text-xs py-1.5 px-3">
+                <i class="bi bi-telephone-fill me-1"></i> Call Desk
+              </a>
+            </div>
+          </div>
+
+          <iframe
+            src="https://maps.google.com/maps?q=221+Meridian+Ave&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            title="Interactive map showing VenaCare headquarters at 221 Meridian Avenue"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
 
         <div class="mt-7 grid gap-5 sm:grid-cols-3">

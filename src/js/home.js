@@ -209,6 +209,26 @@
     });
   }
 
+  function renderTeam() {
+    S.qsa('[data-home-team]').forEach(function (grid) {
+      if (!window.DATA || !window.DATA.team) return;
+      if (C && typeof C.teamCard === 'function') {
+        grid.innerHTML = window.DATA.team.map(C.teamCard).join('');
+      } else {
+        grid.innerHTML = window.DATA.team.map(function (m) {
+          return '<div class="card card-hover flex flex-col items-center text-center">' +
+            '<div style="position:relative;width:96px;height:96px;margin:0 auto 1.15rem;">' +
+              '<img src="' + S.link(m.img) + '" alt="' + S.esc(m.name) + '" style="width:100%;height:100%;border-radius:50%;border:2px solid rgba(255,46,76,0.45);box-shadow:var(--glow-sm);object-fit:cover;" loading="lazy" />' +
+            '</div>' +
+            '<h3 style="font-size:1.12rem;font-weight:700;margin-bottom:0.3rem;">' + S.esc(m.name) + '</h3>' +
+            '<p style="font-size:0.78rem;color:var(--primary);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.75rem;">' + S.esc(m.role) + '</p>' +
+            '<p style="font-size:0.88rem;color:var(--text-muted);line-height:1.55;margin-bottom:1.25rem;flex:1;">' + S.esc(m.bio) + '</p>' +
+          '</div>';
+        }).join('');
+      }
+    });
+  }
+
   S.onLoad(function () {
     renderServices();
     bindServiceTabs();
@@ -216,5 +236,6 @@
     renderMarquee();
     renderPosts();
     renderTestimonials();
+    renderTeam();
   });
 })();

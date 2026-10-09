@@ -58,12 +58,9 @@
     if (meta) {
       meta.innerHTML =
         '<div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin-top:1.5rem;">' +
-          '<span class="badge plain"><i class="bi bi-clock-history"></i>' + S.esc(svc.duration) + '</span>' +
-          '<span class="badge plain"><i class="bi bi-tag"></i>' + (svc.priceFrom ? 'From $' + svc.priceFrom : 'Free of cost') + '</span>' +
-          '<span class="badge green"><i class="bi bi-shield-check"></i>Licensed & insured</span>' +
         '</div>' +
         '<div style="display:flex;flex-wrap:wrap;gap:0.7rem;justify-content:center;margin-top:1.4rem;">' +
-          '<a class="btn btn-primary" href="' + S.link('index.html#book-collection') + '">' +
+          '<a class="btn btn-primary" href="' + S.link('public/pages/booking.html?id=' + encodeURIComponent(svc.id)) + '">' +
             '<i class="bi bi-calendar-check-fill"></i>Book At-Home Collection</a>' +
           '<a class="btn btn-outline" href="' + S.link('public/pages/pricing.html') + '">' +
             '<i class="bi bi-tags"></i>Compare test pricing</a>' +
