@@ -26,51 +26,53 @@
   <script defer src="../../src/js/home.js"></script>
 </head>
 
-<body data-root="../../" data-page="home-2">
+<body data-root="../../" data-page="home2">
 
   <div id="site-header"></div>
 
   <main id="main-content">
 
     <!-- ============================== 1 · HERO ============================== -->
-    <section class="relative overflow-hidden" id="hero" style="height: 90vh;">
+    <section class="page-hero page-hero-compact relative overflow-hidden" id="hero">
       <div class="grid-lines"></div>
       <div class="glow-blob red" style="width:34rem;height:34rem;top:-10rem;inset-inline-start:-8rem;"></div>
       <div class="glow-blob orange" style="width:26rem;height:26rem;bottom:-8rem;inset-inline-end:-6rem;opacity:0.35;"></div>
+      <div class="hero-bg" style="background-image:url('../../assets/img/hero-2.jpeg');"></div>
+      <div class="hero-overlay"></div>
 
-      <div class="container-x relative" style="padding-block:4.5rem 5rem; ">
-        <div class="block center">
+      <div class="container-x relative">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../../index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+          <i class="bi bi-chevron-right"></i>
+          <span class="current">Home 2</span>
+        </nav>
+        <span class="kicker"><span class="pulse-dot"></span> Emergency desk online · 24/7</span>
 
-          <div class="fade-up">
-            <span class="kicker"><span class="pulse-dot"></span> Emergency desk online · 24/7</span>
+        <h1 class="page-hero-title mt-4">
+          Blood in minutes,<br />
+          <span class="text-gradient">not hours.</span>
+        </h1>
 
-            <h1 class="mt-6" style="font-size:clamp(2.5rem,5.4vw,4.2rem);line-height:1.05;">
-              Blood in minutes,<br />
-              <span class="text-gradient">not hours.</span>
-            </h1>
+        <p class="page-hero-sub" style="margin-inline:0;max-width:38rem;">
+          File an urgent request and every compatible donor within 15 km is alerted instantly.
+          A coordinator confirms the donor, arranges transport and pre-warms the receiving
+          hospital — median first response: 14 minutes.
+        </p>
 
-            <p class="lead mt-5" style="max-width:34rem;">
-              File an urgent request and every compatible donor within 15 km is alerted instantly.
-              A coordinator confirms the donor, arranges transport and pre-warms the receiving
-              hospital — median first response: 14 minutes.
-            </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a class="btn btn-primary btn-lg" href="../../public/auth/signup.html">
+            <i class="bi bi-lightning-charge-fill"></i>Respond to a request
+          </a>
+          <a class="btn btn-outline btn-lg" href="tel:+18005532666">
+            <i class="bi bi-telephone-fill"></i>Call hotline
+          </a>
+        </div>
 
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a class="btn btn-primary btn-lg" href="../../public/auth/signup.html">
-                <i class="bi bi-lightning-charge-fill"></i>Respond to a request
-              </a>
-              <a class="btn btn-outline btn-lg" href="tel:+18005532666">
-                <i class="bi bi-telephone-fill"></i>Call hotline
-              </a>
-            </div>
-
-            <div class="mt-8 flex flex-wrap items-center gap-2 text-sm" style="color:var(--text-muted);">
-              <span class="badge plain"><i class="bi bi-headset"></i>24/7 coordinator desk</span>
-              <span class="badge plain"><i class="bi bi-cash-coin"></i>Free for patients</span>
-              <span class="badge plain"><i class="bi bi-hospital"></i>Hospital pre-alerted</span>
-            </div>
-          </div>
-
+        <div class="mt-8 flex flex-wrap items-center gap-2 text-sm" style="color:var(--text-muted);">
+          <span class="badge plain"><i class="bi bi-headset"></i>24/7 coordinator desk</span>
+          <span class="badge plain"><i class="bi bi-cash-coin"></i>Free for patients</span>
+          <span class="badge plain"><i class="bi bi-hospital"></i>Hospital pre-alerted</span>
+        </div>
       </div>
     </section>
     

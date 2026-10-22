@@ -31,16 +31,18 @@
   <main id="main-content">
 
     <!-- 1. PAGE HERO -->
-    <section class="page-hero">
-      <div class="container-x">
+    <section class="page-hero relative overflow-hidden">
+      <div class="hero-bg" style="background-image:url('../../assets/img/blog-hero.jpeg');"></div>
+      <div class="hero-overlay"></div>
+      <div class="container-x relative">
         <div class="breadcrumb" aria-label="Breadcrumb">
           <a href="../../index.html"><i class="bi bi-house-door-fill"></i>Home</a>
           <i class="bi bi-chevron-right"></i>
           <span>Blog</span>
         </div>
         <span class="kicker"><i class="bi bi-journal-bookmark-fill"></i>Knowledge Hub</span>
-        <h1 class="page-hero-title mt-4">Donation knowledge, plainly put</h1>
-        <p class="page-hero-sub">Guides, facts, nutrition and organiser tips reviewed by VenaCare physicians to help every donor feel confident.</p>
+        <h1 class="page-hero-title mt-4">Patient education, <span class="text-gradient">plainly explained</span></h1>
+        <p class="page-hero-sub">Guides, facts, nutrition and preparation tips reviewed by VenaCare physicians to help every patient feel confident.</p>
       </div>
     </section>
 
@@ -119,10 +121,12 @@
     <!-- 5. NEWSLETTER CTA -->
     <section class="section-sm">
       <div class="container-x">
-        <div class="relative overflow-hidden rounded-[30px] text-center" style="padding:3rem 1.5rem;background:linear-gradient(135deg,rgba(255,46,76,0.2),rgba(255,138,61,0.1)),var(--bg-2);border:1px solid rgba(255,46,76,0.4);box-shadow:var(--glow-lg);">
-          <span class="kicker"><i class="bi bi-envelope-fill"></i>Stay informed</span>
-          <h2 class="section-title mt-4" style="margin-inline:auto;">Get the next donation guide <span class="text-gradient">straight to your inbox</span></h2>
-          <p class="section-sub" style="margin-inline:auto;">Monthly updates on camps, eligibility changes and tips — no spam, unsubscribe anytime.</p>
+        <div class="card glass text-center p-8 sm:p-12 relative overflow-hidden" style="border-color:rgba(255,46,76,0.35);box-shadow:var(--glow-md);">
+          <div class="glow-blob red" style="width:24rem;height:24rem;top:-9rem;inset-inline-start:50%;transform:translateX(-50%);opacity:0.5;"></div>
+          <div class="relative">
+            <span class="kicker"><i class="bi bi-envelope-fill"></i>Stay informed</span>
+            <h2 class="section-title mt-4" style="margin-inline:auto;">Get the next patient education guide <span class="text-gradient">straight to your inbox</span></h2>
+            <p class="section-sub" style="margin-inline:auto;">Monthly updates on lab prep, fasting tips, and wellness insights — no spam, unsubscribe anytime.</p>
           <form class="mt-7" data-form="newsletter" novalidate style="max-width:28rem;margin-inline:auto;">
             <div class="field">
               <label class="label" for="newsletter-email">Email address</label>
@@ -134,6 +138,7 @@
               <i class="bi bi-check-circle-fill"></i>Thanks for subscribing! Check your inbox for a welcome email.
             </div>
           </form>
+          </div>
         </div>
       </div>
     </section>

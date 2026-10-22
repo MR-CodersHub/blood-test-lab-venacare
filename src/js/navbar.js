@@ -11,10 +11,9 @@
 
   var NAV_LINKS = [
     { label: 'Home', href: 'index.html', key: 'index.html' },
+    { label: 'Home 2', href: 'public/pages/home-2.html', key: 'home-2.html' },
     { label: 'About', href: 'public/pages/about.html', key: 'about.html' },
     { label: 'Services', href: 'public/pages/services.html', key: 'services.html' },
-    { label: 'Book Draw', href: 'public/pages/booking.html', key: 'booking.html' },
-    { label: 'Pricing', href: 'public/pages/pricing.html', key: 'pricing.html' },
     { label: 'Blog', href: 'public/pages/blog.html', key: 'blog.html' },
     { label: 'Contact', href: 'public/pages/contact.html', key: 'contact.html' }
   ];
@@ -98,7 +97,7 @@
 
             '<div class="nav-actions">' +
               '<button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle colour theme"><i class="bi bi-moon-stars-fill"></i></button>' +
-              '<button class="icon-btn hidden sm:inline-flex" type="button" data-rtl-toggle aria-label="Toggle RTL layout" title="Toggle RTL layout"><i class="bi bi-text-right"></i></button>' +
+              '<button class="btn btn-ghost btn-sm hidden sm:inline-flex" type="button" data-rtl-toggle aria-label="Toggle RTL layout" title="Toggle RTL layout">RTL</button>' +
 
               '<div class="dropdown" data-profile-dropdown>' +
                 '<button class="icon-btn" type="button" aria-haspopup="true" aria-expanded="false" data-profile-toggle aria-label="Open patient menu">' +
@@ -122,8 +121,8 @@
         '<div class="mobile-drawer-panel">' +
           '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">' +
             '<a class="brand" href="' + S.link('index.html') + '">' +
-              '<img src="' + S.link('assets/img/logo.svg') + '" alt="" />' +
-              '<span><span class="brand-name">VenaCare</span><span class="brand-tag">At-Home Lab Services</span></span>' +
+              '<img src="' + S.link('assets/img/logo.png') + '" alt="" />' +
+              '<span><span class="brand-name">VenaCare</span></span>' +
             '</a>' +
             '<button class="icon-btn" type="button" data-drawer-close aria-label="Close menu"><i class="bi bi-x-lg"></i></button>' +
           '</div>' +
@@ -134,28 +133,8 @@
               item.label + '<i class="bi bi-chevron-right"></i></a>';
           }).join('') +
 
-          '<div class="dropdown-label" style="margin-top:1rem;">More pages</div>' +
-          '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;">' +
-            PAGE_MENU.slice(0, 6).map(function (item) {
-              return '<a class="mobile-link" style="border:1px solid var(--border);border-bottom:1px solid var(--border);font-size:0.82rem;padding:0.6rem 0.7rem;" href="' +
-                S.link(item.href) + '"><i class="bi ' + item.icon + '" style="color:var(--primary);"></i>' +
-                item.label.replace(/^[^·]+·?\s*/, '') + '</a>';
-            }).join('') +
-          '</div>' +
-
-          '<div class="dropdown-label" style="margin-top:1rem;">Patient Portal</div>' +
-          '<a class="mobile-link" href="' + S.link('public/auth/login.html') + '"><span><i class="bi bi-box-arrow-in-right" style="color:var(--primary);margin-inline-end:0.5rem;"></i>Patient Portal Log In</span><i class="bi bi-chevron-right"></i></a>' +
-          '<a class="mobile-link" href="' + S.link('public/auth/signup.html') + '"><span><i class="bi bi-person-plus-fill" style="color:var(--primary);margin-inline-end:0.5rem;"></i>Register New Patient</span><i class="bi bi-chevron-right"></i></a>' +
-          '<a class="mobile-link" href="' + S.link('public/auth/user/user-dashboard.html') + '"><span><i class="bi bi-file-earmark-medical-fill" style="color:var(--primary);margin-inline-end:0.5rem;"></i>My Lab Reports</span><i class="bi bi-chevron-right"></i></a>' +
-
-          '<div style="display:flex;gap:0.5rem;margin-top:1.25rem;">' +
-            '<button class="btn btn-outline btn-sm" type="button" data-theme-toggle style="flex:1;"><i class="bi bi-moon-stars-fill"></i>Theme</button>' +
-            '<button class="btn btn-outline btn-sm" type="button" data-rtl-toggle style="flex:1;"><i class="bi bi-text-right"></i>RTL</button>' +
-          '</div>' +
-
-          '<a class="btn btn-primary btn-block" style="margin-top:0.75rem;" href="' + S.link('public/pages/booking.html') + '">' +
+           '<a class="btn btn-primary btn-block" style="margin-top:0.75rem;" href="' + S.link('public/pages/booking.html') + '">' +
             '<i class="bi bi-house-heart"></i>Book At-Home Collection</a>' +
-        '</div>' +
       '</div>'
     );
   }

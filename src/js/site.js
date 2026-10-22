@@ -100,10 +100,14 @@ window.SITE = (function () {
     document.documentElement.setAttribute('dir', dir);
     document.documentElement.setAttribute('lang', dir === 'rtl' ? 'ar' : 'en');
     qsa('[data-rtl-toggle]').forEach(function (btn) {
+      // Support both icon buttons and text buttons
       var icon = qs('i', btn);
-      if (icon) icon.className = dir === 'rtl' ? 'bi bi-text-left' : 'bi bi-text-right';
+      if (icon) {
+        icon.className = dir === 'rtl' ? 'bi bi-text-left' : 'bi bi-text-right';
+      }
       btn.setAttribute('aria-label', dir === 'rtl' ? 'Switch to LTR layout' : 'Switch to RTL layout');
       btn.setAttribute('title', dir === 'rtl' ? 'Switch to LTR layout' : 'Switch to RTL layout');
+      btn.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
       if (dir === 'rtl') {
         btn.classList.add('active');
       } else {
