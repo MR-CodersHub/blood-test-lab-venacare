@@ -97,7 +97,7 @@
 
             '<div class="nav-actions">' +
               '<button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle colour theme"><i class="bi bi-moon-stars-fill"></i></button>' +
-              '<button class="btn btn-ghost btn-sm hidden sm:inline-flex" type="button" data-rtl-toggle aria-label="Toggle RTL layout" title="Toggle RTL layout">RTL</button>' +
+              '<button class="icon-btn " type="button" data-rtl-toggle aria-label="Toggle RTL layout" title="Toggle RTL layout">RTL</button>' +
 
               '<div class="dropdown" data-profile-dropdown>' +
                 '<button class="icon-btn" type="button" aria-haspopup="true" aria-expanded="false" data-profile-toggle aria-label="Open patient menu">' +
@@ -135,6 +135,7 @@
 
            '<a class="btn btn-primary btn-block" style="margin-top:0.75rem;" href="' + S.link('public/pages/booking.html') + '">' +
             '<i class="bi bi-house-heart"></i>Book At-Home Collection</a>' +
+        '</div>' +
       '</div>'
     );
   }

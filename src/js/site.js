@@ -104,10 +104,15 @@ window.SITE = (function () {
       var icon = qs('i', btn);
       if (icon) {
         icon.className = dir === 'rtl' ? 'bi bi-text-left' : 'bi bi-text-right';
+      } else {
+        // Only rewrite when the label actually changes. Assigning textContent
+        // always mutates the DOM, which would re-trigger the observer below
+        // and freeze the page in an infinite loop.
+        var label = dir === 'rtl' ? 'LTR' : 'RTL';
+        if (btn.textContent.trim() !== label) btn.textContent = label;
       }
       btn.setAttribute('aria-label', dir === 'rtl' ? 'Switch to LTR layout' : 'Switch to RTL layout');
       btn.setAttribute('title', dir === 'rtl' ? 'Switch to LTR layout' : 'Switch to RTL layout');
-      btn.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
       if (dir === 'rtl') {
         btn.classList.add('active');
       } else {

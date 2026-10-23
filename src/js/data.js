@@ -698,28 +698,28 @@ window.DATA = (function () {
       quote: 'Having a phlebotomist come to my apartment at 7:30 AM made my annual fasting blood tests effortless. Sarah was gentle, arrived on time, and I had my certified PDF reports in my patient portal the next afternoon.',
       name: 'Elena Rostova',
       role: 'Routine Patient · Metro City',
-      img: 'assets/img/team-2.svg',
+      img: 'assets/img/woman3.jpg',
       rating: 5
     },
     {
       quote: 'My mother is elderly and going to diagnostic clinics is exhausting for her. VenaCare phlebotomist handled her blood draw with immense patience and skill. Accessing her lab reports on the patient portal was seamless.',
       name: 'Marcus Vance',
       role: 'Caregiver · Riverside District',
-      img: 'assets/img/team-4.svg',
+      img: 'assets/img/men3.jpg',
       rating: 5
     },
     {
       quote: 'The Comprehensive Vitality Panel uncovered my subclinical thyroid imbalance and low Vitamin D. Transparent pricing, zero hidden fees, and at-home collection made this the most convenient lab experience I have ever had.',
       name: 'Dr. Rachel Patel',
       role: 'Healthcare Professional · Northgate',
-      img: 'assets/img/team-1.svg',
+      img: 'assets/img/testimonial1.jpg',
       rating: 5
     },
     {
       quote: 'I logged into the patient portal right before my doctor appointment and had all my routine CBC and lipid panels ready to share. The longitudinal biomarker comparison is fantastic.',
       name: 'David Zhao',
       role: 'Executive Patient · Central Plaza',
-      img: 'assets/img/team-3.svg',
+      img: 'assets/img/testimonial2.jpg',
       rating: 5
     }
   ];
@@ -733,10 +733,10 @@ window.DATA = (function () {
       tags: ['fasting', 'lab-prep', 'patient-care'],
       author: 'Dr. Aisha Kapoor',
       authorRole: 'Medical Director, VenaCare',
-      authorImg: 'assets/img/team-1.svg',
+      authorImg: 'assets/img/woman1.jpg',
       date: '2026-09-28',
       readTime: '6 min read',
-      image: 'assets/img/blog-1.svg',
+      image: 'assets/img/blog1.jpeg',
       excerpt: 'Everything you need to know before your at-home blood collection: why water is permitted, medications to mention, and how fasting ensures accurate clinical numbers.',
       body:
         '<p>Fasting before a blood test can feel inconvenient, but it is the cornerstone of clinical diagnostic accuracy. When you eat, food is broken down into glucose, lipids, and amino acids that temporarily flood your bloodstream. Without fasting, your numbers reflect your breakfast rather than your true baseline physiology.</p>' +
@@ -761,10 +761,10 @@ window.DATA = (function () {
       tags: ['blood-tests', 'routine', 'specialized'],
       author: 'Dr. Rohan Mehta',
       authorRole: 'Senior Clinical Pathologist',
-      authorImg: 'assets/img/team-3.svg',
+      authorImg: 'assets/img/men2.jpg',
       date: '2026-09-14',
       readTime: '7 min read',
-      image: 'assets/img/blog-2.svg',
+      image: 'assets/img/blog2.jpeg',
       excerpt: 'Understand the difference between broad baseline screening panels (CBC, CMP, Lipids) and targeted specialized diagnostic investigations (hs-CRP, Hormones, IgE).',
       body:
         '<p>When ordering laboratory tests, physicians categorize investigations into routine screenings and specialized clinical assays. Understanding the distinction helps you make informed choices about your preventive health checkups.</p>' +
@@ -780,12 +780,12 @@ window.DATA = (function () {
       title: 'Behind the Scenes: How Cold-Chain Logistics Keep At-Home Blood Samples Sterile & Accurate',
       category: 'Laboratory Standards',
       tags: ['cold-chain', 'phlebotomy', 'lab-safety'],
-      author: 'Dr. Aisha Kapoor',
+      author: 'Dr. Deepa Kapoor',
       authorRole: 'Medical Director, VenaCare',
-      authorImg: 'assets/img/team-1.svg',
+      authorImg: 'assets/img/woman2.jpg',
       date: '2026-08-30',
       readTime: '5 min read',
-      image: 'assets/img/blog-3.svg',
+      image: 'assets/img/blog3.jpeg',
       excerpt: 'From single-use safety needles to temperature-calibrated specimen carriers, here is how VenaCare preserves diagnostic precision from your home to accredited labs.',
       body:
         '<p>Many patients wonder: does an at-home blood collection offer the exact same clinical accuracy as a draw done in a major hospital laboratory? The answer is an unequivocal yes — when certified phlebotomists follow rigorous chain-of-custody and cold-chain protocols.</p>' +
@@ -800,10 +800,10 @@ window.DATA = (function () {
 
   /* -------------------------------------------------------------------- TEAM */
   var team = [
-    { name: 'Dr. Aisha Kapoor', role: 'Medical Director & Clinical Pathologist', img: 'assets/img/team-1.svg', bio: 'Board-certified pathologist with 16 years leading accredited diagnostic laboratories and mobile phlebotomy operations.', socials: ['linkedin', 'x-twitter'] },
-    { name: 'Sara Muller', role: 'Head of Phlebotomy Services & Quality Control', img: 'assets/img/team-2.svg', bio: 'Oversees our network of 250+ licensed phlebotomists, enforcing CLSI standards, sterile protocols, and patient comfort.', socials: ['instagram', 'linkedin'] },
-    { name: 'Dr. Rohan Mehta', role: 'Senior Consultant in Endocrinology & Diagnostics', img: 'assets/img/team-3.svg', bio: 'Specializes in metabolic biomarkers, hormonal profiles, and preventive wellness diagnostic panels.', socials: ['linkedin', 'x-twitter'] },
-    { name: 'Nikhil Daran', role: 'Director of Cold-Chain & Lab Logistics', img: 'assets/img/team-4.svg', bio: 'Engineered VenaCare’s real-time cold-chain tracking system, ensuring 99.8% specimen integrity from doorstep to lab analyzer.', socials: ['x-twitter', 'instagram'] }
+    { name: 'Dr. Aisha Kapoor', role: 'Medical Director & Clinical Pathologist', img: 'assets/img/woman1.jpg', bio: 'Board-certified pathologist with 16 years leading accredited diagnostic laboratories and mobile phlebotomy operations.', socials: ['linkedin', 'x-twitter'] },
+    { name: 'Sara Muller', role: 'Head of Phlebotomy Services & Quality Control', img: 'assets/img/woman3.jpg', bio: 'Oversees our network of 250+ licensed phlebotomists, enforcing CLSI standards, sterile protocols, and patient comfort.', socials: ['instagram', 'linkedin'] },
+    { name: 'Dr. Rohan Mehta', role: 'Senior Consultant in Endocrinology & Diagnostics', img: 'assets/img/men2.jpg', bio: 'Specializes in metabolic biomarkers, hormonal profiles, and preventive wellness diagnostic panels.', socials: ['linkedin', 'x-twitter'] },
+    { name: 'Nikhil Daran', role: 'Director of Cold-Chain & Lab Logistics', img: 'assets/img/men3.jpg', bio: 'Engineered VenaCare’s real-time cold-chain tracking system, ensuring 99.8% specimen integrity from doorstep to lab analyzer.', socials: ['x-twitter', 'instagram'] }
   ];
 
   /* ------------------------------------------------------------------ PRICING */
